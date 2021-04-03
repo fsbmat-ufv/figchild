@@ -56,6 +56,18 @@ April 2, 2021
  Paula Alves de Freitas,
  Janaíne Geralda Mesquita Martins,
  Henrique Ribeiro Diniz
+ 
+\vspace{3cm}
+
+\noindent \textbf{License:}
+
+\vspace{1cm}
+
+\noindent Copyright 2021 by Fernando de Souza Bastos
+
+\vspace{1cm}
+
+\noindent Released under the LaTeX Project Public License v1.3c or later. See \url{http://www.latex-project.org/lppl.txt}. Feature requests, issues and pull requests are welcome.
 
 \end{titlepage}
 
@@ -69,16 +81,45 @@ This package was created with the aim of facilitating the work of Elementary Sch
 
 \section{Introduction}
 
-\hspace{\parindent}This is a simple package to quickly make figures that can be used to build Basic Education activities. Of course, they can also be used for other purposes. It was created with the help of several students of Computational Mathematics discipline (MAF 172), offered by Professor Fernando de Souza Bastos, at the Federal University of Viçosa - Campus UFV - Florestal (UFV), in Brazil.
+\hspace{\parindent}This is a simple package to quickly make figures that can be used to build Basic Education activities. Of course, they can also be used for other purposes. It was created with the help of several students of Computational Mathematics discipline (MAF 172) from figures found in children's activities applied by teachers from Brazil and the world.. All students was added as authors of the package, as they contributed to the construction of the images, after learning how to use the tikz package. The discipline was offered by Professor Fernando de Souza Bastos\footnote{http://lattes.cnpq.br/9772451905214345}, at the Federal University of Viçosa - Campus UFV - Florestal (UFV), in Brazil.
 
-Our goal is to contribute to Teaching and the creation of high quality typographic materials. Enjoy the figchild package.
+Our goal is to contribute to Teaching and the creation of high quality typographic materials. Thus, we seek to reproduce several images used in lists of activities of Basic Education in Brazil and in the world. That way, the teacher who wants to create activities, does not need to waste hours creating such images or copying low quality images on the internet. Just use our package.
+
+The package is in a process of constant evolution, whenever possible, we will add other images and content in it. In Tables \ref{tab1} à \ref{tab19} we present all the images created so far. We also intend to add images related to commemorative dates such as Christmas, Easter, Halloween, among others. Enjoy the figchild package.
 
 
-\section{Authors and Acknowledgements}
 
-\hspace{\parindent}Fernando de Souza Bastos has a degree in Mathematics from the Federal University of Viçosa and a PhD in Statistics from the Federal University of Minas Gerais. He has been working with \LaTeX since 2003.
+%\section{Author and Acknowledgements}
 
-Thanks in particular the students Guilherme Fernandes Castro de Oliveira and José Vitor Novaes Moreira who acted as monitors of the discipline (MAF 172) in the second remote period offered by UFV, in the year 2021.
+%\hspace{\parindent}Fernando de Souza Bastos has a degree in Mathematics from the Federal University %of Viçosa and a PhD in Statistics from the Federal University of Minas Gerais. He has been working %with \LaTeX since 2003.
+
+%Thanks in particular the students Guilherme Fernandes Castro de Oliveira and José Vitor Novaes %Moreira who acted as monitors of the discipline (MAF 172) in the second remote period offered by UFV, %in the year 2021. I also thank all the students who contributed to the creation of the figures.
+
+\section{Usage}
+
+\hspace{\parindent}To use the package, simply add the command to your document's preamble:
+
+\begin{verbatim}
+     \usepackage{figchild}
+\end{verbatim}
+
+After that, in the body of your text you must use the command of the figure you want with its three options, the first option is related to the size of the figure, the second option is related to color and the third option is related to line thickness of the figure. That is, the command can be indicated as:
+
+\begin{verbatim}
+     \imagename{Picture size}{Picture color}{Line thickness}
+\end{verbatim}
+
+For example, to create a little train in the center of the page, of size 2, gray color and with line thickness that defines it of size 2, just use:
+
+\begin{verbatim}
+    \begin{center}
+    \train{2}{gray}{2}
+    \end{center}
+\end{verbatim}
+
+\begin{center}
+    \train{2}{gray}{2}
+\end{center}
 
 %\newgeometry{top=1.5cm, left=0.5cm, right=0.5cm, bottom=2cm}
 
