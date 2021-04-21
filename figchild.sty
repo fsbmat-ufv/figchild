@@ -1,5 +1,6 @@
+%Copyright 2021 by Fernando de Souza Bastos
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{figchild}[2021/04/03 Package for creating activities for children]
+\ProvidesPackage{figchild}[2021/04/03 Package for creating activities for children version 1.1.0]
 
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
@@ -22,7 +23,7 @@
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%##Coruja##%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\owl}[3]{
+\newcommand{\fcOwlA}[3]{
    
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (162, 411) circle (9cm);
@@ -73,7 +74,7 @@ controls (243, 247) and (227, 302) .. (212, 336);
 %%%%%%%%%%%%%%%%%%%#####Bell####%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\bell}[3]{
+\newcommand{\fcBell}[3]{
     
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (210, 421) ellipse (3cm and 2cm);
@@ -94,7 +95,7 @@ controls (243, 247) and (227, 302) .. (212, 336);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\book}[3]{
+\newcommand{\fcBookB}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (61,216) -- (40,215) --  (40,29)-- (168,40)  .. controls (186, 25) and (230, 35) .. (227, 40) --(355,27) -- (352,219) -- (330,220);
 \draw[draw=#2, line width=#3pt] (58,205)--(58,43) -- (81,81) .. controls (134, 86) and (175,101) .. (197, 50) ..  controls (200, 81) and (245,89) .. (315, 78.8) --(335,46);
@@ -110,7 +111,7 @@ controls (243, 247) and (227, 302) .. (212, 336);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\dino}[3]{
+\newcommand{\fcDino}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt] (60,178) ellipse  (4cm and 3cm);
@@ -148,7 +149,7 @@ controls (243, 247) and (227, 302) .. (212, 336);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\pumpkin}[3]{
+\newcommand{\fcPumpkin}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt] (152,268) .. controls (156, 266) and (162, 269) ..(167,264) .. controls (194, 268) and (219, 266) ..(235,262).. controls (245, 268) and (246, 267) ..(250,266).. controls (400, 330) and (415, 40) ..(316,46).. controls (305, 33) and (278, 27) ..(262,40).. controls (258, 34) and (236, 35) ..(228,41)
@@ -206,7 +207,7 @@ controls (243, 247) and (227, 302) .. (212, 336);
 
 
 
-\newcommand{\crown}[3]{
+\newcommand{\fcCrown}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt,fill=black] (51,171)--(81,107)  .. controls (147, 122) and (232, 132) .. (328, 108) --(354,175);
 \draw[white,line width=0.0005pt,fill=black] (51,170) --(125,180)--(212,211) --(291,174);
@@ -265,7 +266,7 @@ controls (243, 247) and (227, 302) .. (212, 336);
 %%%%%%%%%%%%%%%%%####spinning###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\spinning}[3]{
+\newcommand{\fcSpinning}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2, line width=#3pt,fill=black] (207,428) ellipse  (3.5cm and 2.8cm);
@@ -290,7 +291,7 @@ controls (243, 247) and (227, 302) .. (212, 336);
 %%%%%%%%%%%%%%%%####alligator###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\alligator}[3]{
+\newcommand{\fcAlligator}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2, line width=#3pt] (99,111).. controls (81,99) and (85,86) ..(35,93)-- (40,86).. controls (69,79) and (105,89) ..(121,98).. controls (117,106) and (98,112) ..(80,115)
@@ -318,7 +319,7 @@ controls (243, 247) and (227, 302) .. (212, 336);
 %%%%%%%%%%%%%%%%%%%####bee###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\bee}[3]{
+\newcommand{\fcBee}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2, line width=#3pt] (146,339)  .. controls (130, 459) and (265, 413) .. (233, 338)  .. controls (265, 327) and (259, 295) .. (230, 275)
@@ -352,7 +353,7 @@ controls (243, 247) and (227, 302) .. (212, 336);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\squirrel}[3]{
+\newcommand{\fcSquirrel}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 \draw[draw=#2, line width=#3pt] (128,272)  .. controls (127, 251) and (99, 245) .. (91, 264)  .. controls (85, 290) and (103, 307) .. (131, 299) .. controls (170, 279) and (176, 222) .. (125, 206)
  .. controls (55, 180) and (12, 288) .. (82, 335) .. controls (147, 380) and (215, 346) .. (218, 258) .. controls (220, 252) and (222, 249) .. (222, 245);
@@ -402,7 +403,7 @@ controls (243, 247) and (227, 302) .. (212, 336);
 %%%%%%%%%%%%%%%%%%%####hippo###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\hippo}[3]{
+\newcommand{\fcHippo}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2, line width=#3pt] (101,160).. controls (137,83) and (260,62) ..(289,162);
@@ -436,7 +437,7 @@ controls (243, 247) and (227, 302) .. (212, 336);
 %%%%%%%%%%%%%%%%%%%###elephant#%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\elephant}[3]{
+\newcommand{\fcElephant}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2, line width=#3pt] (158,254)  .. controls (213, 254) and (242, 265) .. (318, 226) .. controls (323, 214) and (325, 207) .. (325, 184)
@@ -492,9 +493,9 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 }
 
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%###Rose###%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%###FlowerF###%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\rose}[3]{
+\newcommand{\fcFlowerF}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (159,193) .. controls(141,193) and (113,200) ..(96,212);
 \draw[draw=#2, line width=#3pt] (96,212) .. controls(73,240) ..(60,288);
@@ -527,7 +528,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####icecream###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\icecream}[3]{
+\newcommand{\fcIceCream}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (117,348) -- (196,37) -- (274,348);
 \draw[draw=#2, line width=#3pt] (274,348) .. controls (218,333) and (146,332) .. (117,348);
@@ -545,7 +546,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####fish###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\fish}[3]{
+\newcommand{\fcFish}[3]{
     
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2,line width=#3pt](160,145) ellipse(16cm and 13cm);
@@ -568,7 +569,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%####boat###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\boat}[3]{
+\newcommand{\fcBoat}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2,  line width = 3pt ] (187,149) -- (187,383) -- (202,383) -- (202,149); %mastro
@@ -583,7 +584,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%####house###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\house}[3]{
+\newcommand{\fcHouse}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2,  line width = 3pt ] (82,160) -- (82,25) -- (219,17) -- (363,40) -- (363,170);
@@ -605,7 +606,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%####gnat###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\gnat}[3]{
+\newcommand{\fcGnat}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2,line width=#3pt]  (215,258) circle (4cm);
@@ -628,7 +629,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%####fan###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\fan}[3]{
+\newcommand{\fcFan}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2,line width=#3pt]  (186,273) circle (3.8cm);
@@ -655,7 +656,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%####cupcake###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\cupcake}[3]{
+\newcommand{\fcCupcake}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2,  line width = 3pt ] (61,184) -- (73,106) .. controls (126,33) and (237,30) .. (296,106) -- (316,206) ;
@@ -676,7 +677,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%####flamingo###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\flamingo}[3]{
+\newcommand{\fcFlamingo}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[fill = black] (117,369) circle (1cm); % olho
@@ -694,7 +695,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%####bonnet###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\bonnet}[3]{
+\newcommand{\fcBonnet}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2,line width=#3pt] (28,184) .. controls (46,115) and (113,90) .. (169,100) .. controls (295,140) and (290,192) .. (298,210) .. controls (312,296) and (256,350) .. (183,347) .. controls (66,350) and (20,287) .. (28,184);
@@ -716,7 +717,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\mailbox}[3]{
+\newcommand{\fcMailbox}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2,line width=#3pt] (48,137) -- (48,25) -- (172,26) -- (172,132) .. controls (174,190) and (70,217) .. (48,137);
@@ -732,7 +733,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%####giraffe###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\giraffe}[3]{
+\newcommand{\fcGiraffe}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[fill = black] (62,398) circle (0.6cm); 
@@ -790,7 +791,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%####rabbit###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\rabbit}[3]{
+\newcommand{\fcRabbit}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw [draw=#2, line width=#3pt] (130, 248) .. controls (35, 402) and (65, 486) ..  (120, 443) .. controls (157, 402) and (169, 358) .. (183, 274) .. controls (195, 274) and (223, 280) ..  (251, 273) .. controls (245, 363) and (305, 486) ..  (354, 450) .. controls (382, 396) and (339, 307) ..  (298, 250) .. controls (376, 185) and (339, 85) ..  (216, 75) .. controls (111, 75) and (55, 185) .. (130, 248);
 
@@ -825,7 +826,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%####Duck###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\Duck}[3]{
+\newcommand{\fcDuck}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw [draw=#2, line width=#3pt] (46, 353) .. controls (68, 357) and (86, 364) ..  (99, 373);
@@ -877,7 +878,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%####Hat###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\beaver}[3]{
+\newcommand{\fcHatA}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw [draw=#2, line width=#3pt] (113, 182)--(113, 235);
 \draw [draw=#2, line width=#3pt] (113, 235) .. controls (115, 264) and (145, 283) .. (174, 259) .. controls (190, 251) and (212, 250) .. (219, 260) .. controls (239, 279) and (264, 292) .. (281, 259);
@@ -892,7 +893,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%####phone###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\phone}[3]{
+\newcommand{\fcPhone}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (164,137)--(190,137);
 \draw[draw=#2, line width=#3pt] (190,137)--(190,152);
@@ -965,7 +966,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%####Sandal###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\sandal}[3]{
+\newcommand{\fcSandal}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (34,109)--(36,86)..controls(79,60) and (144,60)..(225,84)..controls(269,97) and (289,106)..(361,144)..controls(379,154) and (390,175)..(368,196)..controls(354,206) and (357,208)..(319,206)..controls(283,194) and (256,184)..(223,167);
 
@@ -981,7 +982,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%####Robe###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\robe}[3]{
+\newcommand{\fcRobe}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw [draw=#2, line width=#3pt] (165,594)--(90,562);
 \draw [draw=#2, line width=#3pt] (90, 562) .. controls (82, 557) and (79, 550) .. (73, 533);
@@ -1023,7 +1024,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%####Tractor###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\tractor}[3]{
+\newcommand{\fcTractor}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 %roda%
 \draw [draw=#2, line width=#3pt] (63, 88) circle (5.8cm);
@@ -1092,7 +1093,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%####glass###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\glass}[3]{
+\newcommand{\fcGlass}[3]{
 \begin{tikzpicture}[scale = #1]
 \draw[draw=#2, line width=#3pt] (-0.84, -1.8)  .. controls (-0.6,-2.1) and (0.5, -2.1) 
 .. (0.8, -1.75) -- (1.2,1).. controls (-0,0.5) and (0,0.7) ..(-1.2,0.9)-- (-0.8,-1.9);
@@ -1102,7 +1103,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####apple###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\apple}[3]{
+\newcommand{\fcApple}[3]{
 \begin{tikzpicture}[scale = #1]
 \draw[draw=#2, line width=#3pt]
 (0.0, 0.87)  .. controls (-1.8, 1.35) and (-1, -1.9) ..
@@ -1113,7 +1114,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 (0.0, 0.9)  .. controls (0.08, 1.2) and (0.01,1.3) ..
 (-0.0, 1.4);
 
-\draw[draw=#2, line width=0.1pt,fill=green]
+\draw[draw=#2, line width=#3pt]
 (0.08, 1.1)  .. controls (0.2, 1) and (0.5,1.1) ..
 (0.6, 1.2) .. controls (0.4, 1.3) and (0.2,1.4) ..
 (0.07, 1.3);
@@ -1123,7 +1124,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####egg###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\egg}[3]{
+\newcommand{\fcEgg}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 \draw[draw=#2, line width=3.5pt]
 (191,324) ellipse (17cm and 23cm);
@@ -1151,7 +1152,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####spider###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\spider}[3]{
+\newcommand{\fcSpider}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2, line width=#3pt]
@@ -1184,7 +1185,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####moon###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\moon}[3]{
+\newcommand{\fcMoon}[3]{
 \begin{tikzpicture}[scale = #1]
 \draw[draw=#2, line width=#3pt]
 (0.4, 1.9)  .. controls (-1.8, 0.4) and (0., -1.5) ..
@@ -1200,7 +1201,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Bat###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\bat}[3]{
+\newcommand{\fcBat}[3]{
 \begin{tikzpicture}[scale = #1]
 \draw[draw=#2, line width=#3pt]
 	(0.0, -1.7) .. controls (0.3,-1.0) and (1.0,-0.87) ..
@@ -1230,7 +1231,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Car###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\car}[3]{
+\newcommand{\fcCar}[3]{
 \begin{tikzpicture}[scale = #1]
 \draw[draw=#2, line width = #3pt]
 	(-2.35,-0.6) -- (-2,-0.6)
@@ -1264,7 +1265,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####crow###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\crow}[3]{
+\newcommand{\fcCrownA}[3]{
 \begin{tikzpicture}[scale = #1]
 \draw[draw=#2, line width = #3pt]
 	(2.5,-1.05) .. controls (1.55,-0.85) and (-1.3,-0.8) ..
@@ -1298,7 +1299,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Egg###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Egg}[3]{
+\newcommand{\fcEggA}[3]{
 \begin{tikzpicture}[scale = #1]
 \draw[draw=#2, line width = #3pt]
 	(0.05,2.03) .. controls (1.8,1.85) and (1.85,-1.7).. 
@@ -1351,7 +1352,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####goose###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\goose}[3]{
+\newcommand{\fcGoose}[3]{
 \begin{tikzpicture}[scale = #1]
 %cabeçaePescoço
 \draw[draw=#2, line width = #3pt]
@@ -1428,7 +1429,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####House###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\House}[3]{
+\newcommand{\fcHouseA}[3]{
 \begin{tikzpicture}[scale = #1]
 %paredeDireita
 \draw[draw=#2, line width = #3pt]
@@ -1474,7 +1475,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####monkey###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\monkey}[3]{
+\newcommand{\fcMonkey}[3]{
 \begin{tikzpicture}[scale = #1]
 %cabeça
 \draw[draw=#2, line width = #3pt]
@@ -1523,7 +1524,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####mushroom###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\mushroom}[3]{
+\newcommand{\fcMushroom}[3]{
 \begin{tikzpicture}[scale = #1]
 %bolinhas	
 \draw[draw=#2, line width = #3pt]
@@ -1561,7 +1562,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####pig###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\pig}[3]{
+\newcommand{\fcPig}[3]{
 \begin{tikzpicture}[scale = #1]
 \draw[draw=#2, line width = #3pt]
 	(-0.95,1.24) .. controls (0.05,1.7) and (0.95,1.65) ..
@@ -1624,7 +1625,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####trunk###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\trunk}[3]{
+\newcommand{\fcTrunk}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width= #3pt] (67 ,104) ellipse (1cm and 1.5cm);
 \draw[draw=#2, line width= #3pt] (67,104) ellipse (2cm and 2.5cm);
@@ -1647,7 +1648,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####flower###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\flower}[3]{
+\newcommand{\fcFlower}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width= #3pt] (200,252) circle (2.5cm);
 \draw[draw=#2, line width= #3pt] (200,252) circle (3.9cm);
@@ -1677,7 +1678,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####pig###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\ship}[3]{
+\newcommand{\fcShip}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2,line width=#3pt] (28,85) -- (43,17) -- (290,28) -- (374,212);
 \draw[draw=#2,line width=#3pt] (39,34) -- (285,150) -- (320,100);
@@ -1702,7 +1703,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####bullet###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Bullet}[3]{
+\newcommand{\fcBullet}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2,line width= #3pt]  (185,119) ellipse ( 8.2cm and 8.cm);
 \draw[draw=#2,line width= #3pt]  (148,190) .. controls (136,138) .. (107,96);
@@ -1741,7 +1742,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####bee###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Bee}[3]{
+\newcommand{\fcBeeA}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width= #3pt] (86,154) .. controls (83,95) and (115,59) .. (150,43);
 \draw[draw=#2, line width= #3pt] (150,43) -- (230,12);
@@ -1791,7 +1792,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Sun###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\sun}[3]{
+\newcommand{\fcSun}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (196, 190) circle (5.5cm);
 \draw[draw=#2, line width=#3pt] (204,247) -- (213,347);
@@ -1811,7 +1812,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Star###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Star}[3]{
+\newcommand{\fcStar}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 \draw[draw=#2, line width=#3pt] (145,276) -- (190,380) -- 
 (237,279) -- (349,288) --(278,199) -- (349,108) -- 
@@ -1825,7 +1826,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Train###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\train}[3]{
+\newcommand{\fcTrain}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt] (68,95) -- (115,95) -- (115,57) -- (71,57) -- (71,95);
@@ -1878,7 +1879,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Sheep###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\sheep}[3]{
+\newcommand{\fcSheep}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt] (118, 248) .. controls (123, 253) and (131, 255) ..  (137, 250) .. controls (142, 258) and (153, 259) .. (158, 253) .. controls (165, 259) and (176, 257) ..  (183, 249);
@@ -1932,7 +1933,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Carrot###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\carrot}[3]{
+\newcommand{\fcCarrot}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (230,344) .. controls (230,392) .. (205,427);
 \draw[draw=#2, line width=#3pt] (205,427) .. controls (199,439) .. (211,442);
@@ -1967,7 +1968,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####mouse###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\mouse}[3]{
+\newcommand{\fcMouse}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (162,126) .. controls (252,7) .. (335,125);
 \draw[draw=#2, line width=#3pt] (220,175) arc (-1 : 270 : 50);
@@ -1996,7 +1997,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####pencil###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\pencil}[3]{
+\newcommand{\fcPencil}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2, line width=#3pt] (375,70) -- (63,70) -- (68,66 )   -- ( 82,61 )  -- ( 75,56 ) -- ( 86,53 ) -- ( 69,46 )  -- ( 77,42 ) -- ( 64,36 )  -- (375,36) -- ( 375,70 ) ;
@@ -2010,7 +2011,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####shooting star###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\sstar}[3]{
+\newcommand{\fcShootingStar}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 
@@ -2028,7 +2029,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Star###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\STAR}[3]{
+\newcommand{\fcStarA}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 
@@ -2040,7 +2041,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####van###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\van}[3]{
+\newcommand{\fcVan}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2, line width=#3pt] (46, 61) -- (22,61) ; 
@@ -2074,7 +2075,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Truck###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\truck}[3]{
+\newcommand{\fcTruck}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2, line width=#3pt] (31, 73) -- (16,73) ; 
@@ -2104,7 +2105,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####bike###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\bike}[3]{
+\newcommand{\fcBike}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (102,85) circle (6cm);
 \draw[draw=#2, line width=#3pt] (290,85) circle (6cm);
@@ -2122,7 +2123,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Egg###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\EGg}[3]{
+\newcommand{\fcEggB}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (192,241) ellipse (16cm and 22cm);
 \draw[draw=#2, line width=#3pt] (93,412).. controls (95,375) and (122,375) .. (124,403) ;
@@ -2147,7 +2148,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Plane###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\plane}[3]{
+\newcommand{\fcPlane}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (44,140) .. controls (51,175)  .. (87,181);
 \draw[draw=#2, line width=#3pt] (44,140) .. controls (1,133) and (1,103) .. (44,90);
@@ -2169,7 +2170,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Bear###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\bear}[3]{
+\newcommand{\fcBear}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (90,176) circle (4.8cm);
 \draw[draw=#2, line width=#3pt] (338,179) circle (4.8cm);
@@ -2203,7 +2204,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Frog###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\frog}[3]{
+\newcommand{\fcFrog}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (166,380) circle (2cm);
 \draw[draw=#2, line width=#3pt] (151,380) circle (5cm);
@@ -2232,7 +2233,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Bull###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\bull}[3]{
+\newcommand{\fcBull}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (150,409) .. controls (109,383) and (99,364) .. (84,339) .. controls (66,280) and (59,224) .. (74,118);
 \draw[draw=#2, line width=#3pt] (74,118) -- (85,56) .. controls (89,31) and (117,16) .. (141,11);
@@ -2264,7 +2265,7 @@ controls (311, 47) and (326, 48) .. (339,54) ;
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Elephant###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Elephant}[3]{
+\newcommand{\fcElephantA}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (16,113) .. controls (13,120) .. (14,126) .. controls (21,128) .. (32,128) .. controls (43,122) .. (58,119) .. controls (74,120) .. (84,127)
 .. controls (93,147) .. (98,168) .. controls (108,197) .. (109,215) .. controls (114,220) .. (121,224) .. controls (135,226) .. (149,223) .. controls (157,235) and (171,238) .. (178,236) ..
@@ -2287,7 +2288,7 @@ controls (121,119) .. (145,139) .. controls (126,107) .. (101,84) .. controls (1
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Sheet###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\sheet}[3]{
+\newcommand{\fcSheet}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt] (49,22) .. controls(102,134) and (243,236) .. (378,291);
@@ -2310,7 +2311,7 @@ controls(365,271) and (376,276) .. (378,291);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Birdie###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\birdie}[3]{
+\newcommand{\fcBird}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt] (110,188).. controls(98,182) and(78,180) .. (16,190)..
@@ -2335,7 +2336,7 @@ controls(187,254) and (258,181)..(217,98);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Octopus###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\octopus}[3]{
+\newcommand{\fcOctopus}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt](234,184).. controls(239,214) and(260,239)..(280,264)..
@@ -2378,7 +2379,7 @@ controls(253,159) and(233,167)..(234,184);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Pineapple###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\pineapple}[3]{
+\newcommand{\fcPineapple}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt] (198,230) ellipse (13 cm and 15.8 cm);
@@ -2417,7 +2418,7 @@ controls(120,417) and (132,401)..(135,368);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Butterfly###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\butterfly}[3]{
+\newcommand{\fcButterfly}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt](190,175) ellipse (2.5 cm and 10.5cm);
@@ -2464,7 +2465,7 @@ controls(210,317) and(202,301)..(202,271);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Fish###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Fish}[3]{
+\newcommand{\fcFishA}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt] (45,136) circle (2 cm);
@@ -2507,7 +2508,7 @@ controls(220,225) and(225,243)..(236,245);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Christmas Tree###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\christmastree}[3]{
+\newcommand{\fcChristmasTree}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt](187,57)--(187,24)--(212,24)--(213,48);
@@ -2539,7 +2540,7 @@ controls(241,293) and (241,293)..(214,371);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Pumpkin###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Pumpkin}[3]{
+\newcommand{\fcPumpkinA}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt](114,196)--(91,155)--(138,155)--(114,196);
@@ -2578,7 +2579,7 @@ controls(183,251)and(187,227)..(189,211);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Flamingo###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Flamingo}[3]{
+\newcommand{\fcFlamingoA}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2, line width=#3pt] (45,301)..controls (10,272)..(39,214)..
@@ -2641,7 +2642,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Bell###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Bell}[3]{
+\newcommand{\fcBellA}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (239,518) ellipse (2cm and 1.5 cm); 
 
@@ -2659,7 +2660,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Broom###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\broom}[3]{
+\newcommand{\fcBroom}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2, line width=#3pt] (163,800) --(196,800);
@@ -2722,7 +2723,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Candle###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\candle}[3]{
+\newcommand{\fcCandle}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2, line width=#3pt] (189,324) ellipse (10cm and 2.5cm ); 
@@ -2749,7 +2750,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Kite###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\kite}[3]{
+\newcommand{\fcKite}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 \draw[draw=#2, line width=#3pt] (325,446) .. controls (227,407) .. (133,398);
 
@@ -2784,7 +2785,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Mouse###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Mouse}[3]{
+\newcommand{\fcMouseA}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 \draw[draw=#2, line width=#3pt] (305,195) arc (-90 : 180: 45);
 
@@ -2824,7 +2825,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Cloud###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\cloud}[3]{
+\newcommand{\fcCloud}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2, line width=#3pt] (320,77) arc (-90 : 90 : 61);
@@ -2847,7 +2848,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Horse###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\horse}[3]{
+\newcommand{\fcHorse}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2, line width=#3pt] (80,251) -- (71,250);
@@ -2938,7 +2939,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Duckduck###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Duckduck}[3]{
+\newcommand{\fcDuckA}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2, line width=#3pt] (72,270) .. controls (41,265) .. (24,265);
@@ -3047,7 +3048,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Flamingo###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Fflamingo}[3]{
+\newcommand{\fcFlamingoB}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2, line width=#3pt] (45,301) .. controls (10,272) .. (39,214);
@@ -3152,7 +3153,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Ant###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\ant}[3]{
+\newcommand{\fcAnt}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
     \draw[draw=#2, line width=#3pt]  (94,129) circle (3.5cm); %cabeça
     \draw[draw=#2, line width=#3pt]  (90.4,143) circle (0.7cm);%olho
@@ -3176,7 +3177,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####bat###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Bat}[3]{
+\newcommand{\fcBatA}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 \draw[draw=#2, line width=#3pt] (36,45) circle (1.3cm);
 \draw[draw=#2, line width=#3pt] (49,47)--(352,260)..controls(344,292)..(319,302)--(41,57);
@@ -3187,7 +3188,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Mug###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\mug}[3]{
+\newcommand{\fcMug}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 \draw[draw=#2, line width=#3pt] (30,33)..controls(30,10) and (281,10)..(281,33)--(281,310)..controls(281,340) and (30,340)..(30,310)--cycle;
 \draw[draw=#2, line width=#3pt] (155,300) ellipse (110 and 20);
@@ -3199,7 +3200,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Umbrella###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\umbrella}[3]{
+\newcommand{\fcUmbrella}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
     % UMBRELLA    Resindent Evil
     \draw[draw=#2, line width=#3pt] (170,146)..controls(170,118)and(200,118)..(200,146)--(200,330)--(189,329)--(189,146)..controls(189,130)and(175,130)..(177,146)--(170,146);
@@ -3222,7 +3223,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Lion###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\lion}[3]{
+\newcommand{\fcLion}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 \draw[draw=#2, line width=#3pt](130,355)--(165,345)--(190,360)--(195,350)--(215,370)..controls(226,354)..(245,345)--(270,355)--(265,340)--(295,325)--(290,315)--(320,295)--(305,290)..controls(328,261)..(330,240)--(350,210)--(340,205)--(355,170)..controls(344,169)..(330,105)--(320,115)..controls(322,98)..(290,60)--(290,75)--(267,20)..controls(246,25)..(230,45)--(225,25)..controls(215,39)..(200,50)--(175,20)--(170,43)..controls(156,27)..(130,21)..controls(127,35)..(105,75)--(105,60)..controls(75,93)..(70,115)--(65,100)..controls(51,161)..(40,170)--(50,210)--(35,215)..controls(70,233) and(64,270)..(95,293)--(80,300)--(110,320)--(100,325)--(140,345)--cycle;
     
@@ -3252,9 +3253,9 @@ controls (300,57)..(302,85);
 }
 
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%####Chick###%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%####BirdC###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\chick}[3]{
+\newcommand{\fcBirdC}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 \draw[draw=#2, line width=#3pt] (70,155) ..controls(70,0)and(335,-40).. (335,185) -- (275,160) -- (235,190) -- (185,165) -- (160,180) -- (130,155) -- (100,180)--cycle;
 
@@ -3281,7 +3282,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####squirrel###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Squirrel}[3]{
+\newcommand{\fcSquirrelA}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
     %scraft
     \draw[draw=#2, line width=#3pt] (175,165) ..controls(110,90)and(100,120).. (145,160) ..controls(140,176).. (130,180)..controls(58,195)and(84,249).. (155,255)-- (175,280)..controls(181,260)..(180,245)  ..controls(195,220)and(190,200)..  (175,185) ..controls(188,161).. (185,130) ..controls(200,100)and(240,100).. (215,265) ..controls(240,330)and(330,289).. (335,250) ..controls(283,280)and(270,250).. (280,210) ..controls(320,30)and(195,40)..(175,95) ..controls(175,65).. (160,65) ..controls(95,60)and(119,85).. (135,85) ..controls(130,94)and(130,120).. (155,125) -- (153,141.7);
@@ -3300,7 +3301,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Giraffe###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Giraffe}[3]{
+\newcommand{\fcGiraffeA}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
     \draw[draw=#2, line width=#3pt] (85,515).. controls(163,340)..(160,245) ..controls(169,139)and (165,50).. (150,40) ..controls(155,29)..(180,30)..controls(190,290)and (220,290).. (195,50) ..controls(189,42).. (185,35) ..controls (203,29)..(220,35) ..controls(222,40).. (220,50) ..controls(225,245).. (275,205) ..controls(274,152).. (235,50) ..controls(245,40)..(265,45) ..controls(250,64)and(310,164).. (310,195) ..controls(315,166).. (310,140) ..controls(305,76)..(295,50) ..controls(306,43).. (325,45) ..controls(335,165).. (330,255) ..controls(353,224).. (370,180) ..controls(357,150).. (360,110) ..controls(390,153)and (385,235).. (330,280) ..controls(325,295).. (310,305) ..controls(211,405).. (120,570) ..controls(128,600).. (120,615) ..controls(99,610).. (80,590) ..controls(73,606).. (75,620) -- (60,620) ..controls(66,600)..(60,585) ..controls(49,575)..(40,550) ..controls(39,526).. (25,505) ..controls(24,495)..(25,490) ..controls(54,490)..(65,505)--cycle;
     
@@ -3377,7 +3378,8 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####rabit###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\rabit}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcRabbitA}[3]{
+\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (179,431) .. controls (156,449) and (19,271) ..(190,267);
 \draw[draw=#2, line width=#3pt] (190,267) .. controls (343,295) and (208,449) ..(176,432);
 \draw[draw=#2, line width=#3pt] (154,420) .. controls (125,484) and (140,450) ..(113,505);
@@ -3421,7 +3423,8 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%##strawberry#%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\strawberry}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcStrawberry}[3]{ 
+\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (144,307) .. controls (120,318) and (85,341) ..(91,369);
 \draw[draw=#2, line width=#3pt] (91,369) .. controls (108,354) and (176,345) ..(185,314);
 \draw[draw=#2, line width=#3pt] (185,314) .. controls (190,336) and (177,357) ..(163,373);
@@ -3451,7 +3454,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%####turtle###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\turtle}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcTurtle}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (114,192) .. controls (86,180) and (83,168) ..(88,158);
 \draw[draw=#2, line width=#3pt] (88,158) .. controls (74,129) and (118,113) ..(133,104);
 \draw[draw=#2, line width=#3pt] (133,104) .. controls (148,86) and (191,76) ..(213,85);
@@ -3492,7 +3495,8 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####FLOWER###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\FLOWER}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcFlowerA}[3]{ 
+\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (10,43) -- (119,206);
 \draw[draw=#2, line width=#3pt] (30,44) -- (130,197);
 \draw[draw=#2, line width=#3pt] (51,77) .. controls (121,125) and (181,141) ..(244,142);
@@ -3527,7 +3531,8 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####FISH###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\FISH}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcFishB}[3]{ 
+\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2,line width=#3pt](160,145) ellipse(16cm and 13cm);
 \draw[draw=#2,line width=#3pt](280,220) arc(-63:180:50);
 \draw[draw=#2,line width=#3pt](280,178) ellipse(8cm and 5cm); 
@@ -3547,7 +3552,8 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%##centipede##%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\centipede}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcCentipede}[3]{ 
+\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2,line width=#3pt](317,70)circle(38.3);
 \draw[draw=#2,line width=#3pt](250,107) circle(35.3);
 \draw[draw=#2,line width=#3pt](188,137) circle(35.3);
@@ -3615,7 +3621,8 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%##Book##%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\Book}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcBookA}[3]{ 
+\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2,line width=#3pt](216,36)--(330,76);
 \draw[draw=#2,line width=#3pt](330,76)--(331,310);
 \draw[draw=#2,line width=#3pt](331,310)--(214,267);
@@ -3664,7 +3671,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\Turtle}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcTurtleA}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (71, 174) arc (167 : 0 : 156);
 \draw[draw=#2, line width=#3pt] (71, 174) .. controls (192, 146) and (272, 141) ..  (379, 139);
 \draw[draw=#2, line width=#3pt]  (252,145) -- (253,155) -- (232,174) -- (172,174) -- (156, 157);
@@ -3692,7 +3699,8 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\flyingSaucer}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcFlyingSaucer}[3]{ 
+\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[fill = black] (131, 363) circle (1.3cm);
 \draw[fill = black] (246, 369) circle (1.3cm);
 \draw[fill = black] (85, 82) circle (1.7cm);
@@ -3726,7 +3734,7 @@ controls (300,57)..(302,85);
 %%%%%%%%%%%%%%%%%%%#ghost#%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\ghost}[3]{
+\newcommand{\fcGhost}[3]{
 \begin{tikzpicture}[scale = #1]
 \draw[color=black, line width=#3pt] 
 (0.7,0.1)  .. controls (0.3,2) and (-0.6,0.8) ..
@@ -3758,7 +3766,8 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\watermelon}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcWatermelon}[3]{ 
+\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (381,178) arc (360:180: 18.5cm and 16cm);
 \draw[draw=#2, line width=#3pt] (355,178) arc (360:180: 16cm and 14 cm);
 \draw[draw=#2, line width=#3pt] (381,178) -- (12,178);
@@ -3778,7 +3787,8 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%####witchHat###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\witchHat}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcWitchHat}[3]{ 
+\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2,line width=#3pt] (126,165) --(180,396)-- (127,447) .. controls (184,440) .. (209,419) -- (297,165);
 \draw[draw=#2,line width=#3pt] (126,165) .. controls (160,115) and (275,115) .. (297,165);
 \draw[draw=#2,line width=#3pt] (136,211) arc (117: 425:16.5cm and 7cm) (281,210);
@@ -3787,7 +3797,8 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%##Butterfly#%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Butterfly}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcButterflyA}[3]{
+\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2,line width=#3pt] (87,199) circle (4.5cm); 
 \draw[draw=#2,line width=#3pt] (313,199) circle (4.5cm); 
 \draw[draw=#2,line width=#3pt] (116,72) circle (3cm); 
@@ -3801,7 +3812,8 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%###dolphin###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\dolphin}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcDolphin}[3]{
+\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2,line width=#3pt] (349,262) .. controls (368,295) and (318,337).. (277,339).. controls (229,344) and (197,329).. (150,300);
 \draw[draw=#2,line width=#3pt] (349,263) .. controls (357,249).. (366,235).. controls (381,208) and (366,204) .. (353,212).. controls (337,222).. (328,231).. controls (318,243) and (308,240) .. (305,245).. controls (302,250) .. (302,256);
 \draw[draw=#2,line width=#3pt] (349,263)..controls (330,252) and (304,273).. (255,272)..controls(242,271) .. (223,266);
@@ -3827,7 +3839,7 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\Plane}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcPlaneA}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width = #3pt] (77,89) .. controls (89,108) .. (108,120);
 \draw[draw=#2, line width = #3pt] (108,120) .. controls (70,143) .. (42,162);
 \draw[draw=#2, line width = #3pt] (42,162) .. controls (21,160) .. (14,153);
@@ -3866,7 +3878,7 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%###ladybug##%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\ladybug}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcLadyBug}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width = #3pt] (195,160) ellipse (13cm and 15cm);
 \draw[draw=#2, line width = #3pt] (196,309) -- (196,09);
@@ -3916,7 +3928,7 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%##peacock##%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\peacock}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcPeacock}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width = #3pt] (210,183) circle (4.5cm);
 \draw[draw=#2, line width = #3pt] (185,185) -- (211,185);
 \draw[draw=#2, line width = #3pt] (185,185) .. controls (180,210) and (215,218) .. (211,185);
@@ -3993,7 +4005,7 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####dog###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\dog}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcDog}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width = #3pt] (114,399) .. controls (86,398) and (65,365) .. (42,358);
 \draw[draw=#2, line width = #3pt] (42,358) .. controls (20,351) and (0,354) .. (19,312);
@@ -4053,7 +4065,7 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\ball}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcBall}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt](201,216) circle (16cm) ;
 \draw[draw=#2, line width=#3pt] (157,366) -- (134,311) -- (74,308);
@@ -4071,7 +4083,7 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Birdie###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Birdie}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcBirdA}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt] (52,239) -- (19,229) -- (44,222) -- (25,213) -- (42,210);
 \draw[draw=#2, line width=#3pt] (359,138) -- (340,137) -- (361,160) -- (345,157) -- (366,182);
@@ -4108,7 +4120,7 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Sun###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Sun}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcSunA}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt](200,201) circle (10cm) ;
 \draw[draw=#2, line width=#3pt] (159,292)  .. controls (155,322) and (189,360) .. (221,365);
@@ -4134,7 +4146,7 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####Flower###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\Flower}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcFlowerB}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt] (98,9) -- (25,348) -- (373,347) -- (301,9) -- (98,9);
 \draw[draw=#2, line width=#3pt] (55,210) -- (343,210);
@@ -4161,7 +4173,7 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%####HOUSE###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\HOUSE}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcHouseB}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt] (76,23) -- (76,274) -- (201,490) -- (326,274) -- (326,23) -- (76,23);
 \draw[draw=#2, line width=#3pt] (76,274) -- (326,274);
@@ -4174,7 +4186,7 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%####Cherry###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\Cherry}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcCherry}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt] (152,268) .. controls (156, 266) and (162, 269) ..(167,264) .. controls (194, 268) and (219, 266) ..(235,262).. controls (245, 268) and (246, 267) ..(250,266).. controls (400, 330) and (415, 40) ..(316,46).. controls (305, 33) and (278, 27) ..(262,40).. controls (258, 34) and (236, 35) ..(228,41)
 .. controls (216, 25) and (188, 25) ..(177,40).. controls (169,35) and (150, 32) ..(138,40).. controls (126, 34) and (97, 40) ..(88,48).. controls (0, 30) and (0, 327) ..(152,268);
@@ -4205,7 +4217,7 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%####one###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\one}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcOne}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2,line width=#3pt] (38,56)  -- (38,17) -- (380,17) -- (380,56)..controls(271,60)..(260,112)--(260,575)-- (222,575) ..controls(149,521).. (38,511) -- (38,469) -- (163,469)--(163,112)..controls(153,60)..(38,56);
 \end{tikzpicture}}
 
@@ -4213,7 +4225,7 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%####two###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\two}[3]{
+\newcommand{\fcTwo}[3]{
 \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (104,379) .. controls (174,240) and (-72,242) .. (68,410);
 \draw[draw=#2, line width=#3pt] (68,410) .. controls (204,504) and (364,437) .. (368,315);
@@ -4227,7 +4239,7 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%####three###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\three}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcThree}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt] (118,487)  .. controls (293, 623) and (375, 291) .. (150, 316)--(154,274);
 
@@ -4241,7 +4253,7 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%####four###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\four}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcFour}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw=#2, line width=#3pt] (248,513) -- (30,245);
 
 \draw[draw=#2, line width=#3pt] (30,245) -- (32,175);
@@ -4275,7 +4287,7 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%####five###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\five}[3]{
+\newcommand{\fcFive}[3]{
 \begin{tikzpicture}[scale = #1]
 \draw[draw=#2, line width=#3pt]
 	(-3.2,7.25) -- (4.65,7.25) -- (4.65,5.3) -- 
@@ -4299,7 +4311,7 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%####six###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\six}[3]{\begin{tikzpicture}[scale = #1]
+\newcommand{\fcSix}[3]{\begin{tikzpicture}[scale = #1]
 \draw[draw=#2, line width=#3pt] (15.4,28.4) node (v1) {} .. controls (-5.4,24.9) and (-0.9,-1.5) .. (10.7,1.2);
 \draw[draw=#2, line width=#3pt] (10.7,1.2) .. controls (28,6.1) and (16.6,25.4) .. (5.1,15.7);
 \draw[draw=#2, line width=#3pt] (5.1,15.8) .. controls (5.1,20.3) and (10.1,25.8) .. (15.7,26.6) node (v2) {};
@@ -4313,7 +4325,7 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%####seven###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\seven}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcSeven}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
     \draw[draw=#2,line width=#3pt] (70,25)--(118,25)--(383,534)--(383,559)--(34,560)--(35,414)--(54,414)..controls(76,505)..(320,498)--cycle;
 \end{tikzpicture}}
 
@@ -4321,7 +4333,7 @@ controls(0.8,-1)and(0.9,-0.9)..(1.1,-0.8);
 %%%%%%%%%%%%%%%%%%%####eight###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\eight}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcEight}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt] (134,271).. controls(5,323) and(20,420)..(76,474)..
 controls(156,550) and(278,525)..(330,471)..
@@ -4344,7 +4356,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%%%####nine###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\nine}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcNine}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 
 \draw[draw=#2, line width=#3pt, line width=#3pt ] (296,238)  .. controls (280,150) and (215,40) .. (82,37) -- (89,5)  .. controls (357,38) and (390,266) .. (373,365)  .. controls (335,555) and (60,580) .. (20,353)  .. controls (17,216) and (170,135) .. (296,238); %exterior
 
@@ -4356,7 +4368,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%%%####ten###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\ten}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcTen}[3]{ \begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 % ten
 \draw[draw=#2, line width=#3pt] (13,340) -- (13,316) -- (65, 316) -- (65, 99); 
 \draw[draw=#2, line width=#3pt] (13 , 340) .. controls (57, 345) .. (91,378);
@@ -4372,7 +4384,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####bus###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\bus}[3]{
+\newcommand{\fcBus}[3]{
 \begin{tikzpicture}[scale = #1]
 \draw[fill=black]  (6.2,2) node (v1) {} circle (0.2);
 \draw[draw=#2, line width=#3pt]  (v1) node (v2) {} circle (0.6);
@@ -4454,10 +4466,10 @@ controls(55,147) and(88,218)..(151,262);
 \end{tikzpicture}}
 
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%####daisy###%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%####FlowerE###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\daisy}[3]{\begin{tikzpicture}[scale = #1]
+\newcommand{\fcFlowerE}[3]{\begin{tikzpicture}[scale = #1]
 \draw[fill=black]  (11.3,12.4) ellipse (0.4 and 0.4);
 \draw[fill=black]  (12.5,11.3) ellipse (0.3 and 0.3);
 \draw[fill=black]  (11.1,11) ellipse (0.4 and 0.4);
@@ -4540,7 +4552,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%%%####gloves###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\gloves}[3]{\begin{tikzpicture}[scale = #1]
+\newcommand{\fcGloves}[3]{\begin{tikzpicture}[scale = #1]
 \draw[draw=#2, line width=#3pt]  plot[smooth, tension=.7] coordinates {(6.2,8.2) (11.8,8.1) (14.9,8.5) (18.6,8.1)};
 \draw[draw=#2, line width=#3pt]  plot[smooth, tension=.7] coordinates {(18.6,8.2) (18.7,5) (17,3.8) (8.7,3.9) (5.7,4.5) (6.3,8.2)};
 \draw[draw=#2, line width=#3pt] (18.1,8.2) .. controls (24.4,35) and (3.8,35.7) .. (7,17.6) node (v1) {};
@@ -4569,7 +4581,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%%%####key###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\key}[3]{\begin{tikzpicture}[scale = #1]
+\newcommand{\fcKey}[3]{\begin{tikzpicture}[scale = #1]
 \draw[draw=#2, line width=#3pt]  (16.7,5.5) node (v1) {} ellipse (3.6 and 3.7);
 \draw[draw=#2, line width=#3pt]   (18.1,5.6) ellipse (0.6 and 1.1);
 \draw[draw=#2, line width=#3pt]  (13.2,6.1) -- (1.4,6.1) -- (1.4,4.8) -- (13.2,4.8);
@@ -4583,7 +4595,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%%%####Owl###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\Owl}[3]{\begin{tikzpicture}[scale = #1]
+\newcommand{\fcOwlB}[3]{\begin{tikzpicture}[scale = #1]
 \draw[draw=#2, line width=#3pt] (6.8,17.5) .. controls (-4.4,-3) and (26.4,-3) .. (15.1,17.5);
 \draw[draw=#2, line width=#3pt]  (6.8,17.5) .. controls (6.2,15.8) and (15.9,15.6) .. (15.1,17.5);
 \draw[fill=black]  (9.5,14) node (v1) {} ellipse (0.5 and 0.5);
@@ -4609,7 +4621,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%%%####Pencil###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\Pencil}[3]{\begin{tikzpicture}[scale = #1]
+\newcommand{\fcPencilA}[3]{\begin{tikzpicture}[scale = #1]
 \draw[draw=#2, line width=#3pt] (4.7,6.6) node (v2) {} -- (18.5,18.8) node (v10) {};
 \draw[draw=#2, line width=#3pt] (20.8,15) node (v9) {} -- (6.9,2.9) node (v1) {};
 \draw[draw=#2, line width=#3pt] (v1) -- (0.9,0.5) node (v3) {} -- (v2);
@@ -4627,7 +4639,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%%%####rocket###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\rocket}[3]{\begin{tikzpicture}[scale = #1]
+\newcommand{\fcRocket}[3]{\begin{tikzpicture}[scale = #1]
 \draw[draw=#2, line width=#3pt]  plot[smooth, tension=.7] coordinates {(5.2,6.4) (5.6,19) (10,23.5)};
 \draw[draw=#2, line width=#3pt]   plot[smooth, tension=.7] coordinates {(10,23.5) (14.7,18.9) (15.5,6.3)};
 \draw[draw=#2, line width=#3pt]  (5.1,12) -- (2.8,11) -- (3,4.3) -- (4,6.8) -- (5.2,7.6);
@@ -4644,7 +4656,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####DUCK###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\DUCK}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
+\newcommand{\fcDuckB}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 \draw[draw=#2,line width=#3pt]
 (303,374).. controls (550,90) and (-10,70)..(82,291);
 \draw[draw=#2,line width=#3pt](82,291).. controls (97,330) and(96,366)..(87,406);
@@ -4667,7 +4679,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%####HAT###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-\newcommand{\HAT}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
+\newcommand{\fcHat}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2,line width=#3pt]
 (295,116)..controls(227,345) and (104,242)..(75,160);
@@ -4686,7 +4698,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%%%####SUN###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\SUN}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
+\newcommand{\fcSunB}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2,line width=#3pt](206,248) circle(98.7);
 \draw[draw=#2,line width=#3pt](162,340)..controls(60,388) and(22,294)..(102,238);
@@ -4702,7 +4714,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%####BUtterfly###%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\BUtterfly}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
+\newcommand{\fcButterflyB}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw=#2,line width=#3pt](199,89)..controls(456,206) and(47,416)..(156,120);
 \draw[draw=#2,line width=#3pt](134,209)..controls(-54,279) and(139,65)..(297,87);
@@ -4736,7 +4748,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\fpetals}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcFlowerC}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw = #2, line width=#3pt] (216,372) circle (4.6cm);
 \draw[draw = #2, line width=#3pt,fill=black] (190,368) circle (0.8cm);
 \draw[draw = #2, line width=#3pt,fill=black] (208,345) circle (0.8cm);
@@ -4802,7 +4814,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\cow}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcCow}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw = #2, line width=#3pt] (139,281) .. controls(129,289) and (116,292) .. (107,292) .. controls (94,291) and (82,286) .. (74,281) .. controls (69,270) and (70,255) .. (70,240) .. controls (71,236) and (74,231) .. (76,226) .. controls (77,222) and (76,219) .. (73,213) .. controls (72,211) and (71,203) .. (74,191)
 .. controls (76,188) and (77,184) .. (81,182) .. controls (107,179) .. (132,182) .. controls (136,185) and (140,189) .. (140,193) .. controls (141,199) and (141,208) .. (139,213.5) .. controls (135,224) .. (139,235) .. controls (142,240) and (144,249) .. (144,255) .. controls (144,265) and (142,277) .. (139,281);
 \draw[draw = #2, line width=#3pt] (70,242) .. controls (56,239) .. (41,243) .. controls (40,247) .. (43,252) .. controls (50,265) and (56,263) .. (70,263);
@@ -4861,7 +4873,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\fatbird}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcBirdB}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[draw = #2, line width=#3pt] (176,308) -- (206,308);
 \draw[draw = #2, line width=#3pt]  (176,308) .. controls (164,302) and (151,284) .. (149,267) .. controls (138,253) and (138,233) .. (149,229)  .. controls (153,225) .. (155,217) .. controls (160,213) .. (166,218) .. controls (172,211) and (183,211) .. (186,218) .. controls (192,211) and (203,211) .. (206,218) .. controls (210,212) and (214,212) .. (219,216) .. controls (225,213) .. (228,218); 
 \draw[draw = #2, line width=#3pt] (206,308) .. controls (218,302) and (230,284) .. (231,267) .. controls (244,253) and (244,233) .. (232,229) .. controls (228,225) .. (228,218);
@@ -4886,11 +4898,11 @@ controls(55,147) and(88,218)..(151,262);
 \end{tikzpicture}}
 
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%####bloom###%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%####FlowerD###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\bloom}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
+\newcommand{\fcFlowerD}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]
 \draw[fill=black,draw = #2, line width=#3pt] (209,227) -- (207,252) -- (195,252) -- (194,226) -- (186,239) -- (176,235) -- (180,220) -- (169,230) -- (161,224) -- (171,208) -- (145,217) -- (141,206) -- (168,195) -- (151,193) -- (153,183) -- (169,182) -- (155,173) -- (161,164) -- (175,171) -- (163,148) -- (170,142) -- (187,161) -- (187,146) -- (197,144) -- (203,158) -- (207,145) -- (217,146) -- (218,161) -- (235,143) -- (244,150) -- (230,170) -- (244,165) -- (249,174) -- (237,184) -- (252,182) -- (253,194) -- (238,197) -- (262,207) -- (259,216) -- (233,210) -- (243,222) -- (236,229) -- (224,221) -- (228,234) -- (218,239) -- (209,227);
 \draw[fill=white,white, line width=#3pt] (203,192) circle  (3.5 cm);
 \draw[fill=black,draw = #2, line width=#3pt] (203,192) circle (1.4 cm);
@@ -4902,11 +4914,11 @@ controls(55,147) and(88,218)..(151,262);
 \end{tikzpicture}}
 
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%####nestling###%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%####BirdD###%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\nestling}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
+\newcommand{\fcBirdD}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 \draw[draw = #2, line width=#3pt] (52,239) -- (19,229) -- (44,222) -- (25,213) -- (42,210);
 \draw[draw = #2, line width=#3pt] (359,138) -- (340,137) -- (361,160) -- (345,157) -- (366,182);
 \draw[draw = #2, line width=#3pt] (42,210)  .. controls (65,70) and (242,10) .. (359,138);
@@ -4943,7 +4955,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\cottage}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
+\newcommand{\fcHouseC}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 \draw[draw = #2, line width=#3pt] (76,23) -- (76,274) -- (201,490) -- (326,274) -- (326,23) -- (76,23);
 \draw[draw = #2, line width=#3pt] (76,274) -- (326,274);
 \draw[draw = #2, line width=#3pt] (145,23) -- (145,155) -- (253,155) -- (253,23);
@@ -4954,7 +4966,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\catface}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
+\newcommand{\fcCat}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 \draw[draw = #2, line width=#3pt] (59,107) -- (47,253);
 \draw[draw = #2, line width=#3pt] (188,14)  .. controls (130,15) and (70,40) .. (59,107);
 \draw[draw = #2, line width=#3pt] (47,253)  .. controls (59,290) and (82,260) .. (97,244);
@@ -5000,7 +5012,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\bisk}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
+\newcommand{\fcFishC}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 
 \draw[draw = #2, line width=#3pt] (54,133)  .. controls (103,116) and (145,71) .. (153,33);
 \draw[draw = #2, line width=#3pt] (53,29)  .. controls (90,25) and (115,26) .. (153,33);
@@ -5059,7 +5071,7 @@ controls(55,147) and(88,218)..(151,262);
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\sock}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
+\newcommand{\fcSock}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 \draw[draw = #2, line width=#3pt] (102,46)  .. controls (40,30) and (10,90) .. (46,136);
 \draw[draw = #2, line width=#3pt] (102,46)  .. controls (75,66) and (50,102) .. (46,136);
 \draw[draw = #2, line width=#3pt] (46,136)  .. controls (78,158) and (112,176) .. (122,180);
@@ -5075,12 +5087,207 @@ controls(55,147) and(88,218)..(151,262);
 \end{tikzpicture}}
 
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%####baseballbat###%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%####baseballbat###%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\baseballbat}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
+\newcommand{\fcBaseballBat}[3]{\begin{tikzpicture}[x = \imagescaleh, y = \imagescaleh, scale = (#1)/10]]
 \draw[draw = #2,line width=#3pt] (36,45) circle (1.3cm);
 \draw[draw = #2,line width=#3pt] (49,47)--(352,260)..controls(344,292)..(319,302)--(41,57);
 \end{tikzpicture}}
+
+%%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%####StrawberryA###%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
+    
+\newcommand{\fcStrawberryA}[3]{
+\begin{tikzpicture}[x=\imagescaleh, y=\imagescaleh, scale = (#1)/10]
+\draw[draw=#2, line width=#3pt, fill= #2 ](217,81) circle (1cm);   % circulo
+\draw[draw=#2, line width=#3pt, fill= #2 ](113,394) circle (1cm);
+\draw[draw=#2, line width=#3pt, fill= #2 ](144,144) circle (1cm);
+\draw[draw=#2, line width=#3pt, fill= #2 ](288,388) circle (1cm);
+\draw[draw=#2, line width=#3pt, fill= #2 ](265,136) circle (1cm);
+\draw[draw=#2, line width=#3pt, fill= #2 ](293,206) circle (1cm);
+\draw[draw=#2, line width=#3pt, fill= #2 ](183,196) circle (1cm);
+\draw[draw=#2, line width=#3pt, fill= #2 ](111,288) circle (1cm);
+\draw[draw=#2, line width=#3pt, fill= #2 ](185,283) circle (1cm);
+\draw[draw=#2, line width=#3pt, fill= #2 ](280,298) circle (1cm);
+\draw [draw=#2, line width=#3pt] (128,435)  .. controls (128,435) and (57,420) .. (51,369);
+\draw [draw=#2, line width=#3pt] (208,25)  .. controls (128,45) and (67,115) .. (51,369);
+\draw [draw=#2, line width=#3pt] (208,25)  .. controls (290,30) and (346,135) .. (365,378);
+\draw [draw=#2, line width=#3pt] (276,440)  .. controls (314,435) and (339,420) .. (365,378);
+\draw [draw=#2, line width=#3pt] (276,440)  .. controls (314,435) and (339,420) .. (365,378);
+\draw [draw=#2, line width=#3pt] (205,449)  .. controls (244,458) and (263,452) .. (279,444);
+\draw [draw=#2, line width=#3pt] (224,432)  .. controls (244,433) and (263,434) .. (279,444);
+\draw [draw=#2, line width=#3pt] (224,432)  .. controls (245,420) and (254,399) .. (259,375);
+\draw [draw=#2, line width=#3pt] (216,413)  .. controls (230,397) and (243,387) .. (259,375);
+\draw [draw=#2, line width=#3pt] (216,413)  .. controls (220,397) and (221,369) .. (206,344);
+\draw [draw=#2, line width=#3pt] (195,413)  .. controls (196,397) and (186,369) .. (206,344);
+\draw [draw=#2, line width=#3pt] (195,413)  .. controls (196,397) and (186,369) .. (206,344);
+\draw [draw=#2, line width=#3pt] (195,413)  .. controls (196,410) and (176,374) .. (151,366);
+\draw [draw=#2, line width=#3pt] (189,431)  .. controls (167,414) and (155,391) .. (151,366);
+\draw [draw=#2, line width=#3pt] (189,431)  .. controls (167,425) and (155,425) .. (125,430);
+\draw [draw=#2, line width=#3pt] (198,451)  .. controls (161,450) and (142,443) .. (125,430);
+\draw  [draw=#2, line width=#3pt]  (205,449) -- (197,449) -- (197, 473)-- (205,473) -- (205,449);
+\end{tikzpicture}    
+}
+
+
+%%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%####Atividades###%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%#############%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\fcSilabA	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{CA}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {\fcAlligator{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{JA\rule{1cm}{1pt}\rule{1cm}{1pt}RÉ}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{GA}}};	\node at ([yshift=-0.5cm]current page.center) {\fcAnt{1}{black}{1}\hspace{-1em}{\Huge~\textbf{FORMI\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{MA}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center){\fcApple{0.7}{black}{2}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}ÇÃ}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{LA}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center) {\fcBall{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{BO\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{BAS}}};	\node at ([yshift=-5cm]current page.center) {\fcBaseballBat{0.8}{black}{1}\hspace{-3em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}TÃO}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{GO}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center) {\fcBat{0.7}{black}{2}\hspace{-1em}{\Huge~\textbf{MORCE\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{SO}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {\fcBear{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{UR\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{BE}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center) {\fcBee{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{A\rule{1cm}{1pt}\rule{1cm}{1pt}LHA}}};	\end{tikzpicture}}
+\newcommand{\fcSilabB	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{LHA}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {\fcBeeA{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{ABE\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{NO}}};	\node at ([yshift=-0.5cm]current page.center) {\fcBellA{0.6}{black}{1}\hspace{-1em}{\Huge~\textbf{SI\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{CLE}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center){\fcBike{1}{black}{1}\hspace{-1em}{\Huge~\textbf{BICI\rule{1cm}{1pt}\rule{1cm}{1pt}TA}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{SÁ}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center) {\fcBird{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{PAS\rule{1cm}{1pt}\rule{1cm}{1pt}RO}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{PAS}}};	\node at ([yshift=-5cm]current page.center) {\fcBirdA{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}SÁRO}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{RO}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {\fcBirdB{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{PASSÁ\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{RO}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center) {\fcBirdC{0.6}{black}{1}\hspace{-1em}{\Huge~\textbf{PASSÁ\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{CO}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center) {\fcBoat{0.6}{black}{2}\hspace{-1em}{\Huge~\textbf{BAR\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	\end{tikzpicture}}
+\newcommand{\fcSilabC	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{BO}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {\fcBonnet{0.7}{black}{2}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}NÉ}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{VRO}}};	\node at ([yshift=-0.5cm]current page.center) {\fcBookA{0.6}{black}{1}\hspace{-1em}{\Huge~\textbf{LI\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{LI}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center){\fcBookB{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}VRO}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{SOU}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center) {\fcBroom{0.3}{black}{1}\hspace{-1em}{\Huge~\textbf{VAS\rule{1cm}{1pt}\rule{1cm}{1pt}RA}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{BOI}}};	\node at ([yshift=-5cm]current page.center) {\fcBull{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{LA}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {\fcBullet{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{BA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{BUS}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center) {\fcBus{0.3}{black}{1}\hspace{-1em}{\Huge~\textbf{ÔNI\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{BOR}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center) {\fcButterfly{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}BOLETA}}};	\end{tikzpicture}}
+\newcommand{\fcSilabD	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{BO}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center) {\fcButterflyA{0.6}{black}{1}\hspace{-1em}{\Huge~\textbf{BOR\rule{1cm}{1pt}\rule{1cm}{1pt}LETA}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{TA}}};	\node at ([yshift=-0.5cm]current page.center) {\fcButterflyB{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{BORBOLE\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{LA}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center){\fcCandle{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{VE\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{RO}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center) {\fcCar{0.7}{black}{2}\hspace{-1em}{\Huge~\textbf{CAR\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{CE}}};	\node at ([yshift=-5cm]current page.center) {\fcCarrot{0.3}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}NOURA}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{TO}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {\fcCat{0.8}{black}{1}\hspace{-1em}{\Huge~\textbf{GA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{TO}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center) {\fcCentipede{0.4}{black}{1}\hspace{-1em}{\Huge~\textbf{CEN\rule{1cm}{1pt}\rule{1cm}{1pt}PÉIA}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{RE}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {\fcCherry{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{CE\rule{1cm}{1pt}\rule{1cm}{1pt}JA}}};	\end{tikzpicture}}
+\newcommand{\fcSilabE	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{VO}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {\fcChristmasTree{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{ÁR\rule{1cm}{1pt}\rule{1cm}{1pt}RE}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{NU}}};	\node at ([yshift=-0.5cm]current page.center) {\fcCloud{1}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}VEM}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{VA}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center){\fcCow{0.8}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}CA}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{CA}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center) {\fcCrownA{0.7}{black}{2}\hspace{-1em}{\Huge~\textbf{CO\rule{1cm}{1pt}\rule{1cm}{1pt}A}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{KE}}};	\node at ([yshift=-5cm]current page.center) {\fcCupcake{0.7}{black}{2}\hspace{-1em}{\Huge~\textbf{CUPCA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{RO}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center) {\fcDog{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{CACHOR\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{NHO}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center) {\fcDolphin{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{GOLFI\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{TO}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {\fcDuck{0.5}{black}{2}\hspace{-1em}{\Huge~\textbf{PA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	\end{tikzpicture}}
+\newcommand{\fcSilabF	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{PA}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {\fcDuckA{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}TO}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{TO}}};	\node at ([yshift=-0.5cm]current page.center) {\fcDuckB{0.4}{black}{1}\hspace{-1em}{\Huge~\textbf{PA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{VO}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center){\fcEgg{0.4}{black}{2}\hspace{-1em}{\Huge~\textbf{O\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{O}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center) {\fcEggA{0.5}{black}{2}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}VO}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{VO}}};	\node at ([yshift=-5cm]current page.center) {\fcEggB{0.4}{black}{1}\hspace{-1em}{\Huge~\textbf{O\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{TO}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {\fcEight{0.3}{black}{1}\hspace{-1em}{\Huge~\textbf{OI\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{TE}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center) {\fcElephant{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{ELEFAN\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{FAN}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center) {\fcElephantA{1}{black}{1}\hspace{-1em}{\Huge~\textbf{ELE\rule{1cm}{1pt}\rule{1cm}{1pt}TE}}};	\end{tikzpicture}}
+\newcommand{\fcSilabG	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{DOR}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center) {\fcFan{0.5}{black}{2}\hspace{-1em}{\Huge~\textbf{VENTILA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{XE}}};	\node at ([yshift=-0.5cm]current page.center) {\fcFishA{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{PEI\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{PE}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center){\fcFishB{0.6}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}IXE}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{PE}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center) {\fcFishC{0.8}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}IXE}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{CO}}};	\node at ([yshift=-5cm]current page.center) {\fcFive{0.1}{black}{1}\hspace{-1em}{\Huge~\textbf{CIN\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{GO}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {\fcFlamingo{0.6}{black}{2}\hspace{-1em}{\Huge~\textbf{FLAMIN\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{FLA}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center) {\fcFlamingoA{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}MINGO}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{FLOR}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {\fcFlower{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	\end{tikzpicture}}
+\newcommand{\fcSilabH	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{FLOR}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {\fcFlowerA{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{FLOR}}};	\node at ([yshift=-0.5cm]current page.center) {\fcFlowerB{0.3}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{FLOR}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center){\fcFlowerC{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{FLOR}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center) {\fcFlowerD{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{FLOR}}};	\node at ([yshift=-5cm]current page.center) {\fcFlowerE{0.1}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{FLOR}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {\fcFlowerF{0.6}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{DOR}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center) {\fcFlyingSaucer{0.6}{black}{1}\hspace{-1em}{\Huge~\textbf{DISCO VOA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{TRO}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center) {\fcFour{0.3}{black}{1}\hspace{-1em}{\Huge~\textbf{QUA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	\end{tikzpicture}}
+\newcommand{\fcSilabI	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{PO}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {\fcFrog{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{SA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{MA}}};	\node at ([yshift=-0.5cm]current page.center) {\fcGhost{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{FANTAS\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{GI}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center){\fcGiraffe{0.5}{black}{2}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}RAFA}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{RA}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center) {\fcGiraffeA{0.4}{black}{1}\hspace{-1em}{\Huge~\textbf{GI\rule{1cm}{1pt}\rule{1cm}{1pt}FA}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{PO}}};	\node at ([yshift=-5cm]current page.center) {\fcGlass{0.5}{black}{2}\hspace{-1em}{\Huge~\textbf{CO\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{VA}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {\fcGloves{0.07}{black}{1}\hspace{-1em}{\Huge~\textbf{LU\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{TO}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center) {\fcGnat{0.6}{black}{2}\hspace{-1em}{\Huge~\textbf{MOSQUI\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{SO}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center) {\fcGoose{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{GAN\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	\end{tikzpicture}}
+\newcommand{\fcSilabJ	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{PÉU}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {\fcHat{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{CHA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{CHA}}};	\node at ([yshift=-0.5cm]current page.center) {\fcHatA{0.6}{black}{2}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}PÉU}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{TA}}};	\node at ([yshift=-5cm]current page.center){\fcHippo{0.4}{black}{1}\hspace{-1em}{\Huge~\textbf{HIPOPÓ\rule{1cm}{1pt}\rule{1cm}{1pt}MO}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{VA}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center) {\fcHorse{1}{black}{1}\hspace{-1em}{\Huge~\textbf{CA\rule{1cm}{1pt}\rule{1cm}{1pt}LO}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{SA}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center) {\fcHouse{0.7}{black}{2}\hspace{-1em}{\Huge~\textbf{CA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{CA}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {\fcHouseA{0.6}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}SA}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{SA}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center) {\fcHouseB{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{CA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{VE}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center) {\fcIceCream{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{SOR\rule{1cm}{1pt}\rule{1cm}{1pt}TE}}};	\end{tikzpicture}}
+\newcommand{\fcSilabK	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{VE}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {\fcKey{0.1}{black}{1}\hspace{-1em}{\Huge~\textbf{CHA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{PA}}};	\node at ([yshift=-0.5cm]current page.center) {\fcKite{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{PI\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{NHA}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center){\fcLadyBug{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{JOANI\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{LE}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center) {\fcLion{0.6}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}ÃO}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{RE}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center) {\fcMailbox{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{CAIXA DE COR\rule{1cm}{1pt}\rule{1cm}{1pt}IO}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{CA}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {\fcMonkey{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{MA\rule{1cm}{1pt}\rule{1cm}{1pt}CO}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{LU}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center) {\fcMoon{0.8}{black}{2}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}A}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{TO}}};	\node at ([yshift=-5cm]current page.center) {\fcMouse{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{RA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	\end{tikzpicture}}
+\newcommand{\fcSilabL	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{RA}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {\fcMouseA{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}TO}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{NE}}};	\node at ([yshift=-0.5cm]current page.center) {\fcMug{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{CA\rule{1cm}{1pt}\rule{1cm}{1pt}CA}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{ME}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center){\fcMushroom{0.2}{black}{1}\hspace{-1em}{\Huge~\textbf{COGU\rule{1cm}{1pt}\rule{1cm}{1pt}LO}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{VE}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center) {\fcNine{0.3}{black}{1}\hspace{-1em}{\Huge~\textbf{NO\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{VO}}};	\node at ([yshift=-5cm]current page.center) {\fcOctopus{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{POL\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{UM}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {\fcOne{0.3}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{JA}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center) {\fcOwlA{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{CORU\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{RU}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center) {\fcOwlB{0.1}{black}{1}\hspace{-1em}{\Huge~\textbf{CO\rule{1cm}{1pt}\rule{1cm}{1pt}JA}}};	\end{tikzpicture}}
+\newcommand{\fcSilabM	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{VÃO}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {\fcPeacock{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{PA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{PIS}}};	\node at ([yshift=-0.5cm]current page.center) {\fcPencil{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{LÁ\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{LÁ}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center){\fcPencilA{0.1}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}PIS}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{FO}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center) {\fcPhone{0.8}{black}{2}\hspace{-1em}{\Huge~\textbf{TELE\rule{1cm}{1pt}\rule{1cm}{1pt}NE}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{CO}}};	\node at ([yshift=-5cm]current page.center) {\fcPig{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{POR\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{TE}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {\fcPineapple{0.4}{black}{1}\hspace{-1em}{\Huge~\textbf{ABACA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{ÃO}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center) {\fcPlane{1}{black}{1}\hspace{-1em}{\Huge~\textbf{AVI\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{AVI}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center) {\fcPlaneA{1}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}ÃO}}};	\end{tikzpicture}}
+\newcommand{\fcSilabN	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{BO}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center) {\fcPumpkinA{1}{black}{1}\hspace{-1em}{\Huge~\textbf{ABÓ\rule{1cm}{1pt}\rule{1cm}{1pt}RA}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{E}}};	\node at ([yshift=-0.5cm]current page.center) {\fcRabbit{0.5}{black}{2}\hspace{-1em}{\Huge~\textbf{CO\rule{1cm}{1pt}\rule{1cm}{1pt}LHO}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{LHO}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center){\fcRabbitA{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{COE\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{PÃO}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center) {\fcRobe{0.4}{black}{2}\hspace{-1em}{\Huge~\textbf{ROU\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{GUE}}};	\node at ([yshift=-5cm]current page.center) {\fcRocket{0.1}{black}{1}\hspace{-1em}{\Huge~\textbf{FO\rule{1cm}{1pt}\rule{1cm}{1pt}TE}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{DÁ}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center) {\fcSandal{0.8}{black}{2}\hspace{-1em}{\Huge~\textbf{SAN\rule{1cm}{1pt}\rule{1cm}{1pt}LIA}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{TE}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {\fcSeven{0.3}{black}{1}\hspace{-1em}{\Huge~\textbf{SE\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{LHA}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {\fcSheep{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{OVE\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	\end{tikzpicture}}
+\newcommand{\fcSilabO	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{OVE}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {\fcSheet{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}LHA}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{VIO}}};	\node at ([yshift=-0.5cm]current page.center) {\fcShip{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{NA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{LA}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center){\fcShootingStar{1}{black}{1}\hspace{-1em}{\Huge~\textbf{ESTRE\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{SE}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center) {\fcSix{0.08}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}IS}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{ME}}};	\node at ([yshift=-5cm]current page.center) {\fcSock{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}IA}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{NHA}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {\fcSpider{0.8}{black}{2}\hspace{-1em}{\Huge~\textbf{ARA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{QUI}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center) {\fcSquirrel{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{ES\rule{1cm}{1pt}\rule{1cm}{1pt}LO}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{ES}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center) {\fcSquirrelA{0.7}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}QUILO}}};	\end{tikzpicture}}
+\newcommand{\fcSilabP	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{TRE}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {\fcStar{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{ES\rule{1cm}{1pt}\rule{1cm}{1pt}LA}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{LA}}};	\node at ([yshift=-0.5cm]current page.center) {\fcStarA{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{ESTRE\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{RAN}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center){\fcStrawberry{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{MO\rule{1cm}{1pt}\rule{1cm}{1pt}GO}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{MO}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center) {\fcStrawberryA{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}RANGO}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{SOL}}};	\node at ([yshift=-5cm]current page.center) {\fcSun{1}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{SOL}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {\fcSunA{0.8}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{SOL}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center) {\fcSunB{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{DEZ}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center) {\fcTen{0.3}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	\end{tikzpicture}}
+\newcommand{\fcSilabQ	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{TRÊS}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {\fcThree{0.3}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{TOR}}};	\node at ([yshift=-0.5cm]current page.center) {\fcTractor{0.6}{black}{2}\hspace{-1em}{\Huge~\textbf{TRA\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{TREM}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center){\fcTrain{1}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{NHÃO}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center) {\fcTruck{1}{black}{1}\hspace{-1em}{\Huge~\textbf{CAMI\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{CO}}};	\node at ([yshift=-5cm]current page.center) {\fcTrunk{1}{black}{1}\hspace{-1em}{\Huge~\textbf{TRON\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{GA}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {\fcTurtle{1}{black}{1}\hspace{-1em}{\Huge~\textbf{TARTARU\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{TAR}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center) {\fcTurtleA{1}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}TARUGA}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{DOIS}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center) {\fcTwo{0.3}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	\end{tikzpicture}}
+\newcommand{\fcSilabR	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{VA}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {\fcUmbrella{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{GUARDA-CHU\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{VAN}}};	\node at ([yshift=-0.5cm]current page.center) {\fcVan{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{CIA}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center){\fcWatermelon{1}{black}{1}\hspace{-1em}{\Huge~\textbf{MELAN\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{CHA}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center) {\fcWitchHat{0.5}{black}{1}\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}PÉU}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{}}};	\node at ([yshift=-5cm]current page.center) {ZZZ Coloque a Figura Aqui\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {ZZZ Coloque a Figura Aqui\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center) {ZZZ Coloque a Figura Aqui\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center) {ZZZ Coloque a Figura Aqui\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	\end{tikzpicture}}
+\newcommand{\fcSilabS	}[1]{ \thispagestyle{empty} \begin{tikzpicture}[font=\sffamily,remember picture,overlay] \path (current page.north) node[below=0.7cm, draw=black, fill=white, minimum width=0.95\paperwidth, minimum height=4cm, rounded corners=15pt, line width=3pt] (box){};	\path (box.west) node[right=1mm, align=left] {{\fontsize{45pt}{65pt}\color{black}\textbf{Nome:}}~~\rule{0.8\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Escola:}} ~~\rule{0.78\paperwidth}{1pt}\\[5mm] {\fontsize{45pt}{65pt}\color{black}\textbf{Professor(a):}} ~~\rule{0.68\paperwidth}{1pt}}; \path (current page.center) node[draw, minimum width=0.98\paperwidth, minimum height=0.95\paperheight, rounded corners=15pt, line width=3pt] (box) {} node[below=13.4cm] {\textbf{figchild} - Pacote do \LaTeX\ para criação de Atividades}; \node at ([xshift=9cm, yshift=7.5cm]current page.west) {{\Huge Complete as palavras com as sílabas abaixo:}};	\path ([xshift=2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{}}};	\node at ([xshift=-7cm, yshift=-0.5cm]current page.center) {ZZZ Coloque a Figura Aqui\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{}}};	\node at ([yshift=-0.5cm]current page.center) {ZZZ Coloque a Figura Aqui\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{}}};	\node at ([xshift=7cm, yshift=-0.5cm]current page.center){ZZZ Coloque a Figura Aqui\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=6cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{}}};	\node at ([xshift=-7.5cm, yshift=-5cm]current page.center) {ZZZ Coloque a Figura Aqui\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=6cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{}}};	\node at ([yshift=-5cm]current page.center) {ZZZ Coloque a Figura Aqui\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{}}};	\node at ([xshift=7cm, yshift=-5cm]current page.center) {ZZZ Coloque a Figura Aqui\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=-2cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{}}};	\node at ([xshift=-5cm, yshift=-9.5cm]current page.center) {ZZZ Coloque a Figura Aqui\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	
+			\path ([xshift=2cm, yshift=-3cm]current page.north) node[below=7.5cm, draw=black, fill=white, minimum width=3cm, minimum height=2cm, rounded corners=15pt, line width=3pt] (box){{\Huge \textbf{}}};	\node at ([xshift=3.5cm, yshift=-9.5cm]current page.center) {ZZZ Coloque a Figura Aqui\hspace{-1em}{\Huge~\textbf{\rule{1cm}{1pt}\rule{1cm}{1pt}}}};	\end{tikzpicture}}
     
