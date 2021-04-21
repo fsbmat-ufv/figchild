@@ -1,5 +1,6 @@
-\documentclass{article}
+\documentclass[x11names]{article}
 \usepackage[english]{babel}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{figchild}
 \usepackage{verbatim}
@@ -14,10 +15,21 @@
 \usepackage{geometry}
 \geometry{top=2cm, left=2cm, right=2cm, bottom=2cm}
 \usepackage[bf]{caption}
+\usepackage{aurical}
+\usepackage{xcolor}
+%\makeatletter
+%\newcommand\HUGE{\@setfontsize\Huge{50}{60}}
+%\makeatother 
+\definecolor{bluetop}{RGB}{24, 24, 181}
+\definecolor{bookred}{RGB}{129, 57, 55}
+
+
 
 \begin{document}
 
-\begin{titlepage}
+\input{capa}
+
+\thispagestyle{empty}
 
 \begin{center}
 
@@ -29,7 +41,7 @@
 
 \vspace{0.5cm}
 
-\version{1}{1}{0}
+\version{1}{1}{1}
 
 \vspace{0.5cm}
 
@@ -73,7 +85,7 @@
 
 \noindent Released under the LaTeX Project Public License v1.3c or later. See \url{http://www.latex-project.org/lppl.txt}. Feature requests, issues and pull requests are welcome.
 
-\end{titlepage}
+\newpage
 
 \begin{abstract}
 This package was created with the aim of facilitating the work of Elementary School teachers who need to create colorful and attractive activities for their students. It is a product of the Computational Mathematics discipline offered at the Federal University of Viçosa - Campus UFV - Florestal by professor Fernando de Souza Bastos. It makes use of the tikz and xcolor packages.
@@ -129,6 +141,11 @@ For example, to create a little train in the center of the page, of size 2, gray
 
 %\newgeometry{top=1.5cm, left=2cm, right=2cm, bottom=2cm}
 %\afterpage{\globaldefs=1 \newgeometry{top=1.5cm, left=0.5cm, right=0.5cm, bottom=2cm}}
+\newpage
+
+\section{Figures}
+
+\newpage
 
 \begin{table}[H]\centering\begin{tabular}{|c|l|c|}\hline {\bf Command}& \multicolumn{1}{c|}{{\bf Options}} & {\bf Figures}\\  \hline	&&\multirow{5}{*}{\fcAlligator{0.7}{black}{1}}\\	&&\\	&\verb|#1|: Figure Scale &\\	\verb|\fcAlligator{#1}{#2}{#3}|&	\verb|#2|: drawing line color &\\	&\verb|#3|: Line thickness (pt) &\\ &&\\&&	\verb|\fcAlligator{0.7}{black}{1}|\\\hline 	
 	&&\multirow{5}{*}{\fcAnt{1}{black}{1}}\\	&&\\	&\verb|#1|: Figure Scale &\\	\verb|\fcAnt{#1}{#2}{#3}|&	\verb|#2|: drawing line color &\\	&\verb|#3|: Line thickness (pt) &\\ &&\\&&	\verb|\fcAnt{1}{black}{1}|\\\hline 	
@@ -274,6 +291,59 @@ For example, to create a little train in the center of the page, of size 2, gray
 	&&\multirow{5}{*}{Put the Figure Here!}\\	&&\\	&\verb|#1|: Figure Scale &\\	\verb|Put the Figure Here!{#1}{#2}{#3}|&	\verb|#2|: drawing line color &\\	&\verb|#3|: Line thickness (pt) &\\ &&\\&&	\verb|Put the Figure Here!|\\\hline 	
 	&&\multirow{5}{*}{Put the Figure Here!}\\	&&\\	&\verb|#1|: Figure Scale &\\	\verb|Put the Figure Here!{#1}{#2}{#3}|&	\verb|#2|: drawing line color &\\	&\verb|#3|: Line thickness (pt) &\\ &&\\&&	\verb|Put the Figure Here!|\\\hline 	
 	&&\multirow{5}{*}{Put the Figure Here!}\\	&&\\	&\verb|#1|: Figure Scale &\\	\verb|Put the Figure Here!{#1}{#2}{#3}|&	\verb|#2|: drawing line color &\\	&\verb|#3|: Line thickness (pt) &\\ &&\\&&	\verb|Put the Figure Here!|\\\hline 	\hline\end{tabular}\caption{Figures Model 18}\label{tab18}\end{table}
+
+\newpage
+
+\section{Activity Suggestions}
+
+In the next pages we create activities in Portuguese, mathematics and ludic activities, which can be used by teachers, parents, monitors or by people interested in teaching elementary school children. With basic commands you can create an entire page of activities and print. The commands follow below. Enjoy the figchild package!
+
+\vspace{3cm}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+\textbf{Activity} & \textbf{Command} & \textbf{Idiom} \\
+\hline
+Complete Missing Syllables& \verb|\fcSilabA{}|& Portuguese\\
+\hline
+Complete Missing Syllables& \verb|\fcSilabB{}|& Portuguese\\
+\hline
+Complete Missing Syllables& \verb|\fcSilabC{}|& Portuguese\\
+\hline
+Complete Missing Syllables& \verb|\fcSilabD{}|& Portuguese\\
+\hline
+Complete Missing Syllables& \verb|\fcSilabE{}|& Portuguese\\
+\hline
+Complete Missing Syllables& \verb|\fcSilabF{}|& Portuguese\\
+\hline
+Complete Missing Syllables& \verb|\fcSilabG{}|& Portuguese\\
+\hline
+Complete Missing Syllables& \verb|\fcSilabH{}|& Portuguese\\
+\hline
+Complete Missing Syllables& \verb|\fcSilabI{}|& Portuguese\\
+\hline
+Complete Missing Syllables& \verb|\fcSilabJ{}|& Portuguese\\
+\hline
+Complete Missing Syllables& \verb|\fcSilabK{}|& Portuguese\\
+\hline
+Complete Missing Syllables& \verb|\fcSilabL{}|& Portuguese\\
+\hline
+Complete Missing Syllables& \verb|\fcSilabM{}|& Portuguese\\
+\hline
+Complete Missing Syllables& \verb|\fcSilabN{}|& Portuguese\\
+\hline
+Complete Missing Syllables& \verb|\fcSilabO{}|& Portuguese\\
+\hline
+Complete Missing Syllables& \verb|\fcSilabP{}|& Portuguese\\
+\hline
+\end{tabular}
+\caption{Complete Missing Syllables}
+\label{Activies1}
+\end{table}
+
+\newpage
 
 \fcSilabA{}
 
