@@ -1,0 +1,142 @@
+\documentclass[a4paper,dvipsnames]{article}
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usepackage[v2]{figchild}
+\title{A new user interface for the \texttt{figchild} package}
+\author{Matthias Flor\'e}
+\date{2022/10/30}
+\begin{document}
+\maketitle
+This document describes a new user interface for the \texttt{figchild} package.
+
+The new user interface can be used with \verb|\usepackage[v2]{figchild}|. Note the package option \verb|v2|.
+
+In this case, the macros defined in the file \verb|figchild.sty| take one optional argument which accepts a list of Ti\emph{k}Z keys.
+
+With the old interface, a scale, color and line width have to be given as mandatory arguments. With the new interface, this looks for example as below:
+
+\begin{tikzpicture}
+\fcDaisy[
+    scale=0.2,
+    ForestGreen,
+    line width=2pt
+]
+\end{tikzpicture}
+
+The new interface allows to give different styles for different parts of the figure, as in the example below:
+
+\begin{tikzpicture}
+\fcDaisy[
+    scale=0.3,
+    ultra thick,
+    minor A={
+        Dandelion!75!black,
+        fill=Dandelion
+    },
+    minor B=Dandelion!75!black,
+    minor C={
+        Brown!75!black,
+        fill=Brown!50!white
+    },
+    minor D=black,
+    minor E={
+        ForestGreen,
+        fill=ForestGreen!50,
+        line width=2pt,
+        dotted
+    }
+]
+\end{tikzpicture}
+
+With the old interface, a \texttt{figchild} figure was already a \verb|tikzpicture| on its own. This makes it unconvenient to make a picture with several \texttt{figchild} figures. With the new interface, a \texttt{figchild} figure is not a \verb|tikzpicture| on its own thus it is easier to make a figure such as below:
+
+\begin{tikzpicture}[
+    scale=0.19,
+    background rectangle/.style={fill=ForestGreen},
+    show background rectangle
+]
+\foreach\n in {1,...,5}{
+    \fcDaisy[shift={({12*\n},{3*(-1)^\n})}]
+}
+\end{tikzpicture}
+
+With the new syntax, it is also very easy to perform transformations on a figure, for example the figure below is mirrored:
+
+\begin{tikzpicture}
+\fcCloudC[
+    xscale=-1,
+    scale=0.5
+]
+\end{tikzpicture}
+
+Below are $3$ more examples of the benefits described above. Note that for \verb|\fcChristmasTree|, the sequence in the code was changed such that the tree is drawn before the christmas balls.
+
+\begin{tikzpicture}
+\fcChristmasTree[
+    minor A={
+        ForestGreen,
+        ultra thick,
+        fill=ForestGreen!50!white
+    },
+    minor B={
+        Brown!75!black,
+        ultra thick,
+        fill=Brown!50!white
+    },
+    minor C={
+        Gray,
+        thick,
+        fill=Red
+    }
+]
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\fcCloudA[
+    scale=0.9,
+    minor A={
+        SkyBlue,
+        line width=2pt,
+        fill=SkyBlue!25!white
+    },
+    minor B={
+        Goldenrod,
+        line width=6pt
+    }
+]
+\end{tikzpicture}
+
+\begin{tikzpicture}[
+    background rectangle/.style={fill=MidnightBlue!75},
+    show background rectangle
+]
+\fcCloudC[
+    scale=0.5,
+    SkyBlue,
+    ultra thick,
+    minor A=Red,
+    minor B=Orange,
+    minor C=Yellow,
+    minor D=Green,
+    minor E=Blue,
+    minor F=BlueViolet,
+    minor G=Violet,
+    minor H={fill=SkyBlue!50!white},
+    minor I={black,fill=SkyBlue!25!white}
+]
+\end{tikzpicture}
+
+Below are some remarks on the code in the \verb|.sty| file:
+\begin{enumerate}
+\item In the code for \verb|\fcChristmasTree| was the line
+
+\verb|\draw[draw=#2, line width=#3pt];|.
+
+Either some drawing instruction was missing or this line can be removed.
+\item In the \verb|.sty| file the macros \verb|\imagewidthh|, \verb|\imagescaleh| and \verb|\version| were defined. Hence, a user cannot use these variable names anymore because this will for example give the error
+
+\verb|LaTeX Error: Command \version already defined.|.
+
+This can be solved for example by putting \verb|figchild@| in front of these names, such as in the new version of the \verb|.sty| file. The \verb|\version| command does not need to be defined in the \verb|.sty| file but only in the manual.
+\end{enumerate}
+\end{document}
