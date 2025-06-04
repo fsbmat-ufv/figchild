@@ -1,8 +1,7 @@
 %Copyright 2021 by Fernando de Souza Bastos
 \NeedsTeXFormat{LaTeX2e}
-%Version 1.1.1 (2021/04/21)
-%Version 2.1.1 (2022/03/22)
-\ProvidesPackage{figchild}[2022/03/22 Package for creating activities for children version 2.1.1]
+
+\ProvidesPackage{figchild}[2025/06/04 Package for creating activities for children version 3.1.1]
 
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
@@ -20,9 +19,6 @@
 %See \url{http://www.latex-project.org/lppl.txt}. 
 %Feature requests, issues and pull requests are welcome.
 
-\newcommand{\version}[3]{
-    version #1.#2.#3
-}
 %%%%%%%%%%%%%%%%%%%##Coruja##%%%%%%%%%%%%%%%%%%%
 \newcommand{\fcOwlA}[1][]{%
 \begin{tikzpicture}[
@@ -5063,7 +5059,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 %%%%%%%%%%%%%%%%%%%   FishD   %%%%%%%%%%%%%%
 
 
-\newcommand{\fcFishD}[3] {
+\newcommand{\fcFishD}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (0.1,-3.4) .. controls (0.5,-4.4) and (-0.2,-4.6) .. (-0.8,-4.3) .. controls (-1.3,-4.3) and (-1.2,-4.9) .. (-1.1,-5.4);
     \draw (0.2,-3.7) -- (2.8,-3.8);
@@ -5091,7 +5087,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 %%%%%%%%%%%%%%%%%%% DolphinA %%%%%%%%%%%%%%%
 
 
-\newcommand{\fcDolphinA}[3] {
+\newcommand{\fcDolphinA}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-4.1,1) -- (-1.6,0.2);
     \draw [ ,rotate=30] (-2,5.7) ellipse (0.55 and 0.4);
@@ -5113,7 +5109,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 %%%%%%%%%%%%%%%%%%% Seahorse %%%%%%%%%%%%%%%
 
 
-\newcommand{\fcSeahorse}[3] {
+\newcommand{\fcSeahorse}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (1.4,1.9) ellipse (0.8 and );
     \draw (1.78,1.9) ellipse (0.2 and 0.3);
@@ -5145,7 +5141,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 %%%%%%%%%%%%%%%%%%% FishE %%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\fcFishE}[3] {
+\newcommand{\fcFishE}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-8.6,0.2) .. controls (-7.8,0.2) and (-7.3,1.6) .. (-6.4,1.9);    
     \draw (-6.4,1.9) .. controls (-5.9,2.1) and (-5.6,1.8) .. (-5.6,1) .. controls (-5.7,0.4) and (-5.7,0.1) .. (-5.5,-0.3) .. controls (-5.4,-0.5) and (-5.4,-0.9) .. (-5.7,-1.2) .. controls (-6,-1.3) and (-6.4,-1.4) .. (-6.7,-1.2) .. controls (-7,-1) and (-7.1,-0.9) .. (-7.3,-0.7);
@@ -5211,7 +5207,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 %%%%%%%%%%%%%%%%%%% FishF %%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\fcFishF}[3] {
+\newcommand{\fcFishF}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-8.9,-0.2) .. controls (-8.5,0.2) and (-8,0.4) .. (-7.6,0.9) .. controls (-7.2,1.2) and (-6.7,1.4) .. (-6.3,1.5) .. controls (-4.3,2.4) and (-0.4,2.3) .. (2.4,1.3) .. controls (4,0.5) and (6.5,0.4) .. (7.5,1) .. controls (7.9,1.2) and (7.7,0.5) .. (6.3,-0.3) .. controls (5.7,-0.3) and (5.2,-0.3) .. (4.3,-0.4) .. controls (3.4,-0.5) and (2.8,-0.6) .. (0.6,-1) node (v1) {} .. controls (-0.8,-1.1) and (-2.4,-1.2) .. (-3.8,-1.1) .. controls (-3.8,-1.1) and (-3.5,-1.6) .. (-3.8,-2.3) .. controls (-4.4,-2.4) and (-4.8,-1.5) .. (-5,-1.1) .. controls (-5.3,-1) and (-5.7,-0.9) .. (-6.2,-0.8) .. controls (-6.5,-0.9) and (-7.1,-0.9) .. (-7.3,-0.7) .. controls (-7.6,-0.7) and (-8.3,-0.7) .. (-8.9,-0.2);
     \draw (-9.1,-0.5) .. controls (-8.9,-0.5) and (-8.8,-0.4) .. (-8.8,-0.3);
@@ -5289,7 +5285,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 %%%%%%%%%%%%%%%%%%% FishG %%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\fcFishG}[3] {
+\newcommand{\fcFishG}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-7.8,0.2) .. controls (-8.1,-0.2) and (-8.5,0.1) .. (-8.84,0.38) .. controls (-8.9,0.5) and (-9.1,1.1) .. (-8.4,1.3) .. controls (-7.6,1.6) and (-6.8,1.8) .. (-5.8,1.9) .. controls (-3.6,2.5) and (4.6,2.1) .. (5.1,1.9) .. controls (5.4,1.8) and (6,1.8) .. (6.12,1.8) .. controls (5.97,1.5) and (5.94,1) .. (6.2,0.8) .. controls (5.7,0.6) and (5.03,0.38) .. (4.36,-0.16) node (v1) {} .. controls (3.7,-0.7) and (2.1,-1.6) .. (1.4,-1.9) .. controls (0.5,-2.4) and (-3.1,-3) .. (-6.1,-1.6) .. controls (-6.9,-1.5) and (-7.9,-0.9) .. (-8.4,-0.5) .. controls (-8.6,-0.2) and (-8.7,0) .. (-8.7,0.2);
     \draw (-6.98,1.74) .. controls (-6.3,1.5) and (-5.9,0.6) .. (-6.1,-0.1) .. controls (-6.2,-0.7) and (-7,-1.1) .. (-7.87,-0.87);
@@ -5335,7 +5331,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 %%%%%%%%%%%%%%%%%%% FishH %%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\fcFishH}[3] {
+\newcommand{\fcFishH}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-4.4,-2) .. controls (-4.2,-2.2) and (-3.9,-2.4) .. (-3.3,-3.3) .. controls (-2.4,-4.1) and (-1.3,-3.7) .. (-1.1,-3.3) .. controls (-1.2,-4) and (-2.7,-4.2) .. (-3.5,-3.4) .. controls (-3.7,-3.1) and (-4.1,-2.5) .. (-4.3,-2.3) .. controls (-4.5,-2.1) and (-5.1,-2) .. (-5.5,-2) .. controls (-6.5,-2) and (-7.1,-1.8) .. (-7.2,-1.5) node (v2) {} .. controls (-8,-1.3) and (-7.8,0.1) .. (-7.3,0.4) .. controls (-6.8,0.7) and (-5.4,1.1) .. (-5,2.1) .. controls (-4.7,1.2) and (-7.1,0.6) .. (-7.1,0.3) .. controls (-7.6,0.2) and (-7.9,-1.2) .. (-7.2,-1.3) node (v1) {} .. controls (-7,-1.2) and (-6.7,-0.7) .. (-6.5,-0.1) .. controls (-6,0.3) and (-5.1,0.9) .. (-4.6,1) .. controls (-4.3,1) and (-3.9,0.8) .. (-3.81,0.66) .. controls (-2.3,0.6) and (-2.4,-1.7) .. (-3.9,-2.5);
     \draw (-4.4,-1.2) ellipse (0.3 and 0.3);
@@ -5386,7 +5382,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcSleepingBag}[3] {
+\newcommand{\fcSleepingBag}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-2.7,4) .. controls (-0.5,8.8) and (4.8,7.1) .. (3.9,2.53) .. 
     controls (4.4,1.7) and (4.1,0.4) .. (3.7,-0.15) .. controls (3.93,-0.89) and (3.6,-1.7) .. (2.9,-2.58) .. controls (3.3,-3) 
@@ -5418,7 +5414,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcPillow}[3] {
+\newcommand{\fcPillow}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-3,4.9) .. controls (-4.4,4.4) and(-6.4,3.2) .. (-8.4,1.4) ..
     controls (-9.5,1.4) and (-9.2,0.6) .. (-8.7,0.4) .. controls (-9,-1.5) and (-2.7,-4.6) .. (-1.3,-4.4) .. 
@@ -5444,7 +5440,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcCabinet}[3] {
+\newcommand{\fcCabinet}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-2.9,7.2) -- (-2.8,-6.1) -- (-4.7,-4.4);
     \draw (-4.7,-4.41) .. controls (-5,-4.3) and (-5.21,-3.89) .. (-5.2,-3.3);
@@ -5513,7 +5509,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcBed}[3] {
+\newcommand{\fcBed}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-0.9,3.6) .. controls (-2.5,3.1) and (-7,1) .. (-8,0.4) .. controls (-9.2,-0.2) and (-9.3,-0.4) .. (-9.3,-1.7) .. controls 
     (-9.3,-2.1) and (-9.3,-2.5) .. (-9.29,-2.8) .. controls (-9.4,-4.2) and (-8.9,-4.01) .. (-7.4,-4.29) .. controls (-5.7,-4.5) and (-1.2,-4.9) .. (0.1,-4.9)
@@ -5616,7 +5612,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcDressingTable}[3] {
+\newcommand{\fcDressingTable}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (-0.43,3.89) ellipse (2.2 and 2.9);
     \draw  (-0.43,3.89) ellipse (2.8 and 3.5);
@@ -5672,7 +5668,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcClock}[3] {
+\newcommand{\fcClock}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (-4.4,2.84) .. controls (-3.2,3) and (-1,3.1) .. (0.2,3.2)
     .. controls (1.8,3.2) and (2.2,2.2) .. (2.2,1.6) .. controls (2.2,0.7) and (2.2,-1.1) .. (2.12,-3.7)
@@ -5723,7 +5719,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcBedsideLamp}[3] {
+\newcommand{\fcBedsideLamp}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-4,1.3) .. controls (-2.6,8) and (2.5,7.8) .. (3.9,1.3);
     \draw (-4,1.3) .. controls (-1.7,0.4) and (1.7,0.4) .. (3.9,1.3);
@@ -5763,7 +5759,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcComputer}[3] {
+\newcommand{\fcComputer}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw (-7.5,5.1) .. controls (-5.2,5.2) and (-2.9,5.2) .. (-0.1,5.41) .. controls
     (1.9,5.5) and (1.9,5.3) .. (1.84,4.3) .. controls (1.8,3.6) and (1.7,-0.3) .. (1.7,-1.9) .. controls (1.5,-2) and (1.1,-2.1) .. (0.5,-2)
@@ -5815,7 +5811,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcChair}[3] {
+\newcommand{\fcChair}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw  (-0.77,-0.9) ellipse (3.7 and 1.8);
     
@@ -5855,7 +5851,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcDeskLamp}[3] {
+\newcommand{\fcDeskLamp}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw  (0.75,-5.31) ellipse (3.7 and 1.5);
     
@@ -5892,7 +5888,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcTurnip}[3] {
+\newcommand{\fcTurnip}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-8.4,-0.2) .. controls (-8.6,0.3) and (-8,0.5)
     .. (-7.5,0.6) .. controls (-7.3,1.2) and (-6.6,1.6) .. (-5.9,1.7) .. controls (-5.6,2.1) and (-5.1,2.7)
@@ -5964,7 +5960,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcCabbage}[3] {
+\newcommand{\fcCabbage}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (-4.4,2) .. controls (-4.53,2.7) and (-4.56,3.1) .. (-4.6,3.5) .. controls (-4.6,4.3) and 
     (-3.8,4.7) .. (-3.1,4.5) .. controls (-2.3,6.2) and (-0.9,6.2) .. (-0.5,5.4) .. controls (0.1,5.5) and (0.5,5.4) .. (0.8,5.2) .. controls 
@@ -6055,7 +6051,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcChive}[3] {
+\newcommand{\fcChive}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-3.1,0.5) .. controls (-3.5,0.39) and (-4,0.6) .. (-3.9,0.9) ..
     controls (-4.5,3.4) and (-6.6,2.7) .. (-6.8,1.3) .. controls (-6.8,1.1) and (-6.8,1) .. (-6.8,0.9) ..
@@ -6121,7 +6117,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcOnion}[3] {
+\newcommand{\fcOnion}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-1.2,-2.03) ellipse (3.7961 and 3.761);
     
@@ -6156,7 +6152,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcAubergine}[3] {
+\newcommand{\fcAubergine}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  [ ,rotate=-30] (-8.3044,1.34) ellipse (0.3 and 0.38);
     
@@ -6192,7 +6188,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\CarrotA}[3] {
+\newcommand{\fcCarrotA}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
         \draw (-4.2,3) .. controls (-4.2,2.6) and (-4.2,2.4) .. (-4.13,2) .. controls (-4,1.6) and (-3.65,0.49) ..
     (-3.5,0.07) .. controls (-3.3,-0.2) and (-3,-0.33) .. (-2.9,-1.3) .. controls (-3.2,-1.4) and (-3.9,-2.4) .. (-4.2,-4) .. controls
@@ -6245,7 +6241,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcTomato}[3] {
+\newcommand{\fcTomato}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
         \draw  (-1.86,4.6) .. controls (-7.8,2.8) and (-5.8,-2.8) .. (-2.8,-3.7) (-2.8,-3.7) .. controls
     (0.7,-5.1) and (3.9,-3.9) .. (4.7,-2.12);
@@ -6281,7 +6277,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcBellPepper}[3] {
+\newcommand{\fcBellPepper}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (-0.2,0.2) ellipse (0.7 and 0.8);
     \draw(1.7,0.18) ellipse (0.6 and 0.7);
@@ -6339,7 +6335,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcCucumber}[3] {
+\newcommand{\fcCucumber}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw(0.6,5) .. controls (1.2,8) and (-0.7,7.8) .. (-2.9,4.6)
     .. controls (-3.3,4.4) and (-3.3,4.5) .. (-3.2,3.8) .. controls (-3.3,3.5) and (-3.4,3) .. (-3.5,2.6)
@@ -6388,7 +6384,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcPotato}[3] {
+\newcommand{\fcPotato}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw(0.18,1.21) ellipse (4.15 and 5.2);
     
@@ -6430,7 +6426,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcTricycle}[3] {
+\newcommand{\fcTricycle}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (3.3,-3.6) ellipse (1.2 and 1.8);
     \draw (3.99,-3.6) ellipse (2.7 and 3.4);
@@ -6478,7 +6474,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcMotorScooter}[3] {
+\newcommand{\fcMotorScooter}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (-2.59,3.76) ellipse (0.8 and 0.8);
     \draw   (-2.59,3.76)ellipse (1.1 and 1.1);
@@ -6551,7 +6547,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcTractorA}[3] {
+\newcommand{\fcTractorA}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (-5.28,0.78) node (v1) {} ellipse (0.6 and 0.8);
     \draw  (v1) ellipse (0.9 and 1.2);
@@ -6645,7 +6641,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcScooter}[3] {
+\newcommand{\fcScooter}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-3,-2.2)-- (-2.8,-1.8) -- (-2.6,-2.3) --
     (-2.23,-2.37) -- (-2.5,-2.9) -- (-2.5,-3.2) -- (-2.93,-2.93) -- (-3.28,-3.12) -- (-3.1,-2.7) -- 
@@ -6690,7 +6686,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcHelicopter}[3] {
+\newcommand{\fcHelicopter}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw   (-0.2,3.5) node (v1) {} ellipse (0.9 and 0.4);
     
@@ -6737,7 +6733,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcAirBallon}[3] {
+\newcommand{\fcAirBallon}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw   (-0.6,-5) ellipse (1.1 and 0.4);
     \draw (-1.6,-4.8) -- (-1.9,-3.7);
@@ -6789,7 +6785,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcMotorcycle}[3] {
+\newcommand{\fcMotorcycle}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw   (-2.7,3.1) ellipse (1 and 1.3);
     \draw   (-2.7,3.1) ellipse (1.4 and 1.8);
@@ -6844,7 +6840,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcCart}[3] {
+\newcommand{\fcCart}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (6.9,-0.5) rectangle (-1.3,-1);
     \draw (-1.2,-0.46) -- (-6.6,-0.4) -- (-6.3,-0.95) -- (-1.3,-1);
@@ -6943,7 +6939,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcBusA}[3] {
+\newcommand{\fcBusA}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw   (3.7,-2.79) rectangle (2.4,3.1) node (v6) {};
     \draw (3.7,3.1) node (v8) {} rectangle (5,-2.79) node (v5) {};
@@ -7022,7 +7018,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcLetterZ}[3] {
+\newcommand{\fcLetterZ}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw(-5.9,3.2) -- (-5.8,6.1) -- (3.4,6.6) -- (4.3,3.4) -- (-2.1,-1.4)
     -- (4.7,-0.8) node (v2) {} -- (4.7,-5.2) -- (-6,-4.9);
@@ -7052,7 +7048,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcLetterY}[3] {
+\newcommand{\fcLetterY}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
      \draw
      [ ] (-4,3) -- (-1.5,3.5) -- (0.6,2) -- (-0.5,0.5) -- (-3.4,3.1);
@@ -7087,7 +7083,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcLetterX}[3] {
+\newcommand{\fcLetterX}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw    (-4.5,5.7) node (v2) {} .. controls (-5.2,5.1) and (-6.3,4.8) .. (-7.7,4.5) .. controls 
     (-7.1,3.1) and (-5.6,0.6) .. (-4.2,-0.7) .. controls (-5.4,-3) and (-6.2,-4.6) .. (-7,-6.1) .. controls (-6.2,-6.2)
@@ -7122,7 +7118,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcLetterW}[3] {
+\newcommand{\fcLetterW}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw    (-5.5,4.5) .. controls (-6.5,4.5) and (-7.3,4.2) .. (-7.9,3.9) .. controls
     (-7.3,1) and (-5.6,-3.8) .. (-5,-4.9) .. controls (-4.2,-5) and (-3.4,-5) .. (-2.3,-4.9) node (v3) {} .. controls (-1.7,-3.3)
@@ -7163,7 +7159,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcLetterV}[3] {
+\newcommand{\fcLetterV}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (3,-5.8) -- (7.1,1.9) -- (6,4.4) -- (2.7,5.9) -- (-0.8,-2.9) -- (-4.6,6.3) -- (-7.2,5.1);
     \draw (-7.2,5.1) .. controls (-5.8,1.2) and (-2.5,-4.3) .. (-1.5,-5.7) .. controls (-0.2,-5.6)
@@ -7197,7 +7193,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcLetterU}[3] {
+\newcommand{\fcLetterU}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (-5.9,6.6) .. controls (-12,-8) and (5.6,-12.7) .. (5.4,4.6);
     
@@ -7229,7 +7225,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcLetterT}[3] {
+\newcommand{\fcLetterT}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-3.2,1.2) -- (-5.9,0.7) node (v2) {} -- (-7.3,3) -- (3.3,6.7);
     \draw (3.3,6.8) .. controls (3.9,5.9) and (4.4,3.3) .. (4.1,1.9) .. controls 
@@ -7258,7 +7254,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcLetterR}[3] {
+\newcommand{\fcLetterR}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (-6.2,5) -- (-4.9,-6.5) -- (-1.3,-5.3) -- (-3.1,-2) -- (2.1,-4.5)
     -- (4,-4.4) -- (5.1,-2.2) -- (1.9,-1);
@@ -7293,7 +7289,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcLetterS}[3] {
+\newcommand{\fcLetterS}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (0.9,2.5) -- (2.8,1.8) node (v1) {} -- (3.9,4.5) -- (5.1,4.8);
     \draw  (-2.1,-1.2) -- (-3.7,-1.8);
@@ -7337,7 +7333,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcLetterQ}[3] {
+\newcommand{\fcLetterQ}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-1.3,0) ellipse (6 and 6);
     \draw[ ,rotate=-30]   (6.9653,-1.805) rectangle (4.8609,-0.265);
@@ -7369,7 +7365,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcLetterP}[3] {
+\newcommand{\fcLetterP}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (-5.7,4.9) -- (-4.3,0.7) -- (-3.3,-6.2) -- (-0.6,-5.6) -- (-1.4,-2) -- 
     (0.6,-2) -- (1.2,-5.6) -- (-0.9,-7.1) -- (-3.3,-6.2);
@@ -7397,7 +7393,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcLetterO}[3] {
+\newcommand{\fcLetterO}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (-0.1,0) ellipse (6 and 6.6);
     \draw   (-1.1,3.6) node (v1) {} ellipse (1.1 and 1.1);
@@ -7421,7 +7417,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcLetterN}[3] {
+\newcommand{\fcLetterN}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (-4.9,6.3) -- (-7.1,-5.4) -- (-5.2,-7.4) -- (-2.2,-6.9) -- (-4.2,-5.1) -- (-3.33,1.01);
     \draw  (0.5,3.75) -- (1.9,7.2) -- (5.3,6.4) -- (2.6,-3) -- (0.6,-3.4) -- (-2.6,0.7);
@@ -7447,7 +7443,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcLetterM}[3] {
+\newcommand{\fcLetterM}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (-3.1,0.8) -- (-4.8,1.6) -- (-2.6,-5) -- (-1.1,-5.8) -- (-3.7,-7.1) -- (-5.9,-6.3) 
     -- (-8.7,3.6) -- (-4.8,5.5);
@@ -7478,7 +7474,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcLetterL}[3] {
+\newcommand{\fcLetterL}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-5.5,5.8) -- (-5.3,-5.2) -- (-3.6,-6.7) -- (4.7,-6.7) node (v1) {} -- (5.5,-3.2) -- (3.9,-0.6);
     
@@ -7502,7 +7498,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcLetterK}[3] {
+\newcommand{\fcLetterK}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-5.1,5.4) .. controls (-3.7,1.4) and (-2.5,-2.2) .. (-2,-5.9) node (v1) {} ..
     controls (-0.9,-5.6) and (0.1,-5.2) .. (0.6,-5) .. controls (0.2,-3.5) and (-0.4,-1.7) .. (-0.6,-0.6)
@@ -7531,7 +7527,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcDeskLampA}[3] {
+\newcommand{\fcDeskLampA}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (0.07,-6.2) ellipse (2.5 and 2.2);
     \draw  (-9.5,-0.8) ellipse (0 and 0);
@@ -7553,7 +7549,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcDeskLampB}[3] {
+\newcommand{\fcDeskLampB}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (-1.08,4.73) .. controls (-0.6,5.1) and (0.4,5.3) .. (1.3,5) .. controls (2,5.9) 
     and (2.7,5) .. (1.8,4.6) .. controls (2.4,4.2) and (2.7,2.8) .. (2.1,2) .. controls (2.5,0.2) and (2.4,-0.5) .. 
@@ -7597,7 +7593,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcClockA}[3] {
+\newcommand{\fcClockA}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (0.1,-0.9) node (v1) {} ellipse (5.3 and 5.3);
     \draw   (v1) node (v2) {} ellipse (4.1 and 4.3);
@@ -7633,7 +7629,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcDeskLampC}[3] {
+\newcommand{\fcDeskLampC}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (-1.1,-6.8) .. controls (-0.9,-7.6) and (1.4,-7.3) .. (2.4,-6.9) .. controls
     (2.7,-6.1) and (3.1,-3.9) .. (0.9,-3.5) .. controls (0.9,-3.1) and (0.8,-2.8) .. (0.54,-2.78) .. controls (0.5,-2.3) 
@@ -7659,7 +7655,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcBearA}[3] {
+\newcommand{\fcBearA}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw   (-3.81,-5.09) ellipse (1.9 and 1.8);
     \draw   (-3.81,-5.09) ellipse (2.25 and 2.1);
@@ -7810,7 +7806,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcFishJ}[3] {
+\newcommand{\fcFishJ}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw    (0.77,-0.4) ellipse (5.5 and 5.05);
     
@@ -7863,7 +7859,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcPenguinA}[3] {
+\newcommand{\fcPenguinA}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (4.4,-2) .. controls (4.26,-2.88) and (4.44,-3.63) .. (4.6,-4.1) .. 
     controls (4.72,-4.42) and (4.58,-4.88) .. (4,-5.07) .. controls (2.7,-5.8) and (-1.6,-5.5) .. (-2.5,-5.11) .. 
@@ -7904,7 +7900,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcBearB}[3] {
+\newcommand{\fcBearB}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw   (2.88,-5.08) node (v1) {} ellipse (1.4 and 1.4);
     \draw   (v1) ellipse (0.2 and 0.2);
@@ -8014,7 +8010,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcWhale}[3] {
+\newcommand{\fcWhale}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (-6.82,3.68) .. controls (-1.6,8.4) and (6.5,4.7) .. (6.3,-3.9) .. 
     controls (8,-4.6) and (8.2,-6.8) .. (5.9,-5.7) .. controls (4.8,-5.6) and (2.53,-8.57) .. (3.71,-5.21) ..
@@ -8047,7 +8043,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcDeskLampD}[3] {
+\newcommand{\fcDeskLampD}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw   (-0.4,5) ellipse (2.4 and 0.7);
     \draw  (-2.8,4.9) -- (-3.4,0.6);
@@ -8075,7 +8071,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcTurtleC}[3] {
+\newcommand{\fcTurtleC}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (-6.5,1.8) .. controls (-6.2,2.3) and (-5.7,3.3) .. (-4.6,3.5) .. 
     controls (-4.1,4.5) and (-1.7,5.3) .. (-1.1,5) .. controls (-0.3,5.1) and (1.8,4.7) .. (2.2,4.1) .. 
@@ -8143,7 +8139,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcOctopusB}[3] {
+\newcommand{\fcOctopusB}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (2.5,2.1) .. controls (5.1,9.5) and (-6,7.6) .. (-3.6,2.7) ..
     controls (-3.4,0.5) and (-4.1,0.2) .. (-7.8,0.7) .. controls (-9.3,0.1) and (-8.9,-2.3) .. 
@@ -8192,7 +8188,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcBulldozer}[3] {
+\newcommand{\fcBulldozer}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (2.8,-5.5) ellipse (0.3 and 0.3);
     \draw  (6.8,-5) ellipse (0.3 and 0.3);
@@ -8260,7 +8256,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcSteamrollerA}[3] {
+\newcommand{\fcSteamrollerA}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (4.9,-1.8) -- (-1.4,-3.3) -- (-9.5,-3.1) -- (-9.28,-1.3) -- (-1.2,-1.5)
     -- (4.5,-0.4) -- (4.4,5.5) -- (2.5,5.8) -- (-1.6,5.7) -- (-1.8,0.6) -- (2.49,0.37) -- (4.49,0.71) -- (4.46,2.8) --
@@ -8306,7 +8302,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcPigA}[3] {
+\newcommand{\fcPigA}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw 
     (-5.9,0.1) .. controls (-4.84,3.3) and (-1.9,3.95) ..
@@ -8395,7 +8391,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcSheepA}[3] {
+\newcommand{\fcSheepA}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     %ParteDeFora
     \draw
@@ -8589,7 +8585,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcRabbitB}[3] {
+\newcommand{\fcRabbitB}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw 
     (-2.3,3.5) .. controls (-2,4.1) and (-1.4,4.4) ..
@@ -8772,7 +8768,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcChicken}[3] {
+\newcommand{\fcChicken}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw 
     (0.2,3.3) .. controls (-1.2,3.05) and (-1,4.6) ..
@@ -8859,7 +8855,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcPigB}[3] {
+\newcommand{\fcPigB}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw 
     (-4.64,-1.6) .. controls (-7.78,-0.51) and (-7.54,2.33) ..
@@ -9003,7 +8999,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcPigC}[3] {
+\newcommand{\fcPigC}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     %Borboleta
     \draw 
@@ -9144,7 +9140,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcPigD}[3] {
+\newcommand{\fcPigD}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw 
     (-0.3,5.9) .. controls (-0.5,6.2) and (0,6.7) ..
@@ -9352,7 +9348,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcHorseA}[3] {
+\newcommand{\fcHorseA}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw 
     (-5.05,5.72) .. controls (-5.4,5.9) and (-6,5.78) ..
@@ -9652,7 +9648,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcMouseB}[3] {
+\newcommand{\fcMouseB}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw 
     (0.2,4.5) .. controls (0,4.5) and (-0.1,4.5) ..
@@ -10002,7 +9998,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcBullA}[3] {
+\newcommand{\fcBullA}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw 
     (-1.5,3.3) .. controls (-1.5,3.1) and (-1.59,2.97) ..
@@ -10377,7 +10373,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcAlligatorA}[3] {
+\newcommand{\fcAlligatorA}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-1.2,6.6) node (v3) {} .. controls (-2.1,7.5) and (-5.3,5.04) .. (-4.21,3.13) .. controls (-3.5,2.4)
     and (-1.53,0.44) .. (-2.19,-2.48) node (v2) {}.. controls (-2.4,-4) and (-4.15,-5.32) .. (-6.9,-6.31)
@@ -10430,7 +10426,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcSnail}[3] {
+\newcommand{\fcSnail}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-3.75,1.9) .. controls (-1.2,8.3) and (10.3,7.1) .. (8.99,-0.3) .. controls (8.9,-4.4) and (2.6,-5.7) .. (-0.7,-2.5)
     .. controls (0.37,-1.19) and (-1.8,1.6) .. (-4.2,0.3) .. controls (-2.5,0.9) and (-2,1.1) .. (-1.8,1.7) .. controls (-2.4,1.7) and (-2.8,1.5) .. (-3.6,1.09)
@@ -10452,7 +10448,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcFrogA}[3] {
+\newcommand{\fcFrogA}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-4.25,-0.37) .. controls (-10.7,-3.6) and (0.8,-8.5) .. (3,-4.8)
     .. controls (4.7,-5.8) and (7.7,-3.1) .. (3.29,-0.84);
@@ -10512,7 +10508,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcBearC}[3] {
+\newcommand{\fcBearC}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw plot[smooth, tension=.7] coordinates {(1.25,0.4) (2,0.2) (3.5,-0.2) (4.5,-0.85)
     (5,-2) (5,-3) (4.7,-4)(4.4,-5.5) (3.95,-5.85) (3,-6) (2.5,-6) (2.2,-5.75) (2,-5.5) (1.5,-5.5) (1,-5.5) (0.5,-5.75) (0,-5.85) (-1,-5.6) (-0.8,-5)
@@ -10574,7 +10570,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcMouseC}[3] {
+\newcommand{\fcMouseC}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-1.03,3.28) .. controls (-6,4.3) and (-7.1,-3.1) .. (-5,-4.5)
     .. controls (-1.5,-6.4) and (3.6,-3.1) .. (2.7,-0.5)
@@ -10626,7 +10622,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcUrchinA}[3] {
+\newcommand{\fcUrchinA}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     %corpo
     \draw (-2.9,-2.4) -- (-5.7,-2.1) -- (-4.1,-1.4) -- (-6.5,-0.9) -- (-4.7,-0.4) -- (-6.9,0.3) -- (-3.4,0.89)
@@ -10683,7 +10679,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcHamster}[3] {
+\newcommand{\fcHamster}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw(2,5.8) node (v2) {} .. controls (0.5,6.69) and (-1,6.75) .. (-2.7,6) node (v1) {};
     \draw plot[smooth, tension=.7] coordinates {(v1) (-3.68,6.95) (-4.4,5.4) (-3.5,4.3) (-4.23,3.26)
@@ -10750,7 +10746,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcArmadilloA}[3] {
+\newcommand{\fcArmadilloA}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (3.89,-3.75) .. controls (9.95,-3.6) and (10.65,5) .. (2.5,5.15) .. controls (-5.35,4.95) and (-5.25,-3.95) .. (1.05,-3.62) .. controls (0.7,-3)
     and (-0.55,-0.5) .. (0.7,0.6) .. controls (0.5,1) and (0,1) .. (-0.6,1.3) .. controls (-1,1.5) and (-1.3,2) .. (-1.05,2.25) ..
@@ -10777,7 +10773,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcLadybird}[3] {
+\newcommand{\fcLadybird}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (3.25,2.9) .. controls (-5.35,5.65) and (-10.4,-4) .. (0.5,-4);
     \draw  (3.25,2.85) .. controls (0.29,0.9) and (-0.2,-2.1) .. (0.5,-4);
@@ -10808,7 +10804,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcRacoon}[3] {
+\newcommand{\fcRacoon}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-6.2,1.4) .. controls (-8.74,0.87) and (-6.9,-3.8) .. (-4.15,-4.78);
     \draw (-3.66,-3.72) .. controls (-5.6,-7) and (-2.8,-7.1) .. (-2.17,-3.92);
@@ -10835,7 +10831,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcCactus}[3] {
+\newcommand{\fcCactus}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-1.7,-4.63) .. controls (-3.8,-2.4) and (-5.8,3.5) .. (-0.35,4.2) .. controls (4.8,3.7) and (2.8,-1.8) .. (1.14,-4.55);
     \draw(-3.8,1.5) .. controls (-5.9,1.9) and (-7.1,3.9) .. (-5.9,5.3) node (v1) {} .. controls (-4.3,7.2) and (-1.8,5.2) .. (-1.8,3.84);
@@ -10888,7 +10884,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcCactusC}[3] {
+\newcommand{\fcCactusC}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-2.2,-3.4) .. controls (-2.8,-3.3) and (-2.7,-1.7) .. (-2.7,-1.1) .. controls
     (-3,-0.9) and (-3.4,-0.6) .. (-3.9,-0.6) .. controls (-4.9,-0.5) and (-6,1.5) .. (-4.77,2.53) .. controls (-3.7,2.9) and
@@ -10913,7 +10909,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcFlowerG}[3] {
+\newcommand{\fcFlowerG}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (-0.44,0.7) ellipse (3.5 and 3.7);
     \draw (-2.3,3.8) .. controls (-4.4,8.4) and (1.1,9.3) .. (0.4,4.2);
@@ -10966,7 +10962,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcFlowerH}[3] {
+\newcommand{\fcFlowerH}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (2.5,-3) .. controls (-1.5,0.5) and (-4.5,0) .. (-8,-3.5) .. controls (-5,-6.5) and (1.5,-7) .. (2.5,-3);
     \draw plot[smooth, tension=.7] coordinates {(-2.4,-0.6) (-2.8,0.6) (-3.5,2.2)};
@@ -10998,7 +10994,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcFlowerI}[3] {
+\newcommand{\fcFlowerI}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw(-0.05,-0.05) ellipse (3.5 and 3.5);
     \draw (1.1,3.2) .. controls (1.8,4.2) and (3.3,6.1) .. (4.6,5) .. controls (5.7,4) and (4.5,2.4) .. (3.2,1.1);
@@ -11015,7 +11011,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcFlowerJ}[3] {
+\newcommand{\fcFlowerJ}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-0.1,-6.7) .. controls (-5.33,-7.52) and (-7.85,-1) .. (-7.45,3.2) .. controls (-2.6,2.3) and (3.3,-1.46) .. (-0.1,-6.7)(-5.33,-7.52);
     \draw (-5.89,2.74) .. controls (-5.93,4.2) and (-5.64,5.5) .. (-5.2,6.2);
@@ -11058,7 +11054,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcFlowerK}[3] {
+\newcommand{\fcFlowerK}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw  (-0.1,2.33) ellipse (2 and 2);
     \draw (-0.3,4.3) .. controls (-0.5,5.5) and (-1.1,7.6) .. (-2.08,7.15) .. controls (-2.8,6.83) and (-2,5.1) .. (-1.2,3.9);
@@ -11086,7 +11082,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcFlowerL}[3] {
+\newcommand{\fcFlowerL}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-1.3,-6.14) -- (-1.3,-6.7) -- (0.54,-6.75) -- (0.59,-6.2);
     \draw (-1.6,-5.01) -- (-1.6,-6.1) -- (0.9,-6.2) -- (1.1,-5.04);
@@ -11114,7 +11110,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcFlowerM}[3] {
+\newcommand{\fcFlowerM}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-1.4,-6.3) .. controls (-1.34,-6.5) and (-1.34,-6.7) .. (-1.44,-6.8) .. controls (-1.1,-7.1)
     and (0.1,-7.1) .. (0.5,-6.8) .. controls (0.41,-6.64) and (0.38,-6.5) .. (0.4,-6.3);
@@ -11185,7 +11181,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcFlowerN}[3] {
+\newcommand{\fcFlowerN}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-2.5,-1) .. controls (-2.5,-4.5) and (2,-4) .. (1.5,-1) .. controls (3,-1.5) and (5.5,-0.75) .. (5.35,1)
     .. controls (5,2.45) and (2,2) .. (0.82,-0.31);. controls (2,2.5) and (1,4) .. (0.5,4.5);
@@ -11207,7 +11203,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcRefrigerator}[3] {
+\newcommand{\fcRefrigerator}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-4.03,5.1) .. controls (-4.33,1.6) and (-4.6,-2.9) .. (-4.66,-4.9).. controls
     (-4.67,-5.1) and (-4.67,-5.4) .. (-4.5,-5.5) .. controls (-3.5,-5.8) and (-1.5,-6.3) .. (0,-6.6);
@@ -11229,7 +11225,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcRollingPin}[3] {
+\newcommand{\fcRollingPin}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-6.61,-0.95) .. controls (-3.5,0.6) and (0.7,2.3) .. (4.3,3.88) .. controls (4,2.4) and
     (5,0.73) .. (6.02,0.39) .. controls (2.4,-1.2) and (-2.3,-3.3) .. (-4.8,-4.4).. controls (-6,-4.1) and (-7,-2.2) .. (-6.6,-0.9);
@@ -11242,7 +11238,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcLadle}[3] {
+\newcommand{\fcLadle}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-5.8,-2.2) .. controls (-5.99,-7.62)
     and (0.6,-7.68) .. (0.8,-2.5) .. controls (-0.6,-0.6) and (-5.07,-0.8) .. (-5.8,-2.2);
@@ -11255,7 +11251,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcBoard}[3] {
+\newcommand{\fcBoard}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-8.6,-1.5) .. controls (-9.1,-2.1) and (-8.8,-3) .. (-8.3,-3.3) .. controls (-7.2,-3.7) and (-3.1,-4.96) .. (-0.5,-5.9);
     \draw (-0.5,-5.9) .. controls (0,-6.16) and (0.6,-6.09) .. (0.9,-5.7) .. controls (2.4,-4.1) and (5.2,-1.3) .. (6.8,0.3)..
@@ -11269,7 +11265,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcPan}[3] {
+\newcommand{\fcPan}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-1.9,-0.56) ellipse (5.55 and 3);
     \draw (-1.9,-0.6) ellipse (6.2 and 3.45);
@@ -11283,7 +11279,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcKnife}[3] {
+\newcommand{\fcKnife}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-1.9,0.7) .. controls (-2.1,0.8) and (-2.3,0.86) .. (-2.5,0.7) .. controls (-4.68,-0.51) and (-6.45,-1.52) .. (-9.02,-3.13);
     \draw (-9,-3.1) .. controls (-9.2,-3.17) and (-9.29,-3.42) .. (-9.2,-3.6) .. controls (-8.7,-4.4) and (-8.4,-4.9) .. (-7.99,-5.55)..
@@ -11298,7 +11294,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcKnifeA}[3] {
+\newcommand{\fcKnifeA}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (1.8,1.2) .. controls (2,1.3) and (2.3,1.5) .. (2.5,1.7)
     .. controls (2.7,2.2) and (2.1,2.9) .. (1.5,2.7) .. controls (-0.3,1.9) and (-2.5,0.7) .. (-5,-0.9)
@@ -11312,7 +11308,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcKettle}[3] {
+\newcommand{\fcKettle}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-6.8,-6.3) .. controls (-7.4,4.1) and (8.42,4.44) .. (7.4,-6.2) .. controls (3.8,-6.4) and (-3.3,-6.4) .. (-6.93,-6.43);
     \draw (-3.2,0.6) .. controls (-1.4,-0.4) and (3,-0.4) .. (4.4,0.6);
@@ -11328,7 +11324,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcTeapot}[3] {
+\newcommand{\fcTeapot}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-5.7,-2.4) .. controls (-8.9,-7.1) and (8.3,-6.9) .. (5.6,-2.6);
     \draw (-5.73,-2.5) .. controls (-5.3,-5.8) and (4.5,-5.6) .. (5.65,-2.5);
@@ -11355,7 +11351,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \end{tikzpicture}
 }
 
-\newcommand{\fcCutlery}[3] {
+\newcommand{\fcCutlery}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-6.9,-0.9) .. controls (-6.9,0) and (-6.97,0.9) .. (-6.9,1.7) .. controls
     (-7.3,2) and (-8,2.3).. (-8.5,2.6) .. controls (-8.6,3.5) and (-8.6,4.7) .. (-8.7,6.1) .. controls (-7.6,7.09)
@@ -12642,59 +12638,8 @@ controls (-5.8,3.1) and (-5.3,3.8) .. (-5.6,4.2) .. controls (-6.2,4.7) and (-5.
 \draw (-4.15,2.8) .. controls (-4,2.3) and (-4.2,1.7) .. (-4.7,1.5);
 \draw (-3.8,2.8) .. controls (-3.9,3) and (-4,3.1) .. (-4.2,3.3);
 \end{tikzpicture}}
-%26
-\newcommand{\fcCarrotA}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics {Senhor cenoura.jpg}};
-
-\draw (-4.2,3) .. controls (-4.2,2.6) and (-4.2,2.4) .. (-4.13,2) .. controls (-4,1.6) and (-3.65,0.49) ..
-(-3.5,0.07) .. controls (-3.3,-0.2) and (-3,-0.33) .. (-2.9,-1.3) .. controls (-3.2,-1.4) and (-3.9,-2.4) .. (-4.2,-4) .. controls
-(-4.3,-4.2) and (-5.1,-4) .. (-4.9,-5) .. controls (-4.6,-4.9) and (-4.4,-5.1) .. (-4.2,-5.1) .. controls (-3.7,-5.3) and
-(-3.8,-4.5) .. (-3.72,-4.01) .. controls (-2.8,-4.8) and (-2.3,-3.8) .. (-3.2,-3.8) .. controls (-4.3,-3.6) and (-2.4,-1.5) .. (-2.1,-1.8);
-
-\draw (-2.45,-1.87) .. controls (-2.4,-2.2) and (-2.3,-2.6) .. (-1.9,-2.7) .. controls (-2.2,-2.9) and
-(-0.5,-5.4) .. (0.2,-5.05) .. controls (-0.3,-5.3) and (-0.83,-5.37) .. (-1,-5.2) .. controls (-0.7,-5.9) and (0,-6.9) .. (0.6,-7.7) .. controls
-(0.8,-6.5) and (0.9,-6.1) .. (1,-5.7) .. controls (0.7,-4.4) and (1.6,-2.7) .. (1.2,-2.2) .. controls (1.3,-2) and (1.5,-1.5) .. (1.4,-0.6)
-.. controls (1.2,0) and (2,-0.1) .. (2,0.5) .. controls (2.1,0.8) and (1.4,0.8) .. (1.6,0.8) .. controls (1.8,1.6) and (1.6,1.7) .. (1.7,2.3)
-.. controls (1.7,3) and (1.3,3.6) .. (1.1,4.1) .. controls (0.3,4.9) and (-1.1,4.8) .. (-1.1,4.6);
-
-\draw(-1.5,-3.7) .. controls (-1.3,-4.4) and (-1.1,-4.8) .. (-0.2,-5);
-\draw(-1.27,-4.4) -- (-1,-5.2);
-\draw (0.9,-6) .. controls (0.6,-6.1) and (0.3,-6.1) .. (0,-6) .. controls (0.4,-5.8) and (0.7,-5.5) .. (0.9,-5.2);
-\draw(1,-4.5) .. controls (0.8,-4.6) and (0.5,-4.7) .. (0.1,-4.7) .. controls (0.5,-4.4) and (0.9,-4.1) .. (1.1,-3.8);
-\draw (0.2,-4.1) .. controls (0.1,-4.4) and (-0.6,-4.5) .. (-1,-4) .. controls (-0.6,-4.1) and (-0.2,-4.1) .. (0.2,-4.1);
-
-\draw (-0.5,-3.6) .. controls (0.2,-3.6) and (0.7,-3.5) .. (1.1,-3) .. controls (0.7,-3.2) and (0.1,-3.4) .. (-0.5,-3.6);
-\draw (-1.6,-2.7) .. controls (-1.2,-2.9) and (-0.6,-3) .. (-0.2,-2.7) .. controls (-0.8,-2.8) and (-1.2,-2.8) .. (-1.6,-2.7);
-\draw (-0.2,-1.7) .. controls (0,-1.5) and (0.4,-1.3) .. (0.7,-1.1) .. controls (0.6,-1.5) and (0.3,-1.6) .. (-0.2,-1.7);
-\draw (-2.8,-0.4) .. controls (-2.3,-0.6) and (-2,-0.7) .. (-1.7,-0.7) .. controls (-1.5,-0.6) and (-1.2,-0.5) .. (-1.1,-0.5) .. controls (-1.4,-0.3) and (-1.9,-0.4) .. (-2.8,-0.4);
-\draw (-3.8,2.2) .. controls (-3.5,1.9) and (-2.8,1.6) .. (-2,1.8) .. controls (-2.5,1.9) and (-3.1,2) .. (-3.8,2.2);
-\draw(-0.31,1.3) ellipse (0.5 and 0.6);
-\draw (1.6,0.8) .. controls (0.7,1) and (0.4,2) .. (0.9,2.2) .. controls (1.4,2.3) and (1.4,1.5) .. (1.1,1);
-\draw(1.8,0.1) .. controls (0.9,-0.1) and (0.5,0.1) .. (0.5,0.6);
-\draw (0.8,0) .. controls (-0.1,0) and (-0.7,0) .. (-1.1,0.2) .. controls (-0.1,-1.4) and (0.8,-1.2) .. (1.11,0);
-\draw [ ,fill=black](-1.3,1.8) .. controls (-1,2.4) and (-0.6,2.9) .. (-0.2,2.7) .. controls (-0.4,3.7) and (-1.4,3.6) .. (-1.3,1.8);
-\draw[ ,fill=black] (0.6,2.8) .. controls (0.5,3.7) and (1,4) .. (1.3,3.2) .. controls (1,3.2) and (0.8,3.1) .. (0.6,2.8);
-\draw (-4.2,3) .. controls (-4,4) and (-2.8,4.4) .. (-2,4.7);
-\draw(-1.3,3.8) .. controls (-1.1,4.1) and (-0.9,4.1) .. (-0.8,4) .. controls (-1.5,4.8) and (-1,5.5) .. (-0.8,6.2) ..
-controls (-1,6) and (-1.3,5.9) .. (-1.28,5.5) .. controls (-1.5,5.5) and (-0.7,6.8) .. (-0.3,7.1) .. controls (-0.1,7.8) and (-2.5,5.6) .. (-1.2,3.9) ..
-controls (-2.3,5.9) and (-1.7,6.3) .. (-0.6,7.6);
 
 
-\draw(-1.1,4.6) .. controls (-1.3,4.9) and (-1.3,5.3) .. (-1.3,5.5);
-\draw(-1.2,3.9) .. controls (-1.7,4.3) and (-2.3,5.1) .. (-2.9,5.9) .. controls (-3.4,6.9) and (-3.4,7.3) .. (-2.62,6.2) .. controls (-2.5,5.8) and (-2.3,5.5) .. (-1.9,4.7);
-\draw (-2.5,5.9) -- (-2.6,6.8) -- (-2.3,7) -- (-2.3,6.1);
-\draw (-2.3,6.1) .. controls (-2.1,5.5) and (-1.9,5.1) .. (-1.5,4.8);
-\draw (-2.3,6.1) .. controls (-2,6.6) and (-1.8,6.8) .. (-1.6,7) .. controls (-1.6,6.7) and (-1.8,6) .. (-1.7,5.3);
-\draw(-2,6.5) .. controls (-2.1,7.6) and (-1.6,7.9) .. (-1.8,6.8);
-\draw(1.4,-1) .. controls (1.9,-1.1) and (2.9,-0.6) .. (2.9,-0.3) .. controls (2.1,0.6) and (3.6,1.2) .. (3.2,-0.4) .. controls (4.2,0.2) and (5,0.5) .. (4.8,-0.4) .. controls (5.1,-0.5)
-and (4.9,-1.1) .. (4.5,-0.8) .. controls (4.3,-0.7) and (3.7,-0.5) .. (4.1,-1) .. controls (4.4,-1.4) and (3.8,-1.5) .. (3.4,-0.8) .. controls (3.1,-0.7) and (2.5,-2) .. (1.43,-1.61);
-\draw [fill=black] (-0.5,1.3) ellipse (0.1 and 0.1);
-\draw  [fill=black] (1,1.7) ellipse (0.1 and 0.1);
-\draw(-4.4,-4.4) -- (-4.9,-4.7);
-\draw(-4.3,-5) -- (-4.1,-4.3);
-\draw (3.8,-0.3) -- (4.8,-0.3);
-\draw(-0.5,7.1) -- (-0.6,7.6);
-\end{tikzpicture}}
 %27
 \newcommand{\fcTomatoA}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 %\node {\includegraphics {Senhor tomate.jpg}};
@@ -14830,29 +14775,29 @@ controls (1.2,3.3) and (0.6,3.3) .. (-0.3,3.6)--(-0.5,3.2)--(-0.8,4.29)--(-1.2,3
 \draw plot[smooth, tension=.7] coordinates {(-0.7,-0.9) (-0.3,-1.4) (0.2,-2)
 (0.8,-2.1) (1.2,-1.5) (1.4,-1.8) (1.5,-1.5)
 (1.94,-1.95) (2.05,-1.4) (1.6,-0.8) (0.8,-0.9) (0.5,-1.2) (0.3,-0.9) (0.2,-0.4)};
-\draw plot[smooth, tension=.7] coordinates {(3.15,-0.55) (3.6,-0.3) (4.3,-0.3) (4.6,-0.8) (4.4,-1.7)
-(4.3,-1.3) (4.1,-1) (4,-1.4) (3.8,-1) (3.6,-1.23)};
-\draw plot[smooth, tension=.7] coordinates {(-2.27,6.29) (-1.9,6.4) (-1.7,6.4)};
-\draw[fill] [o-*] (-1.8,5.4) ellipse (0.26 and 0.2);
-\draw[fill] [o-*] (-0.8,5.6) ellipse (0.16 and 0.1);
-\end{tikzpicture}
-}
-%72
-\newcommand{\fcSnailA}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics[scale=1]{caracolbebe.jpg}};
-\draw (-3.75,1.9) .. controls (-1.2,8.3) and (10.3,7.1) .. (8.99,-0.3) .. controls (8.9,-4.4) and (2.6,-5.7) .. (-0.7,-2.5)
-.. controls (0.37,-1.19) and (-1.8,1.6) .. (-4.2,0.3) .. controls (-2.5,0.9) and (-2,1.1) .. (-1.8,1.7) .. controls (-2.4,1.7) and (-2.8,1.5) .. (-3.6,1.09)
-.. controls (-3.7,1.6) and (-3.8,2.2) .. (-4.3,2.8) .. controls (-4.4,2.3) and (-4.4,1.9) .. (-4.2,1.3) .. controls (-5.7,3.1) and (-7.6,2.8) .. (-8.04,0.4)
-.. controls (-11,-1) and (-6.8,-5.2) .. (-3.4,-3.9) .. controls (-3.2,-4.1) and (-2.9,-4.4) .. (-3,-4.9) .. controls (-2.6,-5) and (-2.2,-5.1) .. (-1.8,-5.1)
-.. controls (-1.7,-6.1) and (-0.2,-6.7) .. (0.6,-5.9) .. controls (0.9,-6.2) and (1.1,-6.4) .. (1.4,-6.5) .. controls (2,-6.5) and (2.6,-6.3) .. (3.4,-6) ..
-controls (6.3,-6.6) and (6.56,-4.9) .. (4.1,-4.3);
-\draw (-0.4,-1.9) .. controls (0.1,-1.8) and (0.3,-1.6) .. (0.6,-0.9) .. controls (1.2,0.4) and (2.1,1.4)
-.. (3.7,2.2) .. controls (6.1,3.1) and (8.9,0.8) .. (8.1,-1.4);
-\draw (1.3,0.3) .. controls (0.4,-2) and (3.2,-3.7) .. (4.9,-2.6) .. controls (5.7,-2.1) and (7,-0.38)
-.. (4.9,-0.2) .. controls (3.5,-0.4) and (4.1,-2) .. (5,-1.4);
-\draw (-7.55,-3.2) .. controls (-7,-3.2) and (-6.6,-3.2) .. (-6.1,-3);
-\draw (-6.2,0.9) ellipse (1.1 and 1);
-\draw (-3,-1.3) ellipse (1.6 and 1.6);
+ \draw plot[smooth, tension=.7] coordinates {(3.15,-0.55) (3.6,-0.3) (4.3,-0.3) (4.6,-0.8) (4.4,-1.7)
+ (4.3,-1.3) (4.1,-1) (4,-1.4) (3.8,-1) (3.6,-1.23)};
+ \draw plot[smooth, tension=.7] coordinates {(-2.27,6.29) (-1.9,6.4) (-1.7,6.4)};
+ \draw[fill] (-1.8,5.4) ellipse (0.26 and 0.2);
+ \draw[fill] (-0.8,5.6) ellipse (0.16 and 0.1);
+ \end{tikzpicture}
+ }
+ %72
+ \newcommand{\fcSnailA}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
+ %\node {\includegraphics[scale=1]{caracolbebe.jpg}};
+ \draw (-3.75,1.9) .. controls (-1.2,8.3) and (10.3,7.1) .. (8.99,-0.3) .. controls (8.9,-4.4) and (2.6,-5.7) .. (-0.7,-2.5)
+ .. controls (0.37,-1.19) and (-1.8,1.6) .. (-4.2,0.3) .. controls (-2.5,0.9) and (-2,1.1) .. (-1.8,1.7) .. controls (-2.4,1.7) and (-2.8,1.5) .. (-3.6,1.09)
+ .. controls (-3.7,1.6) and (-3.8,2.2) .. (-4.3,2.8) .. controls (-4.4,2.3) and (-4.4,1.9) .. (-4.2,1.3) .. controls (-5.7,3.1) and (-7.6,2.8) .. (-8.04,0.4)
+ .. controls (-11,-1) and (-6.8,-5.2) .. (-3.4,-3.9) .. controls (-3.2,-4.1) and (-2.9,-4.4) .. (-3,-4.9) .. controls (-2.6,-5) and (-2.2,-5.1) .. (-1.8,-5.1)
+ .. controls (-1.7,-6.1) and (-0.2,-6.7) .. (0.6,-5.9) .. controls (0.9,-6.2) and (1.1,-6.4) .. (1.4,-6.5) .. controls (2,-6.5) and (2.6,-6.3) .. (3.4,-6) ..
+ controls (6.3,-6.6) and (6.56,-4.9) .. (4.1,-4.3);
+ \draw (-0.4,-1.9) .. controls (0.1,-1.8) and (0.3,-1.6) .. (0.6,-0.9) .. controls (1.2,0.4) and (2.1,1.4)
+ .. (3.7,2.2) .. controls (6.1,3.1) and (8.9,0.8) .. (8.1,-1.4);
+ \draw (1.3,0.3) .. controls (0.4,-2) and (3.2,-3.7) .. (4.9,-2.6) .. controls (5.7,-2.1) and (7,-0.38)
+ .. (4.9,-0.2) .. controls (3.5,-0.4) and (4.1,-2) .. (5,-1.4);
+ \draw (-7.55,-3.2) .. controls (-7,-3.2) and (-6.6,-3.2) .. (-6.1,-3);
+ \draw (-6.2,0.9) ellipse (1.1 and 1);
+ \draw (-3,-1.3) ellipse (1.6 and 1.6);
 \draw[fill] (-6.5,0.9) ellipse (0.7 and 0.7);
 \draw [fill] (-3.55,-1.2) ellipse (1.05 and 1);
 \draw[fill] (-3.8,-1.05) ellipse (0.68 and 0.63);
