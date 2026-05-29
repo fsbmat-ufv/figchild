@@ -5,7 +5,7 @@ This package was created with the aim of facilitating the work of Elementary Sch
 
 **Current version:** v3.1.2
 
-## Upcoming changes:
+## Changes in this version
 
 ### What's New in This Version
 
@@ -24,6 +24,9 @@ This package was created with the aim of facilitating the work of Elementary Sch
 * **Improved Documentation:**
   The updated documentation now includes detailed examples and explanations for advanced usage.
 
+* **Compatibility fixes:**
+  Optional TikZ arguments are applied only once to each figure, global TikZ defaults are no longer changed, and figure macros no longer introduce unintended surrounding spaces.
+
 
 ## Authors: 
 
@@ -39,7 +42,7 @@ fernando.bastos@ufv.br
 
 ## License
 
-Copyright 2026 by Fernando de Souza Bastos <fernando.bastos@ufv.br>.
+Copyright 2021-2026 by Fernando de Souza Bastos <fernando.bastos@ufv.br>.
 
 Released under the LaTeX Project Public License v1.3c or later. See http://www.latex-project.org/lppl.txt 
 
