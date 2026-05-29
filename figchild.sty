@@ -1,18 +1,13 @@
-%Copyright 2021 by Fernando de Souza Bastos
+﻿%Copyright 2021 by Fernando de Souza Bastos
 \NeedsTeXFormat{LaTeX2e}
 
-\ProvidesPackage{figchild}[2025/06/04 Package for creating activities for children version 3.1.1]
+\ProvidesPackage{figchild}[2025/06/04 Package for creating activities for children version 3.1.2]
 
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
-% Herdar opções globais de estilo e transformação do tikzpicture
+
 \tikzset{
-  every picture/.style={
-    every path/.style={
-      % Aqui pode colocar opções padrão globais do seu pacote
-      line width=0.5pt, draw=black % Por exemplo
-    }
-  }
+  every path/.append style={ line width=0.5pt, draw=black }
 }
 
 %Released under the LaTeX Project Public License v1.3c or later. 
@@ -185,7 +180,7 @@
 }
 %%%%%%%%%%%%%%%%%spinning%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\fcSpinning}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 \draw[fill=black] (2.07,4.28) ellipse  (0.035cm and 0.028cm);
 \draw[fill=white] (0.79,3.12) .. controls (1.21,4.46) and (3.08,4.39) ..(3.47,3.08);
@@ -200,7 +195,7 @@
 }
 %%%%%%%%%%%%%%%%alligator%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\fcAlligator}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw (0.99,1.11).. controls (0.81,0.99) and (0.85,0.86) ..(0.35,0.93)-- (0.4,0.86).. controls (0.69,0.79) and (1.05,0.89) ..(1.21,0.98).. controls (1.17,1.06) and (0.98,1.12) ..(0.8,1.15)
 .. controls (0.76,1.26) and (0.68,1.3) ..(0.6,1.34) --(0.44,1.48).. controls (0.54,1.58) and (0.64,1.5) ..(0.68,1.38).. controls (0.78,1.43) and (0.86,1.39) ..(0.91,1.37)
 .. controls (1.18,1.35) and (1.3,1.31) ..(1.43,1.16);
@@ -219,7 +214,7 @@
 }
 %%%%%%%%%%%%%%%%%%%bee%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\fcBee}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw (1.46,3.39)  .. controls (1.3, 4.59) and (2.65, 4.13) .. (2.33, 3.38)  .. controls (2.65, 3.27) and (2.59, 2.95) .. (2.3, 2.75)
   .. controls (2.91, 2.34) and (3.02, 1) .. (2.01,0.54) --(1.89,0.24) --(1.74,0.54)  .. controls (0.9, 0.9) and (0.78, 2.28) .. (1.45,2.77)  .. controls (1.25, 2.85) and (1.04, 3.26) .. (1.46, 3.39);
 \draw[fill=black] (1.75,3.6) circle (0.1cm); 
@@ -238,7 +233,7 @@
 }
 %%%%%%%%%%%%%%%%%squirrel%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\fcSquirrel}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw (1.28,2.72)  .. controls (1.27, 2.51) and (0.99, 2.45) .. (0.91, 2.64)  .. controls (0.85, 2.9) and (1.03, 3.07) .. (1.31, 2.99) .. controls (1.7, 2.79) and (1.76, 2.22) .. (1.25, 2.06)
  .. controls (0.55, 1.8) and (0.12, 2.88) .. (0.82, 3.35) .. controls (1.47, 3.8) and (2.15, 3.46) .. (2.18, 2.58) .. controls (2.2, 2.52) and (2.22, 2.49) .. (2.22, 2.45);
 \draw (1.12,2.03)  .. controls (1.14,1.77) and (1.02, 1.47) .. (1.17, 1.11) .. controls (1.22,0.99) and (1.48, 0.58) .. (1.74, 0.51).. controls (1.38,1.03) and (1.85, 1.7) .. (2.24,2.16);
@@ -268,7 +263,7 @@
 }
 %%%%%%%%%%%%%%%%%%%hippo%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\fcHippo}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 \draw (1.01,1.6).. controls (1.37,0.83) and (2.6,0.62) ..(2.89,1.62);
 \draw (0.92,3.59).. controls (0.5,3.09) and (0.2,1.22) ..(1.35,0.34).. controls (1.72,0.19) and (2.37,0.02) ..(2.8,0.54)
@@ -302,7 +297,7 @@
 
 
 \newcommand{\fcElephant}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 \draw (1.58,2.54)  .. controls (2.13, 2.54) and (2.42, 2.65) .. (3.18, 2.26) .. controls (3.23, 2.14) and (3.25, 2.07) .. (3.25, 1.84)
  .. controls (3.1, 1.16) and (2.88, 0.71) .. (2.73,0.47)--(2.77,0.39);
@@ -460,7 +455,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 \draw[ line width = 3pt ] (2.63,1.09) -- (3.33,1.19);
 \draw[ line width = 3pt ] (2.97,1.38) -- (2.97,0.92); % janela
 
-\draw  (1.5,0.7) circle (0.05cm); %maçaneta
+\draw  (1.5,0.7) circle (0.05cm); %maÃ§aneta
 
 \end{tikzpicture}
 }
@@ -507,7 +502,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 
 \draw[ line width = 3pt ] (1.61,2.44) -- (1.13,1.8) .. controls (0.81,1.95) and (0.6,2.28) .. (0.67,2.62) -- (1.47,2.71);
 \draw[ line width = 3pt ] (1.71,3.08) -- (1.42,3.79) .. controls (1.6,4) and (2.15,4) .. (2.35,3.77) -- (2.03,3.06);
-\draw[ line width = 3pt ] (2.1,2.43) -- (2.57,1.82) .. controls (2.9,1.9) and (3.1,2.3) .. (3.05,2.62) -- (2.23,2.72);% hélices
+\draw[ line width = 3pt ] (2.1,2.43) -- (2.57,1.82) .. controls (2.9,1.9) and (3.1,2.3) .. (3.05,2.62) -- (2.23,2.72);% hÃ©lices
 
 \end{tikzpicture}
 }
@@ -547,7 +542,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 \draw[ line width = 3pt ] (0.8,3.57) .. controls (0.5,3.52) and (0.37,3.39) .. (0.38,2.89) .. controls (0.41,2.75) and (0.5,2.73) .. (0.54,2.89) .. controls (0.58,3.13) and (0.77,3.2) .. (0.85,3.19) ; %bico
 
 \draw[ line width = 3pt ] (1.8,0.92) -- (1.79,0.53) -- (1.44,0.5) -- (1.76,0.49) -- (1.52,0.39) -- (1.86,0.46) -- (2.08,0.46) -- (1.9,0.52) -- (1.89,0.91);
-\draw[ line width = 3pt ] (2.51,0.95) -- (2.49,0.52) -- (2.32,0.45) -- (2.58,0.45) -- (2.87,0.39) -- (2.65,0.5) -- (2.95,0.51) -- (2.6,0.53) -- (2.6,0.96); %pés
+\draw[ line width = 3pt ] (2.51,0.95) -- (2.49,0.52) -- (2.32,0.45) -- (2.58,0.45) -- (2.87,0.39) -- (2.65,0.5) -- (2.95,0.51) -- (2.6,0.53) -- (2.6,0.96); %pÃ©s
 
 \draw[ line width = 3pt ] (0.8,3.57) .. controls (0.91,4.03) and (1.44,4.15) .. (1.66,3.72) .. controls (1.8,3.39) and (1.43,2.9) .. (1.61,2.63) .. controls (1.94,2.99) and (2.63,2.95) .. (2.93,2.57) .. controls(3.28,2.59) and (3.39,2.62) .. (3.45,2.64) .. controls (3.49,2.54) and (3.39,2.48) .. (3.3,2.46) -- (3.53,2.47) .. controls (3.5,2.38) and (3.32,2.37) .. (3.27,2.37) -- (3.13,2.27) .. controls (3.52,2.27) and (3.65,2.45) .. (3.71,2.61) .. controls (3.78,1.38) and (3.11,1.17) .. (2.59,0.96) .. controls (0.7,0.6) and (0.95,2.2) .. (1.11,2.65) .. controls(1.19,3) and (0.98,3.13) .. (0.85,3.19); %corpo
 
@@ -761,7 +756,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 \draw (1.9,1.37)--(1.9,1.52);
 \draw (1.9,1.52)--(1.64,1.52);
 \draw (1.64,1.52)--(1.64,1.37);
-%botão0.08%
+%botÃ£o0.08%
 \draw (2.03,1.37)--(2.29,1.37);
 \draw (2.29,1.37)--(2.29,1.52);
 \draw (2.29,1.52)--(2.03,1.52);
@@ -776,7 +771,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 \draw (1.9,1.64)--(1.9,1.79);
 \draw (1.9,1.79)--(1.64,1.79);
 \draw (1.64,1.79)--(1.64,1.64);
-%botão0.05%
+%botÃ£o0.05%
 \draw (2.03,1.64)--(2.29,1.64);
 \draw (2.29,1.64)--(2.29,1.79);
 \draw (2.29,1.79)--(2.03,1.79);
@@ -791,7 +786,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 \draw (1.9,1.91)--(1.9,2.06);
 \draw (1.9,2.06)--(1.64,2.06);
 \draw (1.64,2.06)--(1.64,1.91);
-%botão0.02%
+%botÃ£o0.02%
 \draw (2.03,1.91)--(2.29,1.91);
 \draw (2.29,1.91)--(2.29,2.06);
 \draw (2.29,2.06)--(2.03,2.06);
@@ -988,7 +983,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 %%%%%%%%%%%%%%%%%%%egg%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcEgg}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw[line width=3pt]
 (1.91,3.24) ellipse (1.7cm and 2.3cm);
 
@@ -1016,7 +1011,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 %%%%%%%%%%%%%%%%%%%spider%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcSpider}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 \draw
 (2.03,1.17) ellipse (1.07cm and 0.9cm);
@@ -1164,7 +1159,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 \draw
 	(0.05,2.03) .. controls (1.8,1.85) and (1.85,-1.7).. 
 	(0.1,-1.65) .. controls (-1.65,-1.85) and (-1.75,1.7).. (0.06,2.03);
-%1ªlinha
+%1Âªlinha
 \draw
 	(-0.94,1.3).. controls (-1,1) and (-0.7,0.9) .. 
 	(-0.7,1.2) .. controls (-0.7,1.4) and (-0.45,1.4).. 
@@ -1176,7 +1171,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 	(0.78,1.2) .. controls (0.8,1.4) and (1,1.4)..
 	(1,1.2) .. controls (1,1) and (1.15,0.9)..
 	(1.18,1.1);
-%2ª linha
+%2Âª linha
 \draw
 	(-1.25,0.2) .. controls (-1.2,0.35) and (-1,0.35)..
 	(-1.0,0.2) .. controls (-1.05,-0.05) and (-0.8,-0.1)..
@@ -1190,7 +1185,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 	(1.03,0.2) .. controls (0.95,-0.05) and (1.25,-0.1)..
 	(1.25,0.1) .. controls (1.25,0.2) and (1.3,0.35)..
 	(1.38,0.3);
-%3ªlinha
+%3Âªlinha
 \draw
 	(-1.16,-0.65) .. controls (-1.15,-0.45) and (-0.9,-0.5).. 
 	(-0.91,-0.7) .. controls (-0.9,-0.95) and (-0.65,-0.9)..
@@ -1214,7 +1209,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 
 \newcommand{\fcGoose}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%cabeçaePescoço
+%cabeÃ§aePescoÃ§o
 \draw
 	(-0.13,0.18) .. controls (-0.2,0.45) and (-0.15,0.6) .. 
 	(-0.23,0.93) .. controls (-0.1,0.95) and (-0.15,1.4) ..
@@ -1228,26 +1223,26 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 	(-0.85,1.36);
 \draw[ fill = black]
 	(-0.73,1.23) circle (0.065);
-%4ªpata
+%4Âªpata
 \draw
 	(0.93,-0.98) .. controls (0.93,-1.2) and (1.15,-1.45) ..
 	(0.74,-1.5)  .. controls (0.8,-1.5) and (0.8,-1.25) .. 
 	(0.75,-1.28) -- (0.74,-1.19) .. controls (0.8,-1.2) and (0.8,-1.25)..
 	(0.8,-0.985);
-%3ªpata
+%3Âªpata
 \draw	
 	 (0.73,-1.08) -- (0.75,-1.28) .. controls 
 	(0.8,-1.25) and (0.85,-1.55) .. (0.6,-1.56) 
 	.. controls (0.3,-1.5) and (0.5,-1.25) .. (0.59,-1.26)
 	.. controls (0.6,-1.2) and (0.6,-1.1) .. (0.555,-1.09) ..
 	controls (0.62,-0.998) and (0.6,-1.095) .. (0.73,-1.08);
-%2ªpata	
+%2Âªpata	
 \draw	 
 	(-0.06,-1.08) .. controls (-0.05,-1.15) and (-0.1,-1.15) ..
 	(-0.13,-1.17) .. controls (-0.13,-1.2) and (-0.06,-1.34) ..
 	(-0.1,-1.45).. controls (0.15,-1.55) and (0.15,-1.15) ..
 	(0.08,-1.18) -- (0.08,-1.07);
-%1ª pata
+%1Âª pata
 	\draw
 	 (-0.3,-1) .. controls (-0.29,-1) and (-0.28,-1.01) .. 
 	 (-0.25,-0.98) .. controls (-0.3,-1.04) and (-0.2,-1.08) .. 
@@ -1314,10 +1309,10 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 %Porta	
 \draw
 	(0.3,-1.7) -- (0.35,-0.75) -- (0.85,-0.65) -- (0.8,-1.55);
-%Maçaneta	
+%MaÃ§aneta	
 \draw
 	(0.75366,-1.25) circle (0.04);
-%chaminé
+%chaminÃ©
 \draw
 	(0.75,1.6) -- (0.75,0.85) -- (0.4,0.8) -- (0.4,1.55) -- (0.75,1.6)
 	(0.4,1.55) --(0.3,1.6) -- (0.3,1.1) -- (0.4,0.8);
@@ -1337,7 +1332,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 
 \newcommand{\fcMonkey}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%cabeça
+%cabeÃ§a
 \draw
 	(0.75,-0.38) .. controls (0.8,-0.35) and (0.93,-0.25) .. 
 	(0.98,-0.13).. controls (1.23,0.7) and (0.4,1.1) .. 
@@ -1673,7 +1668,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 %%%%%%%%%%%%%%%%%%%Star%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcStar}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw (1.45,2.76) -- (1.9,3.8) -- 
 (2.37,2.79) -- (3.49,2.88) --(2.78,1.99) -- (3.49,1.08) -- 
 (2.37,1.21) -- (1.91,0.19) -- (1.47,1.18) -- (0.37,1.09) -- 
@@ -1741,7 +1736,6 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 
 \newcommand{\fcSheep}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-
 \draw (1.18, 2.48) .. controls (1.23, 2.53) and (1.31, 2.55) ..  (1.37, 2.5) .. controls (1.42, 2.58) and (1.53, 2.59) .. (1.58, 2.53) .. controls (1.65, 2.59) and (1.76, 2.57) ..  (1.83, 2.49);
 \draw (1.83, 2.49) .. controls (1.87, 2.56) and (1.99, 2.57) ..  (2.05, 2.52) .. controls (2.11,2.57) and  (2.22,2.56) .. (2.29, 2.48) .. controls (2.34,2.54) and (2.44,2.55) ..  (2.51,2.49);
 \draw  (2.51,2.49) .. controls (2.58,2.54) and (2.7,2.52) ..  (2.78,2.46) .. controls (2.89,2.47) and  (3.01,2.41) .. (3.05,2.31) .. controls (3.2,2.3) and (3.32,2.25) ..  (3.35,2.11);
@@ -1794,7 +1788,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 %%%%%%%%%%%%%%%%%%%Carrot%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcCarrot}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ][scale=0.01]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}, scale=0.01]
 \draw (230,344) .. controls (230,392) .. (205,427);
 \draw (205,427) .. controls (199,439) .. (211,442);
 \draw (211,442) .. controls (218,443) .. (219,459);
@@ -1824,12 +1818,10 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 }
 
 
-
-
 %%%%%%%%%%%%%%%%%%%mouse%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcMouse}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ][scale=0.01]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}, scale=0.01]
 \draw (162,126) .. controls (252,7) .. (335,125);
 \draw (220,175) arc (-1 : 270 : 50);
 \draw (325,125) arc (-89 : 180: 50);
@@ -1858,7 +1850,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 %%%%%%%%%%%%%%%%%%%pencil%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcPencil}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 \draw (3.75,0.7) -- (0.63,0.7) -- (0.68,0.66 )   -- ( 0.82,0.61 )  -- ( 0.75,0.56 ) -- ( 0.86,0.53 ) -- ( 0.69,0.46 )  -- ( 0.77,0.42 ) -- ( 0.64,0.36 )  -- (3.75,0.36) -- ( 3.75,0.7 ) ;
 \draw (0.63,0.7) -- (0.3,0.61)   ;
@@ -1872,7 +1864,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 %%%%%%%%%%%%%%%%%%%shooting star%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcShootingStar}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 
 \draw (0.48,1.31) -- (0.85,0.9) -- (1.33,1.11 )   -- ( 1.08,0.63 )  --
@@ -1890,7 +1882,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 %%%%%%%%%%%%%%%%%%%Star%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcStarA}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 
 \draw (1.9,3.7) -- (2.47,2.63) -- (3.64,2.5 )   -- ( 2.85,1.64 )  -- ( 3.11,0.47 ) -- ( 2.04,1 ) -- ( 0.99,0.35 )  -- ( 1.14,1.54 ) -- ( 0.24,2.37 )  -- (1.42,2.58) -- (1.9,3.7);
@@ -1902,7 +1894,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 %%%%%%%%%%%%%%%%%%%van%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcVan}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 \draw (0.46, 0.61) -- (0.22,0.61) ; 
 \draw(0.76,0.64) circle (0.18cm);  
@@ -1936,7 +1928,7 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 %%%%%%%%%%%%%%%%%%%Truck%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcTruck}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 \draw (0.31, 0.73) -- (0.16,0.73) ; 
 \draw(0.54,0.64) circle (0.15cm);   
@@ -2017,9 +2009,6 @@ controls (3.11, 0.47) and (3.26, 0.48) .. (3.39,0.54) ;
 \draw (1.32,1.21) -- (2.53,1.21) -- (2.53, 1.46) -- (1.32,1.46) -- (1.32,1.21);
 \draw (1.72,1.21) -- (1.72,1.46);
 \draw (2.13,1.21) -- (2.13,1.46);
-
-(0.6,1.31) (0.82,1.31) (0.82,1.6) (0.6,1.6)
-
 \draw (0.71,1.31) .. controls (0.82,1.31) .. (0.82,1.45);
 \draw (0.82,1.45) .. controls (0.82,1.6) .. (0.71,1.6);
 \draw (0.71,1.6) .. controls (0.6,1.6) .. (0.6,1.45);
@@ -2441,7 +2430,7 @@ controls(1.83,2.51)and(1.87,2.27)..(1.89,2.11);
 %%%%%%%%%%%%%%%%%%%Flamingo%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcFlamingoA}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 \draw (0.45,3.01)..controls (0.1,2.72)..(0.39,2.14)..
 controls (0.45,2.09)..(0.5,2.17)..
@@ -2522,7 +2511,7 @@ controls (3,0.57)..(3.02,0.85);
 %%%%%%%%%%%%%%%%%%%Broom%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcBroom}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 \draw (1.63,8) --(1.96,8);
 
@@ -2585,7 +2574,7 @@ controls (3,0.57)..(3.02,0.85);
 %%%%%%%%%%%%%%%%%%%Candle%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcCandle}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 \draw (1.89,3.24) ellipse (1cm and 0.25cm ); 
 
@@ -2612,7 +2601,7 @@ controls (3,0.57)..(3.02,0.85);
 %%%%%%%%%%%%%%%%%%%Kite%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcKite}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw (3.25,4.46) .. controls (2.27,4.07) .. (1.33,3.98);
 
 \draw (1.33,3.98) .. controls (1.42,2.67) .. (1.22,1.56);
@@ -2647,7 +2636,7 @@ controls (3,0.57)..(3.02,0.85);
 %%%%%%%%%%%%%%%%%%%Mouse%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcMouseA}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw (3.05,1.95) arc (-90 : 180: 0.45);
 
 \draw (3.05,2.15) arc (-90 : 180: 0.25);
@@ -2688,7 +2677,7 @@ controls (3,0.57)..(3.02,0.85);
 %%%%%%%%%%%%%%%%%%%Cloud%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcCloud}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 \draw (3.20,0.77) arc (-90 : 90 : 0.61);
 
@@ -2712,7 +2701,7 @@ controls (3,0.57)..(3.02,0.85);
 %%%%%%%%%%%%%%%%%%%Horse%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcHorse}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 \draw (0.8,2.51) -- (0.71,2.5);
 \draw (0.71,2.5) .. controls (0.66,2.53) .. (0.63,2.61);
@@ -2803,7 +2792,7 @@ controls (3,0.57)..(3.02,0.85);
 %%%%%%%%%%%%%%%%%%%Duckduck%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcDuckA}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 \draw (0.72,2.70) .. controls (0.41,2.65) .. (0.24,2.65);
 
@@ -2913,7 +2902,7 @@ controls (3,0.57)..(3.02,0.85);
 %%%%%%%%%%%%%%%%%%%Flamingo%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcFlamingoB}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 \draw (0.45,3.01) .. controls (0.1,2.72) .. (0.39,2.14);
 
@@ -3019,7 +3008,7 @@ controls (3,0.57)..(3.02,0.85);
 
 \newcommand{\fcAnt}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-    \draw  (0.94,1.29) circle (0.35); %cabeça
+    \draw  (0.94,1.29) circle (0.35); %cabeÃ§a
 \draw  (0.904,1.43) circle (0.07);%olho
 \draw  (0.74,1.575) .. controls(0.76,1.84 ) .. (0.66,1.93);%antena
 \draw  (0.64,1.92) circle (0.04);
@@ -3043,7 +3032,7 @@ controls (3,0.57)..(3.02,0.85);
 %%%%%%%%%%%%%%%%%%%bat%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcBatA}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw (0.36,0.45) circle (0.13cm);
 \draw (0.49,0.47)--(3.52,2.6)..controls(3.44,2.92)..(3.19,3.02)--(0.41,0.57);
 \end{tikzpicture}
@@ -3054,7 +3043,7 @@ controls (3,0.57)..(3.02,0.85);
 %%%%%%%%%%%%%%%%%%%Mug%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcMug}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw (0.3,0.33)..controls(0.3,0.1) and (2.81,0.1)..(2.81,0.33)--(2.81,3.1)..controls(2.81,3.4) and (0.3,3.4)..(0.3,3.1)--cycle;
 \draw (1.55,3) ellipse (1.1 and 0.2);
 \draw(2.81,1.18) arc (2.58:4.62:0.65);
@@ -3066,7 +3055,7 @@ controls (3,0.57)..(3.02,0.85);
 %%%%%%%%%%%%%%%%%%%Umbrella%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcUmbrella}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     % UMBRELLA    Resindent Evil
     \draw (1.7,1.46)..controls(1.7,1.18)and(2,1.18)..(2,1.46)--(2,3.3)--(1.89,3.29)--(1.89,1.46)..controls(1.89,1.3)and(1.75,1.3)..(1.77,1.46)--(1.7,1.46);
     \draw [fill=black,line width=2pt] (1.89,5.165)--(1.98,5.5)--(2.1,5.16)--cycle;
@@ -3089,7 +3078,7 @@ controls (3,0.57)..(3.02,0.85);
 %%%%%%%%%%%%%%%%%%%Lion%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcLion}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw(1.3,3.55)--(1.65,3.45)--(1.9,3.6)--(1.95,3.5)--(2.15,3.7)..controls(2.26,3.54)..(2.45,3.45)--(2.7,3.55)--(2.65,3.4)--(2.95,3.25)--(2.9,3.15)--(3.2,2.95)--(3.05,2.9)..controls(3.28,2.61)..(3.3,2.4)--(3.5,2.1)--(3.4,2.05)--(3.55,1.7)..controls(3.44,1.69)..(3.3,1.05)--(3.2,1.15)..controls(3.22,0.98)..(2.9,0.6)--(2.9,0.75)--(2.67,0.2)..controls(2.46,0.25)..(2.3,0.45)--(2.25,0.25)..controls(2.15,0.39)..(2,0.5)--(1.75,0.2)--(1.7,0.43)..controls(1.56,0.27)..(1.3,0.21)..controls(1.27,0.35)..(1.05,0.75)--(1.05,0.6)..controls(0.75,0.93)..(0.7,1.15)--(0.65,1)..controls(0.51,1.61)..(0.4,1.7)--(0.5,2.1)--(0.35,2.15)..controls(0.7,2.33) and(0.64,2.7)..(0.95,2.93)--(0.8,3)--(1.1,3.2)--(1,3.25)--(1.4,3.45)--cycle;
     
 \draw (1.65,2.9)--(1.8,2.85)--(1.95,2.9)--(2,2.85)--(2.05,2.9)--(2.22,2.8)--(2.35,2.85)--(2.35,2.75)--(2.5,2.7)--(2.4,2.7)--(2.6,2.6)--(2.5,2.55)..controls(2.62,2.43)..(2.65,2.3)--(2.75,2.15)--(2.7,2.1)--(2.75,1.95)--(2.7,1.99)--(2.74,1.76)--(2.86,1.68)--(2.76,1.64)--(2.86,1.55)--(2.75,1.55)--(2.75,1.45)--(2.7,1.45)--(2.65,1.35)--(2.59,1.36)--(2.34,1.21)..controls(2.34,0.95) and (1.7,0.95) ..(1.7,1.21)--(1.35,1.4)--(1.3,1.4)--(1.25,1.45)--(1.15,1.45)--(1.2,1.55)--(1.05,1.55)--(1.15,1.65)--(1.05,1.7)..controls(1.22,1.75)..(1.25,2)--(1.15,1.95)--(1.25,2.15)--(1.15,2.15)..controls(1.37,2.3)and (1.2,2.43)..(1.45,2.55)--(1.35,2.6)--(1.55,2.7)--(1.5,2.75)--(1.7,2.8)--cycle;
@@ -3121,7 +3110,7 @@ controls (3,0.57)..(3.02,0.85);
 %%%%%%%%%%%%%%%%%%%BirdC%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcBirdC}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw (0.7,1.55) ..controls(0.7,0)and(3.35,-0.4).. (3.35,1.85) -- (2.75,1.6) -- (2.35,1.9) -- (1.85,1.65) -- (1.6,1.8) -- (1.3,1.55) -- (1,1.8)--cycle;
 
 \draw  (2.75,1.6) -- (2.55,1.25) -- (2.4,1.3) -- (2.45,1.05) -- (2.15,0.9);
@@ -3148,7 +3137,7 @@ controls (3,0.57)..(3.02,0.85);
 %%%%%%%%%%%%%%%%%%%squirrel%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcSquirrelA}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     %scraft
     \draw (1.75,1.65) ..controls(1.1,0.9)and(1,1.2).. (1.45,1.6) ..controls(1.4,1.76).. (1.3,1.8)..controls(0.58,1.95)and(0.84,2.49).. (1.55,2.55)-- (1.75,2.8)..controls(1.81,2.6)..(1.8,2.45)  ..controls(1.95,2.2)and(1.9,2)..  (1.75,1.85) ..controls(1.88,1.61).. (1.85,1.3) ..controls(2,1)and(2.4,1).. (2.15,2.65) ..controls(2.4,3.3)and(3.3,2.89).. (3.35,2.5) ..controls(2.83,2.8)and(2.7,2.5).. (2.8,2.1) ..controls(3.2,0.3)and(1.95,0.4)..(1.75,0.95) ..controls(1.75,0.65).. (1.6,0.65) ..controls(0.95,0.6)and(1.19,0.85).. (1.35,0.85) ..controls(1.3,0.94)and(1.3,1.2).. (1.55,1.25) -- (1.53,1.417);
     
@@ -3167,7 +3156,7 @@ controls (3,0.57)..(3.02,0.85);
 %%%%%%%%%%%%%%%%%%%Giraffe%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\fcGiraffeA}[1][]{
-\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (0.85,5.15).. controls(1.63,3.4)..(1.6,2.45) ..controls(1.69,1.39)and (1.65,0.5).. (1.5,0.4) ..controls(1.55,0.29)..(1.8,0.3)..controls(1.9,2.9)and (2.2,2.9).. (1.95,0.5) ..controls(1.89,0.42).. (1.85,0.35) ..controls (2.03,0.29)..(2.2,0.35) ..controls(2.22,0.4).. (2.2,0.5) ..controls(2.25,2.45).. (2.75,2.05) ..controls(2.74,1.52).. (2.35,0.5) ..controls(2.45,0.4)..(2.65,0.45) ..controls(2.5,0.64)and(3.1,1.64).. (3.1,1.95) ..controls(3.15,1.66).. (3.1,1.4) ..controls(3.05,0.76)..(2.95,0.5) ..controls(3.06,0.43).. (3.25,0.45) ..controls(3.35,1.65).. (3.3,2.55) ..controls(3.53,2.24).. (3.7,1.8) ..controls(3.57,1.5).. (3.6,1.1) ..controls(3.9,1.53)and (3.85,2.35).. (3.3,2.8) ..controls(3.25,2.95).. (3.1,3.05) ..controls(2.11,4.05).. (1.2,5.7) ..controls(1.28,6).. (1.2,6.15) ..controls(0.99,6.1).. (0.8,5.9) ..controls(0.73,6.06).. (0.75,6.2) -- (0.6,6.2) ..controls(0.66,6)..(0.6,5.85) ..controls(0.49,5.75)..(0.4,5.5) ..controls(0.39,5.26).. (0.25,5.05) ..controls(0.24,4.95)..(0.25,4.9) ..controls(0.54,4.9)..(0.65,5.05)--cycle;
     
     \draw (0.55,5.8) ..controls(0.5,5.93)..(0.4,6.05) -- (0.5,6.15) ..controls(0.57,6.05).. (0.62,5.9);
@@ -3498,7 +3487,7 @@ controls (3,0.57)..(3.02,0.85);
 \draw(1.78,0.36)--(1.77,2.68);
 \draw(2.2,0.22)--(3.44,0.62);
 \draw(3.44,0.62)--(3.47,3.08);
-\draw(3.47,3.08)--(3.33,3.1);--(3.31,0.76);
+\draw(3.47,3.08)--(3.33,3.1)--(3.31,0.76);
 \draw(2.2,0.22)--(2.06,0.25);
 \draw(2.06,0.25)--(1.86,0.25);
 \draw(1.86,0.25)--(1.78,0.18);
@@ -4532,7 +4521,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 
 %%%%%%%%%%%%%%%%%%%DUCK%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\fcDuckB}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\newcommand{\fcDuckB}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw
 (3.03,3.74).. controls (5.5,0.9) and (-0.1,0.7)..(0.82,2.91);
 \draw(0.82,2.91).. controls (0.97,3.3) and(0.96,3.66)..(0.87,4.06);
@@ -4555,7 +4544,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 
 %%%%%%%%%%%%%%%%%%%HAT%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\fcHat}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\newcommand{\fcHat}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 \draw
 (2.95,1.16)..controls(2.27,3.45) and (1.04,2.42)..(0.75,1.6);
@@ -4574,7 +4563,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 %%%%%%%%%%%%%%%%%%%SUN%%%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\fcSunB}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\newcommand{\fcSunB}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 \draw(2.06,2.48) circle(0.987);
 \draw(1.62,3.4)..controls(0.6,3.88) and(0.22,2.94)..(1.02,2.38);
@@ -4590,7 +4579,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 %%%%%%%%%%%%%%%%%BUtterfly%%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\fcButterflyB}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\newcommand{\fcButterflyB}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw (1.99,0.89)..controls(4.56,2.06) and (0.47,4.16)..(1.56,1.20);
 \draw (1.34,2.09)..controls(-0.54,2.79) and (1.39,0.65)..(2.97,0.87);
 \draw (2.97,0.87)..controls(3.45,1.14) and (3.23,1.37)..(2.68,1.40);
@@ -4794,7 +4783,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 
 
 
-\newcommand{\fcBirdF}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\newcommand{\fcBirdF}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw (0.52,2.39) -- (0.19,2.29) -- (0.44,2.22) -- (0.25,2.13) -- (0.42,2.1);
 \draw (3.59,1.38) -- (3.4,1.37) -- (3.61,1.6) -- (3.45,1.57) -- (3.66,1.82);
 \draw (0.42,2.1)  .. controls (0.65,0.7) and (2.42,0.1) .. (3.59,1.38);
@@ -4830,7 +4819,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 %%%%%%%%%%%%%%%%%%%cottage%%%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\fcHouseC}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\newcommand{\fcHouseC}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw (0.76,0.23) -- (0.76,2.74) -- (2.01,4.9) -- (3.26,2.74) -- (3.26,0.23) -- (0.76,0.23);
 \draw (0.76,2.74) -- (3.26,2.74);
 \draw (1.45,0.23) -- (1.45,1.55) -- (2.53,1.55) -- (2.53,0.23);
@@ -4840,7 +4829,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 %%%%%%%%%%%%%%%%%%%catface%%%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\fcCat}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\newcommand{\fcCat}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw (0.59,1.07) -- (0.47,2.53);
 \draw (1.88,0.14)  .. controls (1.3,0.15) and (0.7,0.4) .. (0.59,1.07);
 \draw (0.47,2.53)  .. controls (0.59,2.9) and (0.82,2.6) .. (0.97,2.44);
@@ -4885,7 +4874,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 %%%%%%%%%%%%%%%%%%%FishC%%%%%%%%%%%%%%%%%%%%%
 
 
-\newcommand{\fcFishC}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\newcommand{\fcFishC}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
 \draw (0.54,1.33)  .. controls (1.03,1.16) and (1.45,0.71) .. (1.53,0.33);
 \draw (0.53,0.29)  .. controls (0.9,0.25) and (1.15,0.26) .. (1.53,0.33);
@@ -4944,7 +4933,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 
 
 
-\newcommand{\fcSock}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\newcommand{\fcSock}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw (1.02,0.46)  .. controls (0.4,0.3) and (0.1,0.9) .. (0.46,1.36);
 \draw (1.02,0.46)  .. controls (0.75,0.66) and (0.5,1.02) .. (0.46,1.36);
 \draw (0.46,1.36)  .. controls (0.78,1.58) and (1.12,1.76) .. (1.22,1.8);
@@ -4964,7 +4953,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 
 
 
-\newcommand{\fcBaseballBat}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]]
+\newcommand{\fcBaseballBat}[1][]{\begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 \draw (0.36,0.45) circle (0.13cm);
 \draw (0.49,0.47)--(3.52,2.6)..controls(3.44,2.92)..(3.19,3.02)--(0.41,0.57);
 \end{tikzpicture}}
@@ -8909,7 +8898,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
     (-5.8,6.4) .. controls (-5.2,6.1) and (-4.6,5.7) ..
     (-4.28,5.25) .. controls (-4.58,5.56) and (-4.68,5.46) ..
     (-4.58,5.11);
-    %Pé
+    %PÃ©
     \draw 
     (-5,-5.3) .. controls (-5.68,-5.24) and (-5.87,-4.8) ..
     (-5.8,-4.4) .. controls (-5.56,-4.53) and (-5.49,-4.41) ..
@@ -10513,7 +10502,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
     \draw plot[smooth, tension=.7] coordinates {(1.25,0.4) (2,0.2) (3.5,-0.2) (4.5,-0.85)
     (5,-2) (5,-3) (4.7,-4)(4.4,-5.5) (3.95,-5.85) (3,-6) (2.5,-6) (2.2,-5.75) (2,-5.5) (1.5,-5.5) (1,-5.5) (0.5,-5.75) (0,-5.85) (-1,-5.6) (-0.8,-5)
     (-0.5,-4.5) (-0.35,-3.85) (-1,-3.7) (-1.6,-3.4) (-1.65,-4) (-1.5,-4.5) (-1.36,-5) (-2,-5.6) (-3,-5) (-3.3,-4) (-3.4,-3) (-3,-1.5) (-2.5,-0.5)};
-    %cabeça
+    %cabeÃ§a
     \draw  plot[smooth, tension=.7] coordinates {(-3.4,5.4) (-5.01,3.7) (-4.5,0.15) (0.5,-0.2) (1.72,3.11) (-0.35,5.55) (-3.4,5.4)};
     %orelha
     \draw (0.65,4.9) .. controls (2.17,6.76) and (3.7,3.5) .. (1.7,3.15);
@@ -10653,7 +10642,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
     \draw (0.6,-3.1) .. controls (0.6,-4.5) and (1.6,-5.3) .. (3.26,-6.27) .. controls (3.6,-6.38) and (3.82,-6.29) .. (4.13,-6.04)
     .. controls (3.5,-5.5) and (2.8,-4.8) .. (2.2,-3.3);
     \draw ;
-    %cabeça/orelha
+    %cabeÃ§a/orelha
     \draw  plot[smooth, tension=.7] coordinates {(2.2,-2.9) (1.32,-2.5) (0.83,-1.56) (1.89,-1.45) (2.5,-1.9)};
     \draw (2.2,-3.1) .. controls (2.26,-2.43) and (2.26,-2.05) .. (2.8,-1.6);
     \draw (0.8,-1.7) .. controls (1.3,-1.6) and (2,-1.7) .. (2.3,-2.2);
@@ -11184,7 +11173,7 @@ controls(0.55,1.47) and(0.88,2.18)..(1.51,2.62);
 \newcommand{\fcFlowerN}[1][]{
 \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
     \draw (-2.5,-1) .. controls (-2.5,-4.5) and (2,-4) .. (1.5,-1) .. controls (3,-1.5) and (5.5,-0.75) .. (5.35,1)
-    .. controls (5,2.45) and (2,2) .. (0.82,-0.31);. controls (2,2.5) and (1,4) .. (0.5,4.5);
+    .. controls (5,2.45) and (2,2) .. (0.82,-0.31).. controls (2,2.5) and (1,4) .. (0.5,4.5);
     \draw (0.8,-0.3) .. controls (2,1.7) and (2.1,4.2) .. (0.6,4.26) .. controls (-1.6,4.4) and (-1.5,1.3) .. (-0.6,-0.3);
     \draw (-1.05,3.1) .. controls (-2.1,6) and (-6.11,5.86) .. (-4.1,1.8);
     \draw (-4.6,3.5) .. controls (-6,4.3) and (-7,2.8) .. (-5.92,1.8);
@@ -12164,7 +12153,7 @@ and (-4.7,-3.5) .. (-4.66,-3) .. controls (-4.7,-1.8) and (-4.7,-1) .. (-4.7,-0.
 \end{tikzpicture}}
 %17
 \newcommand{\fcAbajourA}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics {Lâmpada de patinho.jpg}};
+%\node {\includegraphics {LÃ¢mpada de patinho.jpg}};
 
 \draw (-4,1.3) .. controls (-2.6,8) and (2.5,7.8) .. (3.9,1.3);
 \draw (-4,1.3) .. controls (-1.7,0.4) and (1.7,0.4) .. (3.9,1.3);
@@ -12409,7 +12398,7 @@ and (0.9,-1) .. (0.9,-1.3) .. controls (1.1,-2.3) and (0.9,-2.8) .. (0,-3.5);
 \end{tikzpicture}}
 %22
 \newcommand{\fcCabbageA}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics {Repolho ecológico.jpg}};
+%\node {\includegraphics {Repolho ecolÃ³gico.jpg}};
 
 
 \draw  (-4.4,2) .. controls (-4.53,2.7) and (-4.56,3.1) .. (-4.6,3.5) .. controls (-4.6,4.3) and
@@ -12567,7 +12556,7 @@ and (2.9,1.8) .. (4.5,2.2);
 \end{tikzpicture}}
 %24
 \newcommand{\fcOnionA}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics {Cebola ecológica.jpg}};
+%\node {\includegraphics {Cebola ecolÃ³gica.jpg}};
 
 
 \draw (-1.2,-2.03) ellipse (3.7961 and 3.761);
@@ -12603,7 +12592,7 @@ controls (0.7,2.5) and (-0.1,1.4) .. (-0.4,2.3) .. controls (-0.5,2) and (-0.5,1
 \end{tikzpicture}}
 %25
 \newcommand{\fcEggplant}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics {Beringela orgânica.jpg}};
+%\node {\includegraphics {Beringela orgÃ¢nica.jpg}};
 
 
 \draw  [ ,rotate=-30] (-8.3044,1.34) ellipse (0.3 and 0.38);
@@ -13043,16 +13032,15 @@ controls (-3.5,5.4) and (-4.5,5.2) .. (-4.5,4.8) .. controls (-4.5,4.2) and (-4.
 \end{tikzpicture}}
 %34
 \newcommand{\fcSubmarineA}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics {Submarino espião.jpg}};
+%\node {\includegraphics {Submarino espiÃ£o.jpg}};
 
 \draw (-0.02,-1.46) ellipse (7.6 and 3.2);
 \draw  (-7.6,-1.3) ellipse (1.2 and 0.4);
-\draw(-5.3,2.7) ellipse (0.3 and 0.3);,
+\draw(-5.3,2.7) ellipse (0.3 and 0.3);
 \draw(5.9,3.81) ellipse (0.4 and 0.4);
 \draw(-4.9,1.8) ellipse (0.2 and 0.2);
 \draw(6.59,2.71) ellipse (0.3 and 0.3);
 \draw(5.8,1.9) ellipse (0.2 and 0.2);
-
 \draw (3.53,1.38) .. controls (1.7,0.4) and (1.6,-3.3) .. (3.1,-4.4);
 \draw(-2.7,1.5) .. controls (-4.5,-0.1) and (-4.4,-3.3) .. (-2.9,-4.4);
 \draw (0.4,-1.7) ellipse (0.5 and 0.7);
@@ -13153,7 +13141,7 @@ controls (1.1,-5.9) and (3,-5.9) .. (4.1,-5.9) .. controls (4.5,-5.7) and (4.4,-
 \end{tikzpicture}}
 %37
 \newcommand{\fcBalloon}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics {Um balão de ar quente.jpg}};
+%\node {\includegraphics {Um balÃ£o de ar quente.jpg}};
 
 \draw   (-0.6,-5) ellipse (1.1 and 0.4);
 \draw (-1.6,-4.8) -- (-1.9,-3.7);
@@ -13954,7 +13942,7 @@ controls (-0.9,-5.6) and (0.1,-5.2) .. (0.6,-5) .. controls (0.2,-3.5) and (-0.4
 \end{tikzpicture}}
 %57
 \newcommand{\fcAbajourB}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics {Pequena lâmpada.jpg}};
+%\node {\includegraphics {Pequena lÃ¢mpada.jpg}};
 
 \draw  (0.07,-6.2) ellipse (2.5 and 2.2);
 \draw  (-9.5,-0.8) ellipse (0 and 0);
@@ -13976,7 +13964,7 @@ controls (-0.9,-5.6) and (0.1,-5.2) .. (0.6,-5) .. controls (0.2,-3.5) and (-0.4
 \end{tikzpicture}}
 %58
 \newcommand{\fcLightBulb}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics {Lâmpada de crianças.jpg}};
+%\node {\includegraphics {LÃ¢mpada de crianÃ§as.jpg}};
 
 \draw  (-1.08,4.73) .. controls (-0.6,5.1) and (0.4,5.3) .. (1.3,5) .. controls (2,5.9) 
 and (2.7,5) .. (1.8,4.6) .. controls (2.4,4.2) and (2.7,2.8) .. (2.1,2) .. controls (2.5,0.2) and (2.4,-0.5) .. 
@@ -14284,7 +14272,7 @@ controls (-1.9,1.9) and (-2.1,1.5) .. (-1.8,0.8) .. controls (-2.2,0.5) and (-2.
 \end{tikzpicture}}
 %63
 \newcommand{\fcPenguin}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics {Pinguim antártico.jpg}};
+%\node {\includegraphics {Pinguim antÃ¡rtico.jpg}};
 \draw (4.4,-2) .. controls (4.26,-2.88) and (4.44,-3.63) .. (4.6,-4.1) .. 
 controls (4.72,-4.42) and (4.58,-4.88) .. (4,-5.07) .. controls (2.7,-5.8) and (-1.6,-5.5) .. (-2.5,-5.11) .. 
 controls (-4.4,-4.8) and (-4.1,-2.4) .. (-3.5,2) .. controls (-3.57,6.91) and (3.3,9) .. (4.34,3.24) ..
@@ -14467,7 +14455,7 @@ controls (5,-4.1) and (4.9,-3.6) .. (3.9,-2.7) .. controls (3.4,-2.3) and (2.5,-
 \end{tikzpicture}}
 %66
 \newcommand{\fcAbajourD}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics {Lâmpada engraçado.jpg}};
+%\node {\includegraphics {LÃ¢mpada engraÃ§ado.jpg}};
 
 \draw   (-0.4,5) ellipse (2.4 and 0.7);
 \draw  (-2.8,4.9) -- (-3.4,0.6);
@@ -14870,7 +14858,7 @@ controls (1.2,3.3) and (0.6,3.3) .. (-0.3,3.6)--(-0.5,3.2)--(-0.8,4.29)--(-1.2,3
 \draw plot[smooth, tension=.7] coordinates {(1.25,0.4) (2,0.2) (3.5,-0.2) (4.5,-0.85)
 (5,-2) (5,-3) (4.7,-4)(4.4,-5.5) (3.95,-5.85) (3,-6) (2.5,-6) (2.2,-5.75) (2,-5.5) (1.5,-5.5) (1,-5.5) (0.5,-5.75) (0,-5.85) (-1,-5.6) (-0.8,-5)
 (-0.5,-4.5) (-0.35,-3.85) (-1,-3.7) (-1.6,-3.4) (-1.65,-4) (-1.5,-4.5) (-1.36,-5) (-2,-5.6) (-3,-5) (-3.3,-4) (-3.4,-3) (-3,-1.5) (-2.5,-0.5)};
-%cabeça
+%cabeÃ§a
 \draw plot[smooth, tension=.7] coordinates {(-3.4,5.4) (-5.01,3.7) (-4.5,0.15) (0.5,-0.2) (1.72,3.11) (-0.35,5.55) (-3.4,5.4)};
 %orelha
 \draw (0.65,4.9) .. controls (2.17,6.76) and (3.7,3.5) .. (1.7,3.15);
@@ -14929,7 +14917,7 @@ controls (1.2,3.3) and (0.6,3.3) .. (-0.3,3.6)--(-0.5,3.2)--(-0.8,4.29)--(-1.2,3
 \newcommand{\fcLittleMouse}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 %\node {\includegraphics[scale=1]{umratinho.jpg}};
 
-%cabeça e orelhas
+%cabeÃ§a e orelhas
 \draw (-1.03,3.28) .. controls (-6,4.3) and (-7.1,-3.1) .. (-5,-4.5)
 .. controls (-1.5,-6.4) and (3.6,-3.1) .. (2.7,-0.5)
 .. controls (7,4.1) and (0.82,9.39) .. (-1.1,3.3);
@@ -15011,7 +14999,7 @@ controls (1.2,3.3) and (0.6,3.3) .. (-0.3,3.6)--(-0.5,3.2)--(-0.8,4.29)--(-1.2,3
 \draw (0.6,-3.1) .. controls (0.6,-4.5) and (1.6,-5.3) .. (3.26,-6.27) .. controls (3.6,-6.38) and (3.82,-6.29) .. (4.13,-6.04)
 .. controls (3.5,-5.5) and (2.8,-4.8) .. (2.2,-3.3);
 \draw ;
-%cabeça/orelha
+%cabeÃ§a/orelha
 \draw plot[smooth, tension=.7] coordinates {(2.2,-2.9) (1.32,-2.5) (0.83,-1.56) (1.89,-1.45) (2.5,-1.9)};
 \draw (2.2,-3.1) .. controls (2.26,-2.43) and (2.26,-2.05) .. (2.8,-1.6);
 \draw (0.8,-1.7) .. controls (1.3,-1.6) and (2,-1.7) .. (2.3,-2.2);
@@ -15528,7 +15516,7 @@ and (0.1,-7.1) .. (0.5,-6.8) .. controls (0.41,-6.64) and (0.38,-6.5) .. (0.4,-6
 \newcommand{\fcJuicy}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 %\node {\includegraphics[scale=1]{mini suculenta.jpg}};
 \draw(-2.5,-1) .. controls (-2.5,-4.5) and (2,-4) .. (1.5,-1) .. controls (3,-1.5) and (5.5,-0.75) .. (5.35,1)
-.. controls (5,2.45) and (2,2) .. (0.82,-0.31);. controls (2,2.5) and (1,4) .. (0.5,4.5);
+.. controls (5,2.45) and (2,2) .. (0.82,-0.31) .. controls (2,2.5) and (1,4) .. (0.5,4.5);
 \draw (0.8,-0.3) .. controls (2,1.7) and (2.1,4.2) .. (0.6,4.26) .. controls (-1.6,4.4) and (-1.5,1.3) .. (-0.6,-0.3);
 \draw (-1.05,3.1) .. controls (-2.1,6) and (-6.11,5.86) .. (-4.1,1.8);
 \draw(-4.6,3.5) .. controls (-6,4.3) and (-7,2.8) .. (-5.92,1.8);
@@ -16318,7 +16306,7 @@ and (-2,-2.1) .. (-2.35,-1.6) .. controls (-3,-1.9) and (-4.5,-1) ..
 (-5.8,6.4) .. controls (-5.2,6.1) and (-4.6,5.7) ..
 (-4.28,5.25) .. controls (-4.58,5.56) and (-4.68,5.46) ..
 (-4.58,5.11);
-%Pé
+%PÃ©
 \draw [  , fill = black]
 (-5,-5.3) .. controls (-5.68,-5.24) and (-5.87,-4.8) ..
 (-5.8,-4.4) .. controls (-5.56,-4.53) and (-5.49,-4.41) ..
@@ -25494,14 +25482,14 @@ controls (7.2,1.4) and (7.7,1.6) ..
 %179
 \newcommand{\fcMonkeyA}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 %\node at (0,0){{\includegraphics[scale=1]{macaco.jpg}}};
-%braço esquerdo
+%braÃ§o esquerdo
 \draw (-4.7,2.9) .. controls (-4.5,3.2) .. (-4.45,3.5).. controls (-4.4,3.7) and (-4.6,3.9) .. (-4.4,4.1) .. controls (-4.2,4.4) and (-4.3,4.5) .. (-4.4,4.6) .. controls (-4.5,4.7) and (-4.8,4.7) .. (-4.9,4.4) .. controls (-5,4.2) and (-5,4) .. (-5.6,4) .. controls (-4.9,3.9) and (-4.9,3.4) .. (-4.7,2.9);
 \draw(-4.7,2.9) .. controls (-4.8,2.7) and (-4.9,2.6) .. (-5.2,2.7) .. controls (-5.7,3.1) and (-6.4,3.5) .. (-6.6,4.4) .. controls (-6.7,4.7) and (-6.9,5.3) .. (-6.5,5.6) .. controls (-6,5.2) and (-5.9,4.5) .. (-5.6,4);
 \draw(-6.5,5.6) .. controls (-6.5,5.7) and (-6.4,5.9) .. (-6.3,6) .. controls (-5.9,5.7) and (-5.5,4.9) .. (-5.57,4);
 \draw (-6,5.7) .. controls (-5.9,5.5) .. (-5.9,5.9) .. controls (-5.3,5.4) and (-5.2,4.5) .. (-5.2,4);
 \draw(-5.1,2.7) .. controls (-5.1,1.3) and (-4.8,0) .. (-4.7,-0.5) .. controls (-4.6,-1.2) and (-4.4,-1.7) .. (-3.5,-1.6).. controls (-3.7,-1.7) .. (-3.6,-1.8).. controls (-3.3,-1.8)..(-3,-1.6) .. controls (-3.5,-2) and (-3,-2.3) .. (-2.6,-1.7) .. controls (-2.8,-2.1) and (-2.4,-2) .. (-2.1,-1.7);
 \draw(-4.7,2.9) .. controls (-4.3,2) and (-4.1,1) .. (-3.5,0.1) .. controls (-3.1,0.2) and (-2.4,0.5) .. (-2,0.6);
-%braço direito
+%braÃ§o direito
 \draw(4.7,2.9) .. controls (4.4,3.3) and (4.4,3.6) .. (4.5,3.9) .. controls (4.5,4.2) and (4.1,4.2) .. (4.4,4.6) .. controls (4.9,4.9) and (4.8,4.2) .. (5.3,4) -- (5.7,3.9) .. controls (4.9,4) and (4.8,3.5) .. (4.7,2.9) .. controls (4.8,2.7) and (4.9,2.4) .. (5.5,2.9) .. controls (6.2,3.4) and (6.5,3.9) .. (6.6,4.4) .. controls (6.8,4.8) and (6.8,5.4) .. (6.5,5.6) .. controls (6.1,5.3) and (5.8,4.6) .. (5.7,3.9);
 \draw (6.5,5.6) .. controls (6.5,5.8) .. (6.3,6) .. controls (5.7,5.5) and (5.6,4.7) .. (5.56,3.9);
 \draw (5.2,4) .. controls (5.3,4.8) and (5.4,5.5) .. (6,6) .. controls (6.1,5.8) .. (6,5.7);
@@ -28276,8 +28264,6 @@ controls (-7.3,-0.9) and (-7.7,-1.2) .. (-7.7,-1.4)
 %245
 \newcommand{\fcToucan}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
 
-x
-
 \draw(-0.1,6.1) .. controls (-1.7,7.3) and (-3.7,6) .. (-3,3.7) .. controls (-3.5,3.4) and (-3.7,2.8) .. (-3.9,2.4);
 
 \draw (-5.9,-4.4) .. controls (-5.8,-2) and (-5.5,2) .. (-4.2,2.3) .. controls (-3.5,2.7) and (-2.7,2.4) .. (-2.2,1.9) .. controls (-2,0.1) and (-3.7,-3.8) .. (-5.9,-4.4);
@@ -28902,7 +28888,7 @@ x
 %261
 %307
 \newcommand{\fcTruckH}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics{Um caminhão de carga.jpg}};
+%\node {\includegraphics{Um caminhÃ£o de carga.jpg}};
 %\draw
 \draw(-6.5,4.7) .. controls (-7,4.8) and (-6.9,5.1) .. (-6.7,5.7)-- (1.1,5.5) .. controls (1.9,4.6) and (2.8,3.7) .. (3.2,3.4) --(7,4.6) .. controls (7.1,4.8) and (7,4.9) .. (6.7,4.9)-- (1.5,5) (2.9,3.7)--(6.6,4.9) (6.9,4.5) -- (7.8,3.8) --(7.4,2.7) (-6.5,4.7) --(0.7,4.5)--(1.5,3.5) -- (1.5,0.4)--(4.8,1.7) (-6.5,4.7)--(-7.5,4) --(-0.7,3.8) --(0.7,4.5) (-7.5,4) .. controls (-7.6,3.3) and (-7.7,2.8) .. (-7.8,2.2) .. controls (-8.1,1.2) and (-8.6,-0.8) .. (-8.8,-2.8)--(-2.4,-3.4) .. controls (-1.8,-1.2) and (-1.2,0.9) .. (-0.9,1.9)--(-0.7,3.8) (-7.8,2.1) .. controls (-6,2.1) and (-2.7,2) .. (-0.9,1.9) -- (0.9,2.9) (0.9,4.3)-- (0.9,0.2) (-2.4,-3.4)-- (-1,-2.8) (3.5,-0.3)-- (4.2,0.1) (2.7,0.3) --(4.4,1);
 \draw (-6.6,2.1) .. controls (-7,0) and (-7.2,-1.2) .. (-7.7,-2.9) (-2.3,2) .. controls (-3,-0.4) and (-3.5,-2) .. (-3.9,-3.2) (-8,1.5) -- (-6.7,1.5) (-8.2,0.6) -- (-6.8,0.6) (-8.4,0) --(-7,0) (-8.5,-0.7)--(-7.1,-0.7) (-8.7,-1.5) --(-7.3,-1.5) (-8.8,-2.2) --(-7.5,-2.2) (-2.5,1.3)--(-1.1,1.3) (-2.7,0.6)-- (-1.3,0.5) (-2.9,-0.1)-- (-1.5,-0.2) (-3.2,-0.9)--(-1.7,-1) (-3.4,-1.6)-- (-2,-1.7) (-3.6,-2.4)-- (-2.2,-2.5) (-2.8,2) .. controls (-2.7,3.6) and (-2.2,3.2) .. (-0.8,3.2) (-3.8,2) .. controls (-3.7,3.2) and (-3.9,3.3) .. (-4.8,3.3) .. controls (-5.6,3.4) and (-5.7,3.2) .. (-5.7,2.8) (-6.9,2.1) .. controls (-6.7,2.6) and (-5.6,2.6) .. (-5.6,2.1) (-7.3,2.1) .. controls (-7.1,3.3) and (-5.1,3.1) .. (-5,2.1) (-8.6,-2.8) .. controls (-8.7,-4.5) and (-7.2,-4.9) .. (-5.9,-4.5) (-6.7,-3) .. controls (-6.3,-5.2) and (-5.3,-4.7) .. (-5,-3.1) (3.5,-0.2) .. controls (2.8,0.7) and (0.9,0.8) .. (-0.2,-0.6) .. controls (-2.2,-3.2) and (-0.2,-6.1) .. (2.4,-5.4) (3.5,-0.2) .. controls (0.9,-0.8) and (1,-4.5) .. (2.4,-5.4) .. controls (3.7,-4.9) and (5.4,-3) .. (3.5,-0.2) (8,2.4) .. controls (5.9,3.6) and (4.2,1.8) .. (4.2,-0.4) .. controls (4.4,-3.1) and (6.3,-3) .. (7.4,-2.4) (8,2.4) .. controls (6,1.1) and (5.9,-1.7) .. (7.4,-2.4) .. controls (9,-1.1) and (8.9,1.6) .. (8,2.4) (7.6,0.8) .. controls (7.2,0.8) and (7,-0.9) .. (7.4,-0.8) .. controls (7.8,-0.7) and (8.2,0.8) .. (7.6,0.8) (3,-1.7) .. controls (2.4,-1.8) and (2.3,-3.4) .. (2.9,-3.5) .. controls (3.6,-3.5) and (3.7,-1.6) .. (3,-1.7) (-6,-3.1) .. controls (-5.9,-3.7) and (-5.7,-3.8) .. (-5.4,-3.1) (-8.6,-3) .. controls (-7.6,-3.7) and (-7.7,-3.7) .. (-6.9,-3) (-7.8,-4.4) .. controls (-7.2,-4) and (-6.9,-3.8) .. (-6.6,-3.6) (1.5,0.4) .. controls (1.6,-0.1) and (1.5,0.1) .. (2.9,0.3) (1.1,0.3) .. controls (1,-0.6) and (0.8,-0.6) .. (3.4,-0.1) (0.1,-0.3) .. controls (0.6,-1.5) and (0,-1.2) .. (2.6,-0.6) (-0.5,-1.1) .. controls (0,-2.5) and (-0.4,-2.4) .. (1.9,-1.3) (-0.9,-1.8) .. controls (-0.2,-3.4) and (-0.7,-3.2) .. (1.5,-2.3) (-1,-3) .. controls (0.1,-4.1) and (-0.3,-4.2) .. (1.4,-3.2) (-0.3,-4.7) .. controls (0.8,-5) and (0.3,-5) .. (1.6,-4.1) (0.8,-5.4) .. controls (1.6,-5.2) and (1.4,-5.4) .. (1.8,-4.8) (6.4,2.7) .. controls (6.5,2.1) and (6.2,2.3) .. (8,2.4) (5.8,2.6) .. controls (6,1.5) and (5.7,1.5) .. (7.2,1.7) (5.2,2.2) .. controls (5.6,0.7) and (5,0.8) .. (6.8,1.2) (4.5,1.2) .. controls (5.4,-0.4) and (4.9,-0.2) .. (6.5,0.4) (4.2,-0.1) .. controls (5.5,-1.4) and (4.9,-1.2) .. (6.4,-0.4) (4.4,-1.4) .. controls (5.4,-2.3) and (5.1,-2.3) .. (6.5,-1.2) (6,-2.7)-- (6.8,-1.9);
@@ -29194,7 +29180,7 @@ x
 \end{tikzpicture}}
 %270
 \newcommand{\fcDinosaurC}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics[scale=1.5]{Dinoglutão.jpg}};
+%\node {\includegraphics[scale=1.5]{DinoglutÃ£o.jpg}};
 
 \draw (-6.2,-1) .. controls (-7.2,-0.4) and (-7.8,1.4) .. (-7.6,2.6) (-7.6,2.6) .. controls (-8.8,4.6) and (-8.2,5.4) .. (-7,5.2) .. controls (-6,5.4) and (-5.2,4.6) .. (-4.2,4) .. controls (-3.6,3.8) and (-2.6,4.4) .. (-2,4.4) .. controls (-1.2,4.6) and (-0.8,4.6) .. (-0.2,4.2) (1,5.8) .. controls (-0.6,5.4) and (-0.8,3.4) .. (1.4,2.4) (0.4,3) .. controls (0.4,2) and (0.4,0.6) .. (0,-0.7)(-7,5.2) .. controls (-7,6.4) and (-6.2,7.4) .. (-5,8.8) (-5,8.4) .. controls (-5,10.4) and (-3.2,11) .. (-3.2,9.2) (-3.4,10) .. controls (-2.8,10.2) and (-2.6,10.2) .. (-2.2,10.2) .. controls (-2.6,9.2) and (-1.4,9.8) .. (-1,10.2) (-1,10.2) .. controls (-1,11.4) and (-1.8,11.2) .. (-2.2,10.2) (-1,10.2) .. controls (-0.8,10.2) and (-0.8,10.2) .. (-0.6,10.2) (-1.2,9.2) .. controls (-0.2,11.4) and (1.6,11.2) .. (2,7.8) (1.8,9) .. controls (3.8,7) and (3.8,3.4) .. (2.6,0.6) (2.8,1) .. controls (4,0.2) and (4.8,-1) .. (5,-2.8) (2.8,1) .. controls (4,1.2) and (4.2,0.8) .. (3.6,0.4) (4,-0.2) .. controls (4.6,0) and (5.4,-0.2) .. (4.6,-1).. controls (4.8,-1.8) and (5,-1.4) .. (5.2,-1.4) (6,-1.2) .. controls (5.8,-1.4) and (5.2,-2) .. (5.2,-1.4) .. controls (5.4,-0.8) and (5.6,-0.4) .. (6,-1.2) (5.8,-0.8) .. controls (5.8,-0.8) and (6,-0.6) .. (6.2,-0.4) (6.2,-0.4) .. controls (6.2,0) and (6.2,0.4) .. (6.8,0.2) .. controls (7,-0.2) and (6.4,-1) .. (6.2,-0.4) (6.6,0.2) .. controls (6.8,0.6) and (6.8,0.6) .. (7,0.8) .. controls (7,1.2) and (7.2,1.8) .. (7.6,1.2) .. controls (7.6,1) and (7.4,0.6) .. (7,0.8) (7.6,1.2) .. controls (9.4,2.2) and (8.4,1.4) .. (8,0.2) .. controls (8.2,-1.6) and (8.4,-5) .. (5.9,-7.3) (5,-5.2) .. controls (6.4,-6.4) and (6,-8) .. (5.2,-8.8) .. controls (5.8,-8.8) and (6,-9) .. (6.5,-9.4)(4.9,-4.7) .. controls (5.2,-4.8) and (5.5,-5) .. (5.4,-5.6) (6,-9.6) .. controls (6.4,-9) and (7,-9.6) .. (7.3,-10.2) .. controls (6.7,-10.4) and (6.6,-10.2) .. (6.6,-10.3) (5.1,-9.2) .. controls (5.6,-9.2) and (5.8,-9.3) .. (6,-9.6) .. controls (6.5,-10.1) and (6.8,-10.4) .. (6.8,-10.8) .. controls (6.2,-10.7) and (6,-10.7) .. (5.5,-10.6) .. controls (5.4,-10.3) and (5.3,-10.2) .. (5.1,-10) .. controls (5.2,-9.7) and (5.3,-9.4) .. (6,-9.6)(5.5,-10.6) .. controls (5.6,-10.8) and (5.6,-10.9) .. (5.5,-10.9) .. controls (5.1,-10.9) and (4.6,-10.8) .. (4.1,-10.7) .. controls (4,-10.2) and (4,-10) .. (4.3,-9.9) .. controls (4.6,-9.8) and (4.9,-9.9) .. (5.1,-10) .. controls (4.9,-9.7) and (4.7,-9.5) .. (4.1,-9.5)(4.1,-10.7) .. controls (3.8,-10.6) and (3.5,-10.5) .. (3.2,-10.4) .. controls (2.8,-10.7) and (2.1,-10.2) .. (2.3,-9.7) .. controls (2.3,-9.4) and (2.6,-8.9) .. (2.7,-8.6) .. controls (2.7,-8.4) and (2.6,-7.7) .. (1.7,-7.4)(2.4,-7.9) .. controls (0.9,-7.9) and (-0.2,-6.7) .. (-0.6,-4.8) (2.6,-8.8) .. controls (-1.7,-10) and (-6.4,-7.9) .. (-6.4,-4.1) (-6.1,-5.6) .. controls (-7.5,-6.8) and (-6.9,-8.1) .. (-6,-8.5)(-6,-8.5) .. controls (-6.5,-8.4) and (-6.7,-8.5) .. (-6.9,-8.7) (-6.9,-8.7) .. controls (-7.1,-8.7) and (-7.5,-9) .. (-7.5,-9.4)(-6.9,-8.7) .. controls (-6.8,-8.7) and (-6.7,-8.8) .. (-6.7,-8.9) .. controls (-7,-9) and (-7.6,-9.2) .. (-7.5,-9.8) .. controls (-7.3,-9.8) and (-7.2,-9.7) .. (-7,-9.7) .. controls (-6.8,-9.4) and (-6.6,-9.3) .. (-6.3,-9.2) .. controls (-5.9,-9.3) and (-5.9,-9.6) .. (-6,-9.9) .. controls (-6.3,-9.9) and (-6.5,-10.1) .. (-7.2,-10.1) .. controls (-7.1,-9.9) and (-7.1,-9.8) .. (-7,-9.7) (-6.7,-8.9) .. controls (-6.6,-8.9) and (-6.5,-9.1) .. (-6.3,-9.2) (-5.8,-9.1) .. controls (-6.1,-8.9) and (-6.2,-9) .. (-6.3,-9.2)(-6.1,-8.8) .. controls (-6.4,-8.6) and (-6.5,-8.7) .. (-6.7,-8.9) (-6,-9.9) .. controls (-5.5,-10) and (-5.3,-9.9) .. (-5,-9.7) .. controls (-4.3,-9.8) and (-3.7,-9.8) .. (-3.3,-9.4) .. controls (-3.4,-9.2) and (-3.9,-8.9) .. (-3.8,-8.2);
 \draw (-4.2,8.1) .. controls (-4.9,8.3) and (-4.5,9.7) .. (-4,9.7) (-4,9.7) .. controls (-3.3,9.6) and (-3.6,7.9) .. (-4.2,8.1);
@@ -29209,7 +29195,7 @@ x
 \draw(-2.7,8.4) .. controls (-2.8,8.8) and (-2.7,9.1) .. (-2.4,9.3) .. controls (-2.2,9) and (-2.3,8.7) .. (-2.7,8.4);
 
 \draw (-4,7) .. controls (-3.8,6.8) and (-3.7,6.4) .. (-4,6.3);
-\draw [fill=black ] (-3.9,6.9) .. controls (-4,6.8) and (-4.1,6.5) .. (-3.9,6.4)(-3.9,6.8) .. controls (-3.8,6.7) and (-3.8,6.5) .. (-3.9,6.4);;
+\draw [fill=black ] (-3.9,6.9) .. controls (-4,6.8) and (-4.1,6.5) .. (-3.9,6.4)(-3.9,6.8) .. controls (-3.8,6.7) and (-3.8,6.5) .. (-3.9,6.4);
 
 \draw(-2.8,6) .. controls (-3.7,6) and (-2.6,7.6) .. (-2.3,6.4);
 \draw [fill=black](-3.1,6.4) .. controls (-2.9,6.2) and (-2.5,6.3) .. (-2.6,6.8) .. controls (-2.8,6.9) and (-3.1,6.6) .. (-3.1,6.4);
@@ -29382,7 +29368,7 @@ x
 \draw (10.3,4.3) .. controls (10.1,4.4) and (10,4.6) .. (9.4,4.6);
 \draw (-1.8,1.3) .. controls (-1.3,1.4) and (-0.7,1.4) .. (-0.4,2.1);
 \draw (0.2,1.1) .. controls (0.2,1.3) and (0.4,1.4) .. (0.7,1.5);
-\draw (3.3,-5.5) .. controls (3.8,-5.6) and (5.0045,-5.8828) .. (5.7,-4.7) .. controls (6.5592,-3.0324) and (8.1829,-3.6933) .. (8,-5.3) .. controls (8.2,-5.2) and (8.3152,-5.0516) .. (8.6,-4.9508) .. controls (8.3,-5.5) and (8.1,-5.8) .. (7.8,-6.6) .. controls (7.6,-6.1) and (7.2,-5.6) .. (6.8,-5.2) .. controls (7,-5.2) and (7.2,-5.3) .. (7.4,-5.4) .. controls (7.8443,-4.8178) and (7.0759,-3.3275) .. (6,-5.2) .. controls (5.0953,-6.7036) and (3.9499,-6.6913) .. (2.6061,-6.2036);;
+\draw (3.3,-5.5) .. controls (3.8,-5.6) and (5.0045,-5.8828) .. (5.7,-4.7) .. controls (6.5592,-3.0324) and (8.1829,-3.6933) .. (8,-5.3) .. controls (8.2,-5.2) and (8.3152,-5.0516) .. (8.6,-4.9508) .. controls (8.3,-5.5) and (8.1,-5.8) .. (7.8,-6.6) .. controls (7.6,-6.1) and (7.2,-5.6) .. (6.8,-5.2) .. controls (7,-5.2) and (7.2,-5.3) .. (7.4,-5.4) .. controls (7.8443,-4.8178) and (7.0759,-3.3275) .. (6,-5.2) .. controls (5.0953,-6.7036) and (3.9499,-6.6913) .. (2.6061,-6.2036);
 \draw(-0.3399,-6.9387) .. controls (-0.1,-7.3) and (-0.1,-7.5) .. (-0.1,-7.8) .. controls (-1.5,-8.5) and (-1.4,-9.7) .. (0,-9.8);
 \draw (-0.1,-8.5) .. controls (-0.8,-9) and (-0.2,-10.3) .. (0.9,-9.7);
 \draw (0.9,-9.7) .. controls (1.1,-9.4) and (1.1,-9.2) .. (0.5,-8.9) .. controls (1.1,-8.2) and (0.5,-7.8) .. (0.5,-7.7) .. controls (0.5,-7.5) and (0.5,-7.4) .. (0.4012,-7.2463);
@@ -29417,7 +29403,7 @@ x
 \end{tikzpicture}}
 %275
 \newcommand{\fcDinosaurH}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics[scale=1.5]{Saurópode.jpg}};
+%\node {\includegraphics[scale=1.5]{SaurÃ³pode.jpg}};
 %\draw
 \draw(2.3,3.1) .. controls (3.5,2) and (3.8,0.2) .. (3.2,-1.2) (3.4,-0.6) .. controls (2.8,-0.9) and (1.4,-0.9) .. (-1.4,-0.9) .. controls (-4.8,-1.2) and (-4.7,-6.5) .. (-8.4,-6.2) .. controls (-7.7,-7.1) and (-5.7,-7.8) .. (-4.2,-7.5) (-3.7,-4.9) .. controls (-3.9,-6.7) and (-4.4,-8.2) .. (-4.8,-9.4) .. controls (-4.2,-9.8) and (-3.8,-10) .. (-3.2,-10) .. controls (-2.8,-10.1) and (-2.5,-9.9) .. (-2.5,-10) .. controls (-2.2,-10) and (-1.8,-10) .. (-1.3,-9.6) .. controls (-1.3,-9.4) and (-1.4,-9.2) .. (-1.5,-8.9) .. controls (-1.3,-8.2) and (-1.4,-7.2) .. (-1.5,-6.1) (-1.4,-7.4) .. controls (-1,-7.5) and (-0.8,-7.5) .. (-0.2,-7.4) (0.1,-5.9) .. controls (-0.1,-7.1) and (-0.4,-8.2) .. (-0.7,-9.9) .. controls (-0.4,-10.2) and (0.1,-10.4) .. (0.7,-10.5) .. controls (1,-10.6) and (1.7,-10.7) .. (1.9563,-10.4876) .. controls (2.3,-10.4) and (3.1,-10.2) .. (3,-9.7) .. controls (3,-8.4) and (2.7,-7.1) .. (2.6,-5.4) (2.7,-6.7) .. controls (3.5,-6.2) and (4.2,-5.6) .. (5.2,-4.3) (3.4,-6.2) .. controls (3.3,-7) and (3.1,-7.5) .. (2.9,-8) (3,-9.6) .. controls (3.5,-9.8) and (3.6,-9.9) .. (3.7,-9.9) .. controls (4.5,-10) and (4.8,-9.8) .. (4.9,-9.7) .. controls (5.2,-9.7) and (5.6,-9.5) .. (5.8,-9.2) .. controls (5.6,-6.6) and (5.3,-3.4) .. (6.5,1) .. controls (6.9,3.6) and (7.5,6.4) .. (4.8,8.6) .. controls (4.7,9) and (4.3,9.8) .. (3.8,10) .. controls (2.3,10.3) and (1.7,10.1) .. (1.5,9.2) .. controls (-0.2,9.6) and (-2.7,9.1) .. (-3.3,7.3) .. controls (-3.8,7.7) and (-4.6,6.9) .. (-3.8,6.1) .. controls (-3.9,5) and (-4.5,2.9) .. (-1.5,3) .. controls (-0.7,3.1) and (0,3.4) .. (0.2,4.1) (-0.6,4.3) .. controls (-0.3,4) and (0.5,4) .. (0.9,4.3) (-1.5,3) .. controls (1.7,2) and (2.6,3.6) .. (3.8,3.6);
 \draw (-0.7,6.3) .. controls (-1.1,6.2) and (-1.5,7) .. (-0.7,7.4) .. controls (-0.5,7.5) and (-0.1,7.3) .. (-0.1,7.1);
@@ -29623,7 +29609,7 @@ x
 \end{tikzpicture}}
 %295
 \newcommand{\fcCupcakeA}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics[scale=1.5]{Cupcake kawaii com laço.jpg}};
+%\node {\includegraphics[scale=1.5]{Cupcake kawaii com laÃ§o.jpg}};
 %\draw
 \draw (-6.5,-1) .. controls (-5.7,-3.4) and (-6,-6.7) .. (-5,-8.5) .. controls (-4,-9) and (-2.5,-9.5) .. (-1.4,-9.5) .. controls (-1.5,-10) and (-2,-10.5) .. (-2,-10.5) .. controls (-1.4,-10.4) and (-1.1,-10.1) .. (-0.7,-9.6) .. controls (0,-9.6) and (1.1,-9.5) .. (2.3,-9.5) .. controls (2.5,-9.9) and (3,-10.5) .. (3.7,-11.1) .. controls (3.1,-10.1) and (2.8,-9.8) .. (2.8,-8.7) .. controls (3.5,-8.8) and (3.9,-8.9) .. (5,-9.1) -- (4.1,-8.7) .. controls (4.4,-8.3) and (4.6,-8) .. (4.6,-7.3) .. controls (5.4,-6.4) and (5.6,-4.8) .. (5.2,-3.9) .. controls (5.2,-3.2) and (5.3,-3) .. (5.4,-2.4) .. controls (6.8,-2.2) and (8.6,0.2) .. (5.9,1.2) .. controls (7.2,2) and (8.2,4.1) .. (5.3,4.4) .. controls (5.7,5) and (6.4,6) .. (4.4,5.6) .. controls (5.4,6.8) and (4.7,8.4) .. (2.1,7.1) (-3.1,7.4) .. controls (-5.2,7.4) and (-6,5.3) .. (-4.9,3.4) .. controls (-7.4,4.7) and (-10.6,1.3) .. (-6.5,-1);
 \draw (-0.5,8.9) .. controls (-1.8,10.5) and (-5.1,10.2) .. (-2.6,6.6) .. controls (-0.3,3.6) and (0.8,4.2) .. (1.9,6.6) .. controls (3.8,10.2) and (0,12.2) .. (-0.5,8.8);
@@ -29702,7 +29688,7 @@ x
 \end{tikzpicture}}
 %298
 \newcommand{\fcMeton}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics{Caminhão batoneira.jpg}};
+%\node {\includegraphics{CaminhÃ£o batoneira.jpg}};
 %\draw
 \draw(-6,5.3) .. controls (-6.5,5.3) and (-7.1,5.2) .. (-7.5,4.9) .. controls (-7.5,2.8) and (-7.4,1) .. (-7.4,-0.3) (-8.1,-2) .. controls (-8.4,-2.2) and (-8.7,-2) .. (-8.7,-1.9)--(-7.9,-0.4) -- (-5.7,-0.2)-- (-4.9,-2.3)-- (-6.6,-2.5)-- (-7.1,-0.8) --(-7.8,-0.8)--(-8.3,-1.8) (-2.9,-1.4) .. controls (-4.1,-1.2) and (-5.7,-0.3) .. (-6.6,2.3) .. controls (-7.2,3.6) and (-6.5,5.3) .. (-5,5.9) .. controls (-1.9,6.8) and (1.1,5.8) .. (2.3,3.4) (-5.3,-1.2)--(-2.9,-2) --(-2.9,-1)-- (-2.5,-0.5)--(-2.5,1.5) .. controls (-2.5,1.7) and (-2.1,1.7) .. (-1.9,1.6) .. controls (-1.9,2.1) and (-2,3) .. (-1.9,3.9)-- (1.4,4.1) .. controls (1.6,3.1) and (2.2,2) .. (2.7,1.5) .. controls (2.1,1.2) and (0.5,1.2) .. (-0.6,1.2) .. controls (-1,1.2) and (-1.6,1.5) .. (-1.9,1.6) (2.7,1.5) -- (4,1.2) .. controls (4.1,0.8) and (4.3,0.3) .. (4.5,-0.5) .. controls (5.6,-0.8) and (6.7,-1.1) .. (7.6,-1.3)-- (7.6,-4.3) (7.9,-4.3) .. controls (6.5,-4.5) and (4.4,-4.8) .. (2,-5)-- (1.8,-6)-- (2.9,-6.3)-- (8.7,-5.4) -- (8.8,-4.5)-- (7.9,-4.3) (2,-5.2) .. controls (1.4,-5.1) and (1.1,-5.1) .. (0.6,-5) .. controls (0.8,-4.2) and (0.9,-2.8) .. (0,-2)-- (-1.5,-2.2) .. controls (-2.5,-3.4) and (-2.4,-5.4) .. (-1.4,-6.3) .. controls (-0.5,-6.3) and (0.6,-6.3) .. (1.3,-6) .. controls (1.4,-5.7) and (1.4,-5.4) .. (1.4,-5.1) (0.1,-1.4)-- (2.5,-1.9)-- (2.5,-4.6) (2.5,-1.9) -- (7,-1.4) (-1.7,3.6) .. controls (-1.4,2.6) and (-1.1,2.1) .. (-0.5,1.5) (-0.3,0.6) .. controls (1.2,0.8) and (2.4,0.8) .. (3.5,0.9) .. controls (3.7,0.2) and (3.7,-0.2) .. (3.9,-0.7) .. controls (3,-0.8) and (0.8,-1.1) .. (0.2,-1.1) .. controls (0.1,-0.5) and (-0.2,0) .. (-0.3,0.6) (-2.2,1.4) .. controls (-0.4,0.7) and (-0.6,0.5) .. (-0.3,-0.9) (-2.1,1) .. controls (-2.1,0.5) and (-2.1,0.2) .. (-2.1,-0.3) .. controls (-1.7,-0.5) and (-1.3,-0.6) .. (-0.8,-0.8) --(-1.1,0.6) .. controls (-1.4,0.8) and (-1.8,0.9) .. (-2.1,1) (-0.7,-2.5) .. controls (-0.1,-3.6) and (-0.2,-4.8) .. (-0.5,-5.7) (-2.1,-3.4)-- (-4.6,-2.6)-- (-5.1,-2.8) .. controls (-5.1,-2.9) and (-5.1,-3) .. (-5.1,-3.1)--(-2.2,-4.3) (-5.1,-2.8)-- (-2.2,-3.9) (-7.9,-1) .. controls (-8.3,-2.4) and (-8.2,-3.1) .. (-7.4,-4.1) .. controls (-6.8,-4.1) and (-6.1,-4) .. (-5.7,-4) .. controls (-5.4,-3.6) and (-5.2,-3.3) .. (-5.2,-2.8) (-6.9,-3.7) .. controls (-6.6,-3.4) and (-6.3,-2.9) .. (-6.3,-2.5) (-6,-0.5) .. controls (-6.8,-0.6) and (-7,-0.5) .. (-6.7,-1.3)--(-6.4,-2.3) .. controls (-6.3,-2.3) and (-6.2,-2.3) .. (-6.2,-2.3);
 \draw(-5.5,-2.4) .. controls (-5.5,-2.7) and (-5.4,-2.8) .. (-5.3,-2.8) .. controls (-5.3,-2.8) and (-5.2,-2.8) .. (-5.1,-2.8) (-2.4,6.2) .. controls (-5,5.2) and (-6.6,3.5) .. (-5.4,0.1) (-4,-1) .. controls (-5.3,2.3) and (-3.9,4.7) .. (-0.3,5.8) (-6.7,-0.1)-- (-6.5,1.1) -- (-6.1,1.1) (-7,2.5) .. controls (-6.8,1.2) and (-6.2,0.6) .. (-5.8,0.2) (-2.9,-1.2) .. controls (-3.1,-1.2) and (-3.4,-0.9) .. (-3.4,-0.7) .. controls (-3.4,0.1) and (-3.4,0.8) .. (-3.4,1.3) .. controls (-3.4,1.5) and (-3.2,1.6) .. (-3,1.6) (-3.4,1.4) .. controls (-3.1,1.1) and (-2.7,1.1) .. (-2.5,1.3) (-3,1.5) .. controls (-3,2.2) and (-3,2.6) .. (-3,2.9) .. controls (-2.9,3.1) and (-2.7,3.1) .. (-2.6,2.9) .. controls (-2.6,2.3) and (-2.6,1.9) .. (-2.6,1.5) .. controls (-2.6,1.3) and (-3,1.3) .. (-3,1.5) (3.3273,1.3415)--(3.3,2.1) .. controls (3.2,2.2) and (3.1,2.2) .. (2.9062,2.2446) (2.4,1.9)-- (2.3,3.4) .. controls (2.4,3.6) and (2.7,3.6) .. (2.8544,3.399)-- (2.9,2.1) .. controls (2.9,1.9) and (2.7,1.9) .. (2.4,1.9) (3,1.8) .. controls (2.9,1.7) and (2.7052,1.6836) .. (2.4603,1.7355)(6.8,-1.8) .. controls (7.1,-2.1) and (7,-2.6) .. (6.9,-3) (3.9,-3.4) --(6,-3.2)-- (6.1,-4.2) (4.3,-3.4) --(4.4,-4.3) (4.8,-3.3)--(4.9,-4.3) (5.2,-3.3)-- (5.3,-4.2) (5.6,-3.2)--(5.7,-4.2) (3.2,-2) .. controls (3.6,-2.5) and (3.3,-3.3) .. (3.2,-3.4);
@@ -29714,7 +29700,7 @@ x
 \end{tikzpicture}}
 %299
 \newcommand{\fcTruckA}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics{Caminhão carregado.jpg}};
+%\node {\includegraphics{CaminhÃ£o carregado.jpg}};
 %\draw
 \draw (-9.2,-3.5) .. controls (-9.3,-4) and (-9.4,-4.5) .. (-9.4,-5) .. controls (-7.2,-5.1) and (-4.4,-5.3) .. (-1.8,-5.2)--(-0.8,-4.7) -- (-0.8,-3.7) -- (-1.7,-3.6) .. controls (-3.6,-3.7) and (-7.3,-3.5) .. (-9.2,-3.5) (-7.6,-3.6) .. controls (-7.7,-2.3) and (-7.9,-1.3) .. (-7.9,0.4) .. controls (-5.9,1.2) and (-3.9,0.8) .. (-3,0.8)-- (-2.4,0.6)-- (-2.9,-2.2) (-3,0.8) .. controls (-3.1,-0.2) and (-3.3,-1.6) .. (-3.7,-3.6) (-3.2,-3.6) .. controls (-3.3,-2) and (-2,-1) .. (-0.9,-1.1) .. controls (0.8,-1.1) and (1.2,-1.9) .. (1,-4.7) -- (2,-4.6)--(2.1,-3.9) -- (1,-3.8) (1,-2.8) -- (1.4,-2.3) .. controls (2.5,-2.4) and (4.6,-2.4) .. (4.8,-2.5) .. controls (5,-2.5) and (5.1,-2.9) .. (5.8,-4.9) .. controls (5.5,-5) and (5.5,-5) .. (5.5,-5)--(5.5,-5) -- (4.8,-2.8)--(2.9,-2.7) -- (2,-3.9) (1.3,-2.4) .. controls (1.4,-1.8) and (1.4,-1.5) .. (1.6,-0.5) (5.8,-4.8) -- (6.3,-4.8) -- (6.4,-3.9) .. controls (6.2,-3.9) and (5.9,-3.9) .. (5.5,-3.9) (5.7,-3.9) .. controls (5.7,-3.8) and (5.7,-3.7) .. (5.7,-3.4) (5.3,-3.4) .. controls (5.6,-3.4) and (5.8,-3.4) .. (6.2,-3.4) .. controls (6.6,-2.5) and (7.5,-0.2) .. (8.4,1.5)--(8.8,1.4) -- (9.1,2) .. controls (6.9,2.4) and (4.5,2.7) .. (3.3,2.9) --(2.6,4.5)--(0.3,5.1)--(-6.2,5) -- (-6.2,4.5)-- (0.3,4.7) .. controls (0.9,4.5) and (1.6,4.3) .. (2.2,4.2)--(2.4,3.6) (-6.2,4.5) .. controls (-5.6,4.3) and (-5.1,4.2) .. (-4.8,4.1) .. controls (-2.9,4.1) and (0.1,4.1) .. (2.2,4.2) (-4.8,4.1) .. controls (-4.8,4.1) and (-4.8,3.9) .. (-4.8,3.7);
 \draw (8.4,1.5) --(2.8,2.4) (-4.8,0.9) --(-4.4,2.6) .. controls (-3.3,2.8) and (-1.4,2.9) .. (-0.4,2.7) --(1.4,2) (-2.4,0.4) .. controls (-1.8,0.3) and (-1,0.1) .. (-0.8,0.1) .. controls (-0.6,0.9) and (-0.5,2.1) .. (-0.3,2.7) (2.2,-0.7) .. controls (2.1,-1) and (2.1,-1.4) .. (2,-1.9) .. controls (2.5,-2) and (3,-2) .. (3.6,-2.1) .. controls (3.9,-1.2) and (4.5,0.5) .. (4.7,1.4) -- (3.2,1.6) (3.1,1.4) .. controls (4.6,1.3) and (4.4,1.2) .. (4.1,0.4) .. controls (3.8,-0.5) and (3.5,-1.3) .. (3.3,-2) (5.3,1.3) .. controls (4.9,-0.1) and (4.6,-1) .. (4.2,-2) -- (5.9,-2.2) .. controls (6.4,-1.1) and (6.9,-0.1) .. (7.2,0.5) .. controls (7.4,0.8) and (7.5,1.1) .. (7.1,1.1) .. controls (6.4,1.2) and (6.1,1.2) .. (5.3,1.3) (5.2,1.1) .. controls (5.9,1.1) and (6.8,1) .. (6.9,1) .. controls (7.3,0.9) and (6.8,0.4) .. (5.6,-2.2) (-8.7,-3.4) .. controls (-9,-2.6) and (-8.5,-1.7) .. (-7.8,-1.4) (-0.9,-3.7) .. controls (-0.5,-1.8) and (0,-1.9) .. (0.2,-1.9) (-8.4,-5) .. controls (-8.1,-5.4) and (-7.8,-5.7) .. (-7.4,-5.8) .. controls (-6.8,-5.9) and (-6,-5.8) .. (-5.7,-5.8) .. controls (-5.3,-5.8) and (-5,-5.6) .. (-4.8964,-5.1795) (-3.5,-5.2) .. controls (-3.4,-5.7) and (-3.2,-5.9) .. (-2.9,-6.2)--(-0.6,-6.2) .. controls (-0.2,-6.2) and (0.3,-4.9) .. (0.4,-4.4) .. controls (0.5,-4) and (0.7,-2.6) .. (-0.1,-2) (0.2,-5) .. controls (0.3,-6.6) and (0.9,-6.1) .. (2.6,-6.2) (-5.7,0.9)--(-5.6,2.4) .. controls (-5.4,2.5) and (-5.5,2.4) .. (-5.3,2.5) .. controls (-5.3,2.7) and (-5.3,2.7) .. (-5.3,2.8) .. controls (-5.1,3) and (-5,2.8) .. (-5,2.9) .. controls (-5,3.2) and (-5,3.4) .. (-5,3.7) .. controls (-4.5,3.8) and (-4.2,3.7) .. (-4,3.6) .. controls (-4.1,3.3) and (-4.2,2.9) .. (-4.3,2.8) (1.4,2.2) .. controls (1.3,1.4) and (1.2,0.3) .. (1.1,-0.3) .. controls (0.9,-0.2) and (2.5,-0.2) .. (2.9,-0.3) .. controls (2.7,-0.7) and (2.9,-1) .. (1.1,-0.3) .. controls (3.9,-1.4) and (2.4,-0.5) .. (3.3,2) .. controls (2.7,2.2) and (1.8,2.3) .. (1.4,2.2) (-1.1,0.2) .. controls (-0.9,1.1) and (-0.8,1.8) .. (-0.6,2.4) .. controls (-1.5,2.6) and (-3.2,2.6) .. (-4,2.4) .. controls (-4.2,1.8) and (-4.3,1.3) .. (-4.4,0.9) (-4.1,0.9) .. controls (-4.1,1.4) and (-4,1.8) .. (-3.9,2.1) .. controls (-2.9,2.4) and (-1.6,2.3) .. (-0.7,2) (-0.1,2.3) .. controls (-0.3,1.4) and (-0.4,0.6) .. (-0.5,0.2) .. controls (0,0) and (0.3,0) .. (0.6,-0.1)--(0.9,2) .. controls (0.5,2.1) and (0.3,2.2) .. (-0.1,2.3) (0.4,0) .. controls (0.5,0.5) and (0.6,1.2) .. (0.7,1.8) .. controls (0.3,2) and (0.2,2) .. (-0.1,2.1) (-5.3,2.5) .. controls (-5.2,2.6) and (-4.5,2.5) .. (-4.4,2.4)(-4.2,2.6) .. controls (-4.2,2.7) and (-4.2,2.8) .. (-4.4,2.8) .. controls (-4.5,2.9) and (-4.8,2.9) .. (-5,2.9) (-3.6,2.7) .. controls (-3.3,3.5) and (-3.1,3.5) .. (-2.8,2.8) (-2.5,2.8) .. controls (-2.2,3.5) and (-1.9,3.5) .. (-1.7,2.8) (-1.4,2.8) .. controls (-1.1,3.5) and (-0.8,3.5) .. (-0.6,2.7) (-5.6,1.8) .. controls (-5.2,1.9) and (-4.8,1.9) .. (-4.6,1.9) (-5.6,2) .. controls (-5.2,2.1) and (-4.8,2.1) .. (-4.5,2.1) (1.8,2.2) .. controls (1.9,2.5) and (1.9,2.6) .. (2,2.6) .. controls (2.2,2.6) and (2.5,2.6) .. (2.8,2.5) .. controls (2.8,2.4) and (2.8,2.2) .. (2.8,2.1) (2,2.6) .. controls (2,2.9) and (2,3.2) .. (1.9,3.5) .. controls (2.2,3.6) and (2.7,3.6) .. (2.8,3.4) .. controls (2.8,3.1) and (2.7,2.8) .. (2.7,2.5);
@@ -29728,9 +29714,9 @@ x
 
 %300
 \newcommand{\fcTruckB}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics{Caminhão de mercadoria.jpg}};
+%\node {\includegraphics{CaminhÃ£o de mercadoria.jpg}};
 %\draw
-\draw(-8.5,4.1) .. controls (-6.5,4.8) and (-5,5.3) .. (-2.5,6.2) .. controls (0.5,5.9) and (2,5.8) .. (4.1,5.7) .. controls (4.1,4.9) and (4.1,4.4) .. (4.1,3.7) (-8.5,4.1) .. controls (-8.4,2.4) and (-8.4,0.1) .. (-8.4,-1.5) .. controls (-6.5,-1.8) and (-4.4,-1.9) .. (-2.5,-2.1) .. controls (-2.5,2.2) and (-2.4,4) .. (-2.5,6.2) (-8.2,-1.6) .. controls (-8.2,-1.8) and (-8.2,-2) .. (-8.2,-2.6) .. controls (-8.1,-2.7) and (-8,-2.7) .. (-8,-2.7) .. controls (-7.8,-1.7) and (-6.6,-1.5) .. (-6.3,-3.2) .. controls (-5.2,-3.5) and (-3.5,-3.9) .. (-2.3,-4.1) (-2,-2.2) .. controls (-2.2,-2.1) and (-2.2,-2.2) .. (-2.5,-2.1) (-2.3,-2.1) .. controls (-2.3,-2.8) and (-2.3,-3.3) .. (-2.3,-4.1) (-2.3,-4.1) .. controls (-2.1,-4.2) and (-2,-4.3) .. (-2,-4.2) .. controls (-2,-2.8) and (-2,0.8) .. (-1.9,2.7) .. controls (-2,3.4) and (-1.5,3.5) .. (-0.7,3.6) .. controls (2.2,3.8) and (4.6,3.7) .. (6.3,3.4) .. controls (7.2,3.3) and (7.3,2.7) .. (7.3,2) .. controls (7.5,0.5) and (7.7,-2.9) .. (7.7,-3.7) .. controls (7.7,-4.8) and (7.4,-4.6) .. (7,-4.7) .. controls (6,-4.8) and (3.5,-5.1) .. (2.3,-5.2) .. controls (1.8,-5.2) and (1,-5.1) .. (0.4,-5) .. controls (0.5,-2.3) and (-1.3,-2) .. (-1.7,-4.3) .. controls (-1.8,-4.3) and (-1.9,-4.3) .. (-2.1,-4.2) (0.8,2) .. controls (-0.4,2) and (-0.1,1.6) .. (-0.1,0.8) (-0.1,1.5) .. controls (-0.4,1.4) and (-0.7,1.7) .. (-0.6,-0.2) .. controls (-0.5,-1.1) and (0.3,-0.9) .. (0.3,-0.3) .. controls (0.3,0.8) and (0.4,1.4) .. (-0.1,1.5) (7.3,1.9) .. controls (8.1,2) and (8,1.6) .. (8,0.9) (7.7,0.8) .. controls (7.6,1.7) and (8.4,1.7) .. (8.4,0.8) .. controls (8.4,0.5) and (8.4,0.2) .. (8.4,0) .. controls (8.5,-1) and (7.7,-1) .. (7.7,-0.1) .. controls (7.7,0.2) and (7.7,0.5) .. (7.7,0.8);;
+\draw(-8.5,4.1) .. controls (-6.5,4.8) and (-5,5.3) .. (-2.5,6.2) .. controls (0.5,5.9) and (2,5.8) .. (4.1,5.7) .. controls (4.1,4.9) and (4.1,4.4) .. (4.1,3.7) (-8.5,4.1) .. controls (-8.4,2.4) and (-8.4,0.1) .. (-8.4,-1.5) .. controls (-6.5,-1.8) and (-4.4,-1.9) .. (-2.5,-2.1) .. controls (-2.5,2.2) and (-2.4,4) .. (-2.5,6.2) (-8.2,-1.6) .. controls (-8.2,-1.8) and (-8.2,-2) .. (-8.2,-2.6) .. controls (-8.1,-2.7) and (-8,-2.7) .. (-8,-2.7) .. controls (-7.8,-1.7) and (-6.6,-1.5) .. (-6.3,-3.2) .. controls (-5.2,-3.5) and (-3.5,-3.9) .. (-2.3,-4.1) (-2,-2.2) .. controls (-2.2,-2.1) and (-2.2,-2.2) .. (-2.5,-2.1) (-2.3,-2.1) .. controls (-2.3,-2.8) and (-2.3,-3.3) .. (-2.3,-4.1) (-2.3,-4.1) .. controls (-2.1,-4.2) and (-2,-4.3) .. (-2,-4.2) .. controls (-2,-2.8) and (-2,0.8) .. (-1.9,2.7) .. controls (-2,3.4) and (-1.5,3.5) .. (-0.7,3.6) .. controls (2.2,3.8) and (4.6,3.7) .. (6.3,3.4) .. controls (7.2,3.3) and (7.3,2.7) .. (7.3,2) .. controls (7.5,0.5) and (7.7,-2.9) .. (7.7,-3.7) .. controls (7.7,-4.8) and (7.4,-4.6) .. (7,-4.7) .. controls (6,-4.8) and (3.5,-5.1) .. (2.3,-5.2) .. controls (1.8,-5.2) and (1,-5.1) .. (0.4,-5) .. controls (0.5,-2.3) and (-1.3,-2) .. (-1.7,-4.3) .. controls (-1.8,-4.3) and (-1.9,-4.3) .. (-2.1,-4.2) (0.8,2) .. controls (-0.4,2) and (-0.1,1.6) .. (-0.1,0.8) (-0.1,1.5) .. controls (-0.4,1.4) and (-0.7,1.7) .. (-0.6,-0.2) .. controls (-0.5,-1.1) and (0.3,-0.9) .. (0.3,-0.3) .. controls (0.3,0.8) and (0.4,1.4) .. (-0.1,1.5) (7.3,1.9) .. controls (8.1,2) and (8,1.6) .. (8,0.9) (7.7,0.8) .. controls (7.6,1.7) and (8.4,1.7) .. (8.4,0.8) .. controls (8.4,0.5) and (8.4,0.2) .. (8.4,0) .. controls (8.5,-1) and (7.7,-1) .. (7.7,-0.1) .. controls (7.7,0.2) and (7.7,0.5) .. (7.7,0.8);
 \draw (-8.5,3.8)--(-2.5,5.9) (-8.4,-1.1) .. controls (-5.9,-1.4) and (-4.2,-1.6) .. (-2.5,-1.7) (-7.9,4) .. controls (-7.9,2.4) and (-7.8,0) .. (-7.8,-1.1) (-7.1,4.3) .. controls (-7.1,2.3) and (-7,-0.2) .. (-7,-1.2) (-6.3,4.5) .. controls (-6.3,2.3) and (-6.2,-0.2) .. (-6.2,-1.3) (-5.5,4.8) .. controls (-5.4,2.2) and (-5.4,-0.2) .. (-5.4,-1.4) (-4.7,5.1) .. controls (-4.7,2.7) and (-4.7,0.2) .. (-4.6,-1.5) (-3.9,5.4) .. controls (-3.8,2.7) and (-3.8,0.1) .. (-3.8,-1.6) (-3.1,5.7) .. controls (-3.1,2.6) and (-3.1,0.2) .. (-3,-1.7) (-1.8,3) .. controls (-0.9,3.2) and (0.4,3.2) .. (0.8,3.1) .. controls (3.3,3.4) and (5.5,3.1) .. (7.1,2.9) (0.8,3.1) .. controls (0.9,1.6) and (1.1,-1.8) .. (1.1,-3.9) .. controls (0.9,-3.9) and (0.6,-3.9) .. (0.3,-3.8) (1.1,-3.9) .. controls (1.2,-3.8) and (1.3,-3.8) .. (1.5,-3.7) .. controls (4.4,-3.7) and (6.6,-3.6) .. (7.7,-3.4) (1.5,-3.7) .. controls (1.5,-3.5) and (1.5,-3.2) .. (1.5,-2.9) .. controls (4.1,-2.9) and (6.1,-2.8) .. (7.6,-2.7) (7.3,2.4) .. controls (6,2.8) and (2.9,2.8) .. (1.7,2.8) .. controls (1.5,2.8) and (1.1,2.7) .. (1.2,2) .. controls (1.5,-1.4) and (1.5,-1.9) .. (1.5,-1.9) .. controls (1.5,-2.5) and (1.8,-2.4) .. (2.4,-2.4) .. controls (4,-2.4) and (5.9,-2.3) .. (7.6,-2.1) (0.6,2) .. controls (0.6,2.2) and (0.6,2.7) .. (0.2,2.7) .. controls (-0.2,2.8) and (-0.6,2.8) .. (-0.9,2.8) .. controls (-1.5,2.8) and (-1.5,2.5) .. (-1.5,1.9) .. controls (-1.5,0.9) and (-1.5,-0.4) .. (-1.5,-0.9) .. controls (-1.5,-1.4) and (-1.5,-1.6) .. (-1,-1.7) .. controls (-0.7,-1.8) and (0,-1.8) .. (0.2,-1.8) .. controls (0.4,-1.8) and (0.7,-1.6) .. (0.7,-1.3) .. controls (0.7,-0.1) and (0.6,0.7) .. (0.6,2);
 \draw (-1.7203,5.374)circle(0.4)(-0.8,5.2)circle(0.3) (3.6197,4.9402)circle(0.3)(2.8398,4.9398)circle(0.25);
 
@@ -29753,7 +29739,7 @@ x
 \end{tikzpicture}}
 %301
 \newcommand{\fcTruckC}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics{Caminhão de transporte.jpg}};
+%\node {\includegraphics{CaminhÃ£o de transporte.jpg}};
 %\draw
 \draw (-4.8,5.2) --(0.6,5) -- (1.2,3.2) --(7,2.8)--(6.3,-1.3) -- (0.5,-1.4) --(-0.2,4.1) --(-4.9,4.4) --(-4.8,5.2) (1.1,3.5) .. controls (3.6,7.8) and (5.5,5.2) .. (6.3,2.9) (1.3,2.7)--(2.5,2.6) -- (2.2,-0.7)-- (1.4,-0.7)--(1.3,2.7) (3,2.6)--(4,2.5)--(4,-0.6)--(3.2,-0.6) --(3,2.6) (4.7,2.4) --(5.8,2.4) -- (5.4,-0.6) --(4.9,-0.6) -- (4.7,2.4) (0.5,-1.4) .. controls (0.4,-1.4) and (0.3,-1.4) .. (0.2,-1.4)-- (0.2,-2.2) (5.7,-1.3) .. controls (5.9,-1.6) and (5.8,-1.8) .. (5.5,-2.1);
 \draw(-7,-3.1) .. controls (-7.5,1) and (-6.8,0.5) .. (-5.1,3.3) (-7,0.1) .. controls (-4.7,-1.2) and (-4.6,0.2) .. (-4.4,1.8) .. controls (-4.1,3.4) and (-4.1,3.1) .. (-4.7,3.2) .. controls (-5.5,3.3) and (-6,3.8) .. (-4.5,3.9) .. controls (0.2,4.1) and (-0.3,2.8) .. (-0.2,1.3) .. controls (-0.2,0) and (-0.1,-2.1) .. (0,-4.2) (-4.2,0.4) .. controls (-4,3.1) and (-3.8,2.9) .. (-2.7,2.9) .. controls (-1.9,2.9) and (-0.8,3.3) .. (-0.8,1) .. controls (-0.4,-5.2) and (-1.8,-3.4) .. (-1.9,-2.5) .. controls (-1.9,-1.9) and (-2.2,-1.2) .. (-3.6,-1.2) .. controls (-4.2,-1.2) and (-4.2,-1.1) .. (-4.2,0.4) (-7,-3.1) .. controls (-8.2,-3.1) and (-7.9,-3.6) .. (-8,-4.3) .. controls (-8,-5.6) and (-6.5,-5) .. (-6.5,-4.4) .. controls (-6.4,-3.8) and (-6.4,-3.1) .. (-7,-3.1) (-7.1,-1.7) .. controls (-6.1,-1.8) and (-6.5,-2.7) .. (-7,-2.7) (-0.3,-4.2) .. controls (0.4,-4.2) and (1,-4.2) .. (1.8,-4.2) (6.1,-2.7) .. controls (5.3,-1.6) and (2.2,-0.5) .. (1.8,-4.2) .. controls (1.7,-5) and (2.3,-4.8) .. (2.4,-4.2) .. controls (2.9,-2.4) and (5.4,-2.9) .. (6,-3.7)--(6.5,-3.6) .. controls (6.5,-3.6) and (6.4,-3.3) .. (6.3,-3.1) (-0.1,-2.2) .. controls (0.7,-2.2) and (1.7,-2.2) .. (2.6,-2.2) (5.9,-2.7) -- (6.5,-2.7) -- (6.5,-3.1)--(5.9,-3.1)-- (5.9,-2.7) (-4.2,-0.2)--(-0.8,-0.2) (-1.7,-4.1) .. controls (-2.1,-1.5) and (-4.3,-1.3) .. (-5.4,-1.8) .. controls (-6.5,-2.2) and (-7,-3.3) .. (-5.1,-3.1) .. controls (-3.2,-2.5) and (-2.4,-3.4) .. (-2.3,-4.3) .. controls (-2.3,-4.5) and (-2.1,-4.6) .. (-1.9,-4.6) -- (-0.8,-4.6) .. controls (-0.1,-4.6) and (0,-4.1) .. (-0.7,-4.1) .. controls (-1,-4.1) and (-1.3,-4.1) .. (-1.7,-4.1);
@@ -29761,7 +29747,7 @@ x
 \end{tikzpicture}}
 %302
 \newcommand{\fcTruckD}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics{Caminhão guindaste.jpg}};
+%\node {\includegraphics{CaminhÃ£o guindaste.jpg}};
 %\draw
 \draw(-7.7,-2.5) .. controls (-8.1838,-3.0951) and (-7.2546,-4.2816) .. (-7.3,-2.9) .. controls (-6.5,-3.4) and (-7.3688,-4.6015) .. (-8.0714,-3.6324) .. controls (-8.2349,-3.3931) and (-8.4407,-2.8935) .. (-8.2788,-2.5545) (-7.8,-0.8) .. controls (-7.3,-1.1) and (-7.1,-1.7) .. (-7.4,-2.2) .. controls (-7.6,-2.7) and (-8.4606,-2.6394) .. (-8.8,-2.2) .. controls (-9.0909,-1.8728) and (-9.1,-1) .. (-8.5,-0.8) (-6.6,0.6) .. controls (-6.8,-0.4) and (-7.8,-0.9) .. (-8.2,-0.8) .. controls (-8.6,-0.9) and (-9.2524,-0.4045) .. (-9.5,0.3) .. controls (-9.8,1.2) and (-9.2,1.8) .. (-8.8,2) .. controls (-8.3,2.2) and (-7.5,2.2) .. (-7,1.7) .. controls (-6.4,2) and (-5.5,2.3) .. (-4.2897,2.7928) (-6.6,0.6) .. controls (-5.8,0.8) and (-4.8,1.3) .. (-3.6963,1.8459) (-4.5723,2.6527) --(-4.5,2.9) --(-3.475,2.4534)-- (-3.8193,1.487) -- (-4.1907,1.6166) (-5.1327,2.4725) --(-4.9,3.2) --(-4.0724,3.5562) --(-2.662,2.8283)--(-2.9145,1.4577) .. controls (-3.1,1.4) and (-3.4,1.2) .. (-3.8,0.8746)--(-4.8018,1.3248) (-3.8746,3.4506) .. controls (-0.6,4.6) and (2.3,5.6) .. (4.2,6.2) .. controls (4.6,6.1) and (4.9,6) .. (5.1,5.9)-- (5.3,4.9) .. controls (3.6,4.2) and (-0.6,2.6) .. (-2.9167,1.4928) (-1.2,4.4) .. controls (-1.1,5.1) and (-0.7,5.1) .. (1.2,6.1) .. controls (2.1,6.2) and (3.2,6.1) .. (3.3,5.9) (5.2,5.2) .. controls (6,5.2) and (6.1,4.9) .. (6.3,4.3) .. controls (8.2,4) and (8.0021,3.669) .. (8.4,1.9) .. controls (4.7,-0.1) and (0.7,-2.1) .. (-2.1,-3.5) .. controls (-4.6,-2.6) and (-6.7,-1.7) .. (-7.3,-1.3) (-6.8754,-0.0109) .. controls (-6,0.3) and (-5.5751,0.5413) .. (-4.2901,1.0733) (-5.2,-2) .. controls (-5.2,-1.7) and (-5.4,-1.2) .. (-4.5,-0.9) .. controls (-4.3,1.2) and (-3.3,1.2) .. (-1.3,2.2) .. controls (1.2,1.8) and (0.8,0.7) .. (1.4,-0.7) --(8.1826,2.7385) (1.5,2.9) .. controls (1.7,3.5) and (2.0247,3.3341) .. (2.2603,3.3548) .. controls (3.0975,3.3304) and (2.8975,3.3304) .. (3.0975,3.3304)--(3.4,4.1) --(3.5,4.1)-- (4,4.1) --(4.2,3.3) --(5.8,2.8)--(5.7,1.8) --(3,2.3) .. controls (2.9,2.3) and (2.9,2.3) .. (2.9,2.4)-- (0.8,3)-- (0,2.6)-- (0,1.8) (1,0.6)--(2.1,0.3)--(3,1) --(2.8,2.4) (0.1,2.5)-- (1.9,1.9) -- (2.6,2.3) (1.9,1.9) -- (2.1,0.6) (4,4.1)-- (5.9,5.1) (4.2,3.3) .. controls (5,3.6) and (5.7,4) .. (6.3,4.3) (5.8,2.8)--(7.7,3.9) (2.8568,1.9948) --(5.5285,1.3738)(5.6875,1.7788) .. controls (6.4795,2.2903) and (7.3869,2.678) .. (8.0717,3.074);
 \draw (-3.1593,0.7689) .. controls (-1.4,0) and (-1.4,0) .. (0.2877,1.2786) (-1.3872,0.2106) .. controls (-1.4115,-0.6148) and (-1.4115,-1.076) .. (-1.5086,-1.5615) .. controls (-1.7756,-1.6828) and (-2.2,-2) .. (-2.0912,-3.0422) (-3.4606,0.425) .. controls (-3.6813,-0.0966) and (-3.7816,-0.4577) .. (-3.8618,-0.7586) .. controls (-3.2399,-0.9592) and (-2.7384,-1.1598) .. (-2.2,-1.4) .. controls (-1.8958,-0.879) and (-1.8155,-0.558) .. (-1.7353,-0.237) .. controls (-2.3371,-0.0564) and (-2.9189,0.1642) .. (-3.4405,0.3849) (-7.3,-1.2) .. controls (-7.2923,-0.7987) and (-7.3,-0.8) .. (-7.2,-0.8) --(-6.6,-1.1) --(-6.5902,-1.4805) --(-7.3,-1.2) (-3.1797,-2.4438) .. controls (-2.6982,-2.6043) and (-2.5779,-2.6444) .. (-2.4575,-2.6444) --(-2.4374,-3.1058) --(-3.1195,-2.8651) .. controls (-3.1195,-2.8049) and (-3.1195,-2.7046) .. (-3.1195,-2.4438) (-1.1936,-0.5179) .. controls (-0.9328,-0.3774) and (-0.672,-0.2972) .. (-0.4313,-0.1367) --(-0.2,-1) .. controls (-0.5717,-1.1197) and (-0.8125,-1.2401) .. (-1.0532,-1.3805) -- (-1.1535,-0.5179) (-0.1304,0.0238) -- (0.632,0.4852) .. controls (0.7323,0.1843) and (0.7925,-0.0564) .. (0.8928,-0.4176) .. controls (0.5919,-0.578) and (0.3712,-0.6984) .. (0.0903,-0.879) -- (-0.1103,0.0037) (-7.8,-2.9)--(-7.3,-3.1) (-7,-3.3) .. controls (-5.6072,-3.9885) and (-3,-5) .. (-2.5,-5.4) --(-2.5,-5.4) --(-2.5,-4.6)--(-2.1,-3.8) .. controls (-1.8,-3.6) and (-1.6,-3.6) .. (6.9,0.9)--(8.5,1.8) --(9.1,1.6)--(9.4,0.7) .. controls (9.2,0.6) and (9,0.6) .. (9,0.6)--(8.8,1.3) -- (8.1,1.2) .. controls (6.7,0.3) and (4.8,-0.6) .. (4.2,-1) .. controls (4.2,-1.1) and (4.2,-1.2) .. (4.2,-1.4) .. controls (4.2,-1.5) and (4.2,-1.6) .. (4.3,-1.7)-- (3.8,-2.1)--(3.7,-1.4) -- (3.9228,-0.6733) (-2.5,-5.4) --(-2.1,-5.2) -- (-2.1,-4.7) .. controls (-2,-4.6) and (-1.9,-4.3) .. (-1.8,-4.1) .. controls (-0.9,-3.6) and (1.6,-2.3) .. (2.6,-1.8) -- (3.1,-1.9)-- (3.2,-2.4) .. controls (3.4,-2.3) and (3.5,-2.2) .. (3.5,-2.2)-- (3.4,-1.5) --(2.6,-1.4) (-7.5,-2.4) .. controls (-6.2,-3) and (-3.9,-4) .. (-2.5,-4.6);
@@ -29776,7 +29762,7 @@ x
 \end{tikzpicture}}
 %303
 \newcommand{\fcTruckE}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics{Caminhão largura.jpg}};
+%\node {\includegraphics{CaminhÃ£o largura.jpg}};
 %\draw
 \draw (2,-3.5) -- (-9.4,0.6)--(-9.4,1.3) -- (-8.9,1.4) .. controls (-9.3,4.4) and (-7.9,4.5) .. (-7.4,4.8) .. controls (-6.8,5.1) and (-6.4,5.2) .. (-6,5.3) .. controls (-5,5.7) and (-4.2,5.4) .. (-3.6,5.2) .. controls (-2.8,5) and (-1.1,4.6) .. (-0.5,4.4) .. controls (0.8,4.1) and (0.7,3.8) .. (0.7,3.6) (2.5,-2.9) .. controls (-1.4,-1.5) and (-2.5,-1) .. (-2.6,-0.6) .. controls (-2.6,1.7) and (-3,2.3) .. (-1.6,2.8) .. controls (-1,3) and (-0.5,3.2) .. (0.7,3.6) .. controls (1.1,3.8) and (1.3,3.8) .. (1.7,3.7) .. controls (3,3.3) and (5.1,2.9) .. (6.3,2.4) .. controls (7.2,2.1) and (6.9,1.7) .. (6.9659,1.1234) (2.5,-2.9) .. controls (2.3,0.4) and (2.3,-0.1) .. (3.7,0.5) .. controls (4.4,0.7) and (5.2,1) .. (5.9,1.2) .. controls (7.9,1.6) and (8.3,-0.8) .. (8,-1.2) .. controls (8.7,-1.5) and (9,-2.3) .. (9.003,-2.6099) .. controls (6.8776,-3.5277) and (5.7,-3.8) .. (5.5,-3.8) .. controls (4.8,-3.9) and (4.8,-3.7) .. (4.7,-3.7) .. controls (4.5,-3.7) and (4.4,-4) .. (4.4,-4.5) .. controls (4.4,-5.3) and (5.2,-5.2) .. (5.7,-5.1) .. controls (7.2,-4.8) and (8.1,-4.4) .. (9.0633,-3.8569) .. controls (9.5521,-3.6135) and (9.5971,-2.4293) .. (8.9,-2.3) (-8.1,4.2) .. controls (-2.5293,2.2945) and (-3.8,2.2) .. (0.1,3.8) (-3.2,2.7) .. controls (-3.2,1.3) and (-3.2,0.6) .. (-3.2,-0.2) (-2.2,2.2) .. controls (2.7,0.4) and (1.9,0.2) .. (6.4,2.1) (2.3,0.8) .. controls (2.3,-0.5) and (2.2,-1.4) .. (2.2,-2.2) (2.9,-0.2) .. controls (3.1,-0.3) and (3.3,-0.5) .. (3.8,-0.6) .. controls (4.4,-0.7) and (5.8848,-0.0429) .. (7.2,0.4) (4.2,-1) .. controls (5.3,-0.6) and (6.8,-0.1) .. (7.5,0) .. controls (7.7,-0.3) and (7.8,-0.6) .. (7.8,-1) .. controls (6.9,-1.3) and (5.3,-1.9) .. (4.5181,-2.1743) .. controls (4.3,-2) and (4.1,-1.2) .. (4.2,-1) (4,-2.3) .. controls (4.6,-2.8) and (4.6,-3.5) .. (4.5,-3.8) (-8.9,1.4) .. controls (-7.5,0.9) and (-4.9,0) .. (-3.4,-0.6) .. controls (-3.1,-0.7) and (-2.8,-0.6) .. (-2.6,-0.6) (-9.4,1.3) .. controls (-5,-0.3) and (-0.4,-2.1) .. (2.3,-3.1) (4.5,-3.9) .. controls (4.9,-4.1) and (5.5,-4.1) .. (6.2,-3.9) .. controls (7.6,-3.5) and (8.9,-2.9) .. (9.1,-2.8) .. controls (9.2479,-2.665) and (9.3,-2.6) .. (9,-2.3) (3.4,-2.1) .. controls (3,-1.9) and (2.8,-1.8) .. (2.7,-1.7) .. controls (2.7,-1.5) and (2.7,-1) .. (2.7,-0.7)-- (3.6,-1.1) .. controls (3.6,-1.1) and (3.6,-1.1) .. (3.6,-1.1) (4.0299,-2.0556)-- (3.4,-2.1) .. controls (3,-1.1) and (3.5,-1.1) .. (3.8,-1.1)-- (4.0257,-2.059) (4.4,-4.6) .. controls (4.2,-4.7) and (4.1,-4.7) .. (3.8,-4.8) -- (3.4,-4.7) .. controls (3.6,-4) and (2.7439,-3.1797) .. (1.9152,-3.8663) .. controls (2.2198,-2.0481) and (4.3743,-3.2128) .. (4.4,-4.2) (1.9152,-3.8663) .. controls (2.4671,-2.7356) and (3.9651,-3.5941) .. (3.8,-4.8) (-8.9,0.4) (-8.9,0.4) .. controls (-9.1,-0.5) and (-8.5,-1.2) .. (-8.2,-1.2) .. controls (-7.3,-1.3) and (-7.2,-0.6) .. (-7.2,-0.2) (-6.6,-0.4) .. controls (-6.6,-0.9) and (-7.1,-1.5) .. (-8.2,-1.2) (-6,-0.6) .. controls (-6.2,-1.1) and (-6.1,-1.8) .. (-5.4,-2.2) .. controls (-4.8,-2.5) and (-4.2,-1.9) .. (-4.2,-1.3) (-3.7,-1.5) .. controls (-3.7,-2) and (-4.5,-2.7) .. (-5.4,-2.2) (-3.2,-1.6) .. controls (-3.4,-2.4) and (-3,-3) .. (-2.5,-3.2) .. controls (-1.7,-3.4) and (-1.3,-2.6) .. (-1.4,-2.3) (-2.5,-3.2) .. controls (-1.2,-3.5) and (-1,-2.9) .. (-0.8,-2.5) (-0.4,-2.6) .. controls (-0.5,-3.8) and (-0.1,-4.1) .. (0.4,-4.3) .. controls (0.9,-4.5) and (1.4,-4.2) .. (1.4,-3.3) (0.4,-4.3) .. controls (0.7,-4.4) and (1.7,-4.5) .. (1.9,-3.5) (-8.3,1.4) .. controls (-8.3,2.4) and (-8.3,3.2) .. (-8.3,3.9)-- (-7.8,3.7) .. controls (-7.8,3) and (-7.8,2) .. (-7.8,1.3) (-7.3,1.1) .. controls (-7.3,2) and (-7.3,2.7) .. (-7.3,3.6) --(-6.8,3.4) --(-6.8,1) (-6.4,0.8)--(-6.4,3.3)-- (-5.9,3.1) --(-5.9,0.6) (-5.4,0.5) .. controls (-5.4,1.5) and (-5.4,2.2) .. (-5.4,3) --(-4.9,2.8)-- (-4.9,0.3) (-4.5,0.2) -- (-4.5,2.7)--(-4,2.5) .. controls (-4,1.8) and (-4,0.8) .. (-4,0) (-2.3,-0.6) --(-2.2,1.9)-- (-1.8,1.7)--(-1.9,-0.9) (-1.5,-1) -- (-1.4,1.5) --(-1,1.3)--(-1.1,-1.1) (-0.7,-1.3) --(-0.6,1.2)--(-0.2,1)--(-0.3,-1.5) (0.1,-1.6)-- (0.2,0.9)-- (0.7,0.7)-- (0.6,-1.8) (1,-2)-- (1.1,0.6) --(1.6,0.4)--(1.5,-2.1);
 \draw (2,-3.8) .. controls (1.6699,-4.778) and (2.4416,-5.4722) .. (2.7,-5.5) .. controls (3.1161,-5.5928) and (3.6545,-5.4613) .. (3.7,-4.8) (2.7,-5.5) .. controls (3.783,-5.8143) and (4.2544,-5.294) .. (4.3,-4.6) (3.7811,-1.1547) .. controls (3.404,-1.2942) and (3.2784,-1.4302) .. (3.5128,-2.1296) (7.9,0.2) .. controls (7.9271,0.1949) and (8.3407,0.4134) .. (8.5,-0.2) .. controls (8.6069,-0.6895) and (8.4,-0.8) .. (8.055,-0.8575) (8,-0.1) .. controls (7.9725,0.1369) and (8.398,0.1524) .. (8.5175,-0.2111);
@@ -29786,7 +29772,7 @@ x
 \end{tikzpicture}}
 %304
 \newcommand{\fcTruckF}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics{Caminhão pá.jpg}};
+%\node {\includegraphics{CaminhÃ£o pÃ¡.jpg}};
 %\draw
 \draw (-9,-5.5) .. controls (-8,-4.3) and (-7.3,-3.4) .. (-7.9,-1.1) .. controls (-5.9,-1.2) and (-2.6,-1.4) .. (0,-1.6) .. controls (0,-3) and (-0.1,-5.2) .. (-1.7,-6.5) .. controls (0.4,-6.4) and (1.6,-2.3) .. (0,-1.6) (-1.7,-6.5) .. controls (-3.2,-6.3) and (-6.5,-6) .. (-9,-5.5) (-4,-1.3) .. controls (-4,-0.2) and (-3.9,0.8) .. (-3.9,1.6) .. controls (-3,1.6) and (-2.2,1.6) .. (-1.5,1.6)--(-1.6,-1.5) (-3.5,-1.4)-- (-3.5,1.2)-- (-2.1,1.1) --(-2.2,-1.4) (-3.9,1.6) .. controls (-3.2,2.1) and (-2.5,2.6) .. (-1.6,3.2) -- (0.9,3)-- (-1.5,1.6) (1,-0.6)--(1,5.7)--(-1.6,6) .. controls (-1.6,5.2) and (-1.6,4.3) .. (-1.6,3.2) (-1.5,6)-- (1.9,6.5)--(3.7,6.3) --(1,5.7) (3.9,6.3) .. controls (3.9,5.3) and (3.9,3.9) .. (3.9,2.5) (1,-0.1) .. controls (1.3,1.7) and (4.2,2.6) .. (4.6,2.7) .. controls (5.2,2.9) and (6.4,2.4) .. (6.7,1.9) .. controls (5.1,2.2) and (4.1,1.1) .. (3.1,-0.2) .. controls (2.6,-0.2) and (1.7,-0.2) .. (1,-0.1) (6.7,1.9) .. controls (7.3,1.8) and (7,1.5) .. (6.9,1.5) .. controls (5.6,1.5) and (4.6,0.9) .. (3.9,-0.1) .. controls (3.6,-0.3) and (3.4,-0.3) .. (3.2,-0.4) .. controls (3.2,-0.4) and (3.2,-0.4) .. (3.1,-0.2) (1.5,5.2) .. controls (2.2,5.4) and (2.9,5.5) .. (3.4,5.6) .. controls (3.4,4.4) and (3.4,4) .. (3.4,3.5) -- (1.5,2.8) .. controls (1.5,3.4) and (1.5,4.5) .. (1.5,5.2) (-1.2,3.2) .. controls (-1.2,4.1) and (-1.2,4.8) .. (-1.2,5.4)--(0.6,5.2) --(0.6,3) (4.2,2.6) .. controls (4.2,3.4) and (4.2,4) .. (4.2,4.7) .. controls (4.7,4.7) and (5.2,4.7) .. (5.5,4.7) .. controls (5.9,4.7) and (5.9,4.2) .. (5.5,4.2) .. controls (5.4,4.2) and (5.1,4.2) .. (4.8,4.2) .. controls (4.8,3.9) and (4.8,3.3) .. (4.8,2.7) (-1.6,3.2) .. controls (-3.4,2.6) and (-4.4,1.8) .. (-4.8,0.7) (-3.9,0.6)-- (-4.8,0.7) .. controls (-5.5,0.4) and (-6,-0.3) .. (-6,-1.2);
 \draw (1.5,-0.2) .. controls (0.5,-0.8) and (0.7,-1.6) .. (0.7,-2.7) (0.7,-3.4) .. controls (0.8,-3.6) and (0.8,-3.8) .. (0.9,-3.9) .. controls (1.7,-4.1) and (2.7,-4.3) .. (3.6,-4.2) .. controls (5.1,-3.6) and (7.3,-1.6) .. (7.6,-1.3) .. controls (8.4,-0.6) and (8.9,0.9) .. (7.4,1.1) .. controls (6.2,0.7) and (5,0) .. (4.2,-0.5) .. controls (2.8,-1.5) and (2.9,-3.8) .. (3.6,-4.2) (7.2,0.6) .. controls (8.3,1.1) and (8.2,-0.5) .. (7.5,-1) .. controls (6.2,-2) and (4.8,-3.2) .. (3.9,-3.5) .. controls (3.2,-3.8) and (3.4687,-1.4718) .. (4.7924,-0.7493) .. controls (5.9,0) and (6.5,0.2) .. (7.2,0.6) (4.6,-1.4) .. controls (3.7,-1.8375) and (3.8687,-3.1786) .. (4.5,-2.8) .. controls (5.8,-1.9) and (6.8,-1.1) .. (7.3,-0.8) .. controls (7.7,-0.6) and (7.8,0.4) .. (7.3,0.2) .. controls (6.5,-0.4) and (5.2,-1) .. (4.6,-1.4) (7.4,1.1) .. controls (7.1,1.2) and (6.5,1.3) .. (6.0149,1.4098);
@@ -29794,11 +29780,10 @@ x
 \end{tikzpicture}}
 %305
 \newcommand{\fcTruckG}[1][]{ \begin{tikzpicture}[   #1,   execute at begin picture={\tikzset{every path/.append style={#1}}}   ]
-%\node {\includegraphics{Caminhão pequeno.jpg}};
+%\node {\includegraphics{CaminhÃ£o pequeno.jpg}};
 %\draw
 \draw (-2.1,5.6) .. controls (-2.1,5.9) and (-2.1,6.3) .. (-1.9,6.6) .. controls (3,6.4) and (6.5,6.2) .. (7.2,6.1) .. controls (7.7,6.1) and (7.9,5.7) .. (7.9,4.7) .. controls (7.7,1.9) and (7.9,-1.3) .. (7.8,-2.9) .. controls (5.8,-3) and (1.6,-2.9) .. (0.2,-2.8) .. controls (0.1,2.1) and (-0.1,4.5) .. (-0.1,5) .. controls (-0.1,5.3) and (-0.4,5.5) .. (-0.8,5.5) .. controls (-1.4,5.5) and (-1.6,5.5) .. (-2.1,5.6) (-1.5,-5.3) .. controls (-1.7,-2.4) and (-5.3,-2.4) .. (-5.3,-5.2) .. controls (-7.8,-5.3) and (-8.2,-5.4) .. (-8.1,-3) .. controls (-8,0.2) and (-7.5,1.6) .. (-6.3,4) .. controls (-5.7,5.5) and (-4.9,5.1) .. (-1.6,5) .. controls (-0.4,4.9) and (-0.5,3.8) .. (-0.5,3.2) .. controls (-0.5,0.8) and (-0.5,-3.3) .. (-0.5,-4.5) .. controls (-0.5,-5.6) and (-1.1,-5.2) .. (-1.5,-5.3) (-0.6,-5) .. controls (0.9,-5) and (1.5,-5) .. (2.7,-5) .. controls (3.1,-2.4) and (6.4,-2.6) .. (6.6,-5.1) .. controls (8.6,-5.2) and (8.1,-5.1) .. (8.2,-3.8) .. controls (8.2,-3.5) and (8.4,-3) .. (7.8,-2.9) (-7.8,-0.2) .. controls (-6.9,-0.2) and (-7,-0.9) .. (-7,-1.2) .. controls (-7,-1.6) and (-7.3,-2.1) .. (-8,-1.9) (-6.1,4.4) .. controls (-5.4,4.3) and (-5.3,4.4) .. (-5.9,2.8) .. controls (-6.1,2.4) and (-6.3,1.3) .. (-6.4,1.1) .. controls (-6.4,0.7) and (-6.7,0.6) .. (-7.6,0.7) (-4.6,3.5) .. controls (-4.4,4.2) and (-4.5,4.2) .. (-2.8,4.2) .. controls (-1.2,4.1) and (-1.5,4.2) .. (-1.5,1.4) .. controls (-1.5,0.4) and (-1.4,0.5) .. (-3.5,0.5) .. controls (-5.2,0.6) and (-5.3,0.4) .. (-5,1.5) (-5.2,3.5)-- (-4.3,3.4) .. controls (-4.4,2.5) and (-4.3,1.3) .. (-5.3,1.5) .. controls (-6,1.6) and (-5.7,1.9) .. (-5.2,3.5) (-5.1,4.4) .. controls (-4.9,4.2) and (-4.8,3.9) .. (-4.9,3.5) (-5.3,1.5) .. controls (-5.4,1.1) and (-5.8,0.9) .. (-6.1,0.6) (1,5.5) .. controls (1.3,5.5) and (1.5,5.5) .. (1.8,5.4) .. controls (1.8,3.3) and (2,-0.3) .. (1.8,-2.1) .. controls (1.6,-2.2) and (1.4,-2.2) .. (0.9,-2.1) .. controls (0.9,-0.4) and (1,3.4) .. (1,5.5) (2.5,5.3) .. controls (2.8,5.3) and (3.2,5.3) .. (3.3,5.3) .. controls (3.4,3) and (3.4,-0.8) .. (3.3,-2) .. controls (3.1,-2) and (2.8,-2) .. (2.6,-2) .. controls (2.6,0.4) and (2.5,3.6) .. (2.5,5.3) (4.2,5.3) .. controls (4.6,5.3) and (5,5.3) .. (5.1,5.3) .. controls (5.1,2.5) and (5.2,-1.5) .. (5.1,-2.2) .. controls (4.6,-2.2) and (4.5,-2.2) .. (4.2,-2.2) .. controls (4.2,1) and (4.1,4.2) .. (4.2,5.3) (5.7,5.2) .. controls (6,5.2) and (6.4,5.2) .. (6.5,5.2) .. controls (6.6,2.5) and (6.6,-1.4) .. (6.6,-2.1) .. controls (6.5,-2.1) and (6,-2.1) .. (5.7,-2.1) .. controls (5.8,1.9) and (5.7,4) .. (5.7,5.2) (0.2,-2.8)--(-0.5,-2.8);
 \draw (-5.4,-5.2) .. controls (-5.1,-7.2) and (-1.6,-6.9) .. (-1.4,-5.3) (-3.5,-4) .. controls (-2.4,-4.1) and (-2.3,-5.6) .. (-3.5,-5.6) .. controls (-4.7,-5.6) and (-4.5,-4) .. (-3.5,-4)(2.6,-5) .. controls (2.9,-7.3) and (6.5,-7) .. (6.7,-5.1) (4.7,-4) .. controls (6,-4.2) and (5.6,-5.5) .. (4.5,-5.5) .. controls (3.2,-5.5) and (3.6,-3.9) .. (4.7,-4);
 \filldraw (-2.7,0.1) rectangle (-1.5,-0.5);
-
 \draw (-7.6,-5.1) .. controls (-7.7,-4.9) and (-7.7,-4.5) .. (-7.5,-4.4) (-6.8,-5.2) .. controls (-7,-5.1) and (-6.9,-4.5) .. (-6.7,-4.5) (-6.1,-5.2) .. controls (-6.2,-4.9) and (-6.2,-4.7) .. (-6.1,-4.5) (-0.1,-5) .. controls (-0.2,-4.8) and (-0.1,-4.5) .. (0,-4.4) (0.8,-5) .. controls (0.8,-4.6) and (0.8,-4.6) .. (0.9,-4.5) .. controls (0.8,-4.7) and (0.8,-4.6) .. (0.9,-4.5) (1.6,-5) .. controls (1.5,-4.7) and (1.6,-4.6) .. (1.8,-4.4) (6.7,-5.1) .. controls (6.6,-4.8) and (6.8,-4.6) .. (6.8,-4.5) (7.3,-5.1) .. controls (7.2,-4.9) and (7.3,-4.7) .. (7.4,-4.5);
 \end{tikzpicture}}
