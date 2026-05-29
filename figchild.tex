@@ -1,0 +1,373 @@
+\documentclass[x11names]{article}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{figchild}
+\usepackage{verbatim}
+\usepackage{authblk}
+\usepackage{float}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{amsmath,array,booktabs}
+%\usepackage{afterpage}
+\usepackage{geometry}
+\geometry{top=2cm, left=2cm, right=2cm, bottom=2cm}
+\usepackage[bf]{caption}
+\usepackage{aurical}
+\usepackage{xcolor}
+%\makeatletter
+%\newcommand\HUGE{\@setfontsize\Huge{50}{60}}
+%\makeatother 
+\definecolor{bluetop}{RGB}{24, 24, 181}
+\definecolor{bookred}{RGB}{129, 57, 55}
+
+%Version 1.1.1 (2021/04/21)
+%Version 2.1.1 (2022/03/22)
+%Version 3.1.1 (2025/06/04)
+%\newcommand{\version}[3]{
+%	version #1.#2.#3
+%}
+
+\begin{document}
+	
+	\input{capa}
+	
+	\thispagestyle{empty}
+	
+	\begin{center}
+		
+		\textbf{figchild:} Figures for Creating Children's Activities
+		
+		\vspace{0.5cm}
+		
+		\url{https://github.com/fsbmat-ufv/figchild}
+		
+		\vspace{0.5cm}
+		
+		version 3.1.1
+		
+		\vspace{0.5cm}
+		
+		\today
+		
+	\end{center}
+	
+	\vspace{2cm}
+	
+	
+	
+	Fernando de Souza Bastos\footnote{Author and maintainer of the package (\textbf{E-mail:} fernando.bastos@ufv.br)}, 
+	Guilherme Fernandes Castro de Oliveira, 
+	José Vitor Novaes Moreira,
+	Jéssica de Mendonça,
+	Gabriel Singh Bruno,
+	Matheus Iago Teixeira da Silva,
+	Erlane Alves Santiago,
+	Ana Carolina de Assis Coelho,
+	Lucas Mendes Viana,
+	Dhavy Alexwander Lopes dos Santos,
+	Vitória Augusta Dutra de Castro Soares,
+	Júlia Letícia Gonçalves Martins,
+	Kethile Alves Fagundes,
+	Luan Moises dos Santos Valadares,
+	Luiz Henrique de Souza Matos,
+	Warley Ribeiro de Freitas,
+	Paula Alves de Freitas,
+	Janaíne Geralda Mesquita Martins,
+	Henrique Ribeiro Diniz
+	
+	\vspace{3cm}
+	
+	\noindent \textbf{License:}
+	
+	\vspace{1cm}
+	
+	\noindent Copyright 2022 by Fernando de Souza Bastos
+	
+	\vspace{1cm}
+	
+	\noindent Released under the LaTeX Project Public License v1.3c or later. See \url{http://www.latex-project.org/lppl.txt}. Feature requests, issues and pull requests are welcome.
+	
+	\newpage
+	
+	\begin{abstract}
+		This package was created to facilitate the work of Elementary School teachers who need to design colorful and engaging activities for their students. It is a product of the Computational Mathematics discipline at the Federal University of Viçosa – Campus UFV – Florestal, developed under the guidance of Professor Fernando de Souza Bastos. The package leverages the TikZ and xcolor packages to deliver high-quality, scalable, and customizable figures that can be seamlessly integrated into educational materials.
+		
+	\end{abstract}
+	
+	\tableofcontents
+	
+	\listoftables
+	
+	\strut\newpage
+	
+	\section{Introduction}
+	
+	\hspace{\parindent}This is a simple yet powerful package designed to quickly create figures for building engaging and visually appealing activities, especially for Basic Education. It can also be used for a variety of other purposes, including crafting coloring books, designing educational exercises, creating playful illustrations, and even making personalized children’s birthday gifts.
+	
+	The package was developed with the collaboration of several students from the Computational Mathematics discipline (MAF 172) at the Federal University of Viçosa – Campus UFV – Florestal (UFV), Brazil. These students contributed significantly to the creation of high-quality vector drawings using the TikZ package, based on images commonly found in children’s educational materials worldwide. All of them are recognized as co-authors of the package.
+	
+	A key feature of the \texttt{figchild} package is the great number of figures it offers. Each figure was carefully crafted point by point, using precise coordinates and detailed TikZ commands to ensure clean, scalable, and visually balanced results. Creating such figures in TikZ is a challenging task, often requiring meticulous adjustments of curves, control points, and transformations to achieve the desired shape and style. This level of detail is what sets the package apart and guarantees high-quality output for any project.
+	
+	Our primary goal is to support teachers, educators, and anyone interested in playful and creative activities by providing a reliable source of high-quality typographic material. With \texttt{figchild}, there is no longer a need to spend countless hours designing or searching for low-resolution images on the internet. The package’s comprehensive library ensures professional and adaptable figures ready to be incorporated into educational materials, exercises, and artistic projects.
+	
+	Enjoy the \texttt{figchild} package and unleash your creativity!
+	
+	
+	
+	
+	%\section{Author and Acknowledgements}
+	
+	%\hspace{\parindent}Fernando de Souza Bastos has a degree in Mathematics from the Federal University %of Viçosa and a PhD in Statistics from the Federal University of Minas Gerais. He has been working %with \LaTeX since 2003.
+	
+	%Thanks in particular the students Guilherme Fernandes Castro de Oliveira and José Vitor Novaes %Moreira who acted as monitors of the discipline (MAF 172) in the second remote period offered by UFV, %in the year 2021. I also thank all the students who contributed to the creation of the figures.
+	
+	\section{Usage}
+	
+	\hspace{\parindent}To use the package, simply add the command to your document's preamble:
+	
+	\begin{verbatim}
+		\usepackage{figchild}
+	\end{verbatim}
+	
+	
+	\section*{News: Version 3.1.1}
+	
+	\begin{itemize}
+		\item \textbf{Full TikZ Options Support:} All TikZ options can now be applied directly by including them inside square brackets after the figure command (e.g., \verb|\fcAbajourA[scale=0.5, rotate=45]|). This makes it easier to customize figures while maintaining compatibility with the standard TikZ syntax.
+		
+		\item \textbf{Corrections and Enhancements:} Several figures included in the package have been revised and corrected to improve visual accuracy and consistency.
+		
+		\item \textbf{Greater Flexibility:} This version enhances the overall versatility of the package, allowing users to seamlessly integrate figures with diverse TikZ styles and transformations.
+		
+		\item \textbf{Backward Compatibility:} Despite these improvements, all previous figure commands and options remain fully compatible, ensuring a smooth update process for existing documents.
+		
+		\item \textbf{Improved Documentation:} Updated documentation reflects these changes, providing examples and detailed explanations for advanced usage.
+	\end{itemize}
+	
+	\noindent
+	For more details and examples, please refer to the updated package documentation or visit the CTAN page.
+	
+    To create a little train in the center of the page, of size 2, gray color and with line thickness that defines it of size 2, just use:
+	
+	\begin{verbatim}
+		\begin{center}
+			\fcTrain[draw=gray, line width = 2, scale=2]
+		\end{center}
+	\end{verbatim}
+	
+	\begin{center}
+		\fcTrain[draw=gray, line width = 2, scale=2]
+	\end{center}
+	
+	\section*{Acknowledgements}
+	
+	I would like to express my sincere gratitude to Matthias Floré (\texttt{Matthias.Flore@vub.be}) for his insightful suggestions and valuable feedback, which inspired the changes implemented in this version of the \texttt{figchild} package.
+	
+	Although it took some time to revisit and integrate these ideas, I can finally say: “Better late than never!” Thank you for your patience and your valuable input, which has significantly improved the package’s versatility and usability.
+	
+	
+	\newgeometry{top=1.5cm, left=0.5cm, right=0.5cm, bottom=0.5cm}
+	%\afterpage{\globaldefs=1 \newgeometry{top=0.5cm, left=0.5cm, right=0.5cm, bottom=2cm}}
+
+	
+	
+	
+	\section{Figures}
+	
+	
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcAbajourA	[scale=0.4]} & &\multirow{5}{*}{	\fcAbajourB	[scale=0.4]} & &\multirow{5}{*}{	\fcAbajourC	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcAbajourA	| & & \verb|	\fcAbajourB	| & & \verb|	\fcAbajourC	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcAbajourD	[scale=0.4]} & &\multirow{5}{*}{	\fcAirBallon	[scale=0.4]} & &\multirow{5}{*}{	\fcAlarmClockA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcAbajourD	| & & \verb|	\fcAirBallon	| & & \verb|	\fcAlarmClockA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcAlarmClockB	[scale=0.4]} & &\multirow{5}{*}{	\fcAlligator	[scale=0.8]} & &\multirow{5}{*}{	\fcAlligatorA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcAlarmClockB	| & & \verb|	\fcAlligator	| & & \verb|	\fcAlligatorA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcAlligatorB	[scale=0.4]} & &\multirow{5}{*}{	\fcAngel	[scale=0.3]} & &\multirow{5}{*}{	\fcAnt	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcAlligatorB	| & & \verb|	\fcAngel	| & & \verb|	\fcAnt	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcAntA	[scale=0.4]} & &\multirow{5}{*}{	\fcAntelope	[scale=0.4]} & &\multirow{5}{*}{	\fcApple	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcAntA	| & & \verb|	\fcAntelope	| & & \verb|	\fcApple	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcAppleTree	[scale=0.4]} & &\multirow{5}{*}{	\fcArmadillo	[scale=0.3]} & &\multirow{5}{*}{	\fcArmadilloA	[scale=0.3]}\\	& & & & & \\	& & & & & \\	\verb|	\fcAppleTree	| & & \verb|	\fcArmadillo	| & & \verb|	\fcArmadilloA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcAubergine	[scale=0.4]} & &\multirow{5}{*}{	\fcBabe	[scale=0.4]} & &\multirow{5}{*}{	\fcBall	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcAubergine	| & & \verb|	\fcBabe	| & & \verb|	\fcBall	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcBallA	[scale=0.4]} & &\multirow{5}{*}{	\fcBallB	[scale=0.4]} & &\multirow{5}{*}{	\fcBallC	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBallA	| & & \verb|	\fcBallB	| & & \verb|	\fcBallC	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 1	}\label{Tab1}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcBalloon	[scale=0.4]} & &\multirow{5}{*}{	\fcBaloonsA	[scale=0.4]} & &\multirow{5}{*}{	\fcBaloonsB	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBalloon	| & & \verb|	\fcBaloonsA	| & & \verb|	\fcBaloonsB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcBarbecue	[scale=0.4]} & &\multirow{5}{*}{	\fcBarquet	[scale=0.4]} & &\multirow{5}{*}{	\fcBaseballBat	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBarbecue	| & & \verb|	\fcBarquet	| & & \verb|	\fcBaseballBat	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcBat	[scale=0.8]} & &\multirow{5}{*}{	\fcBatA	[scale=0.8]} & &\multirow{5}{*}{	\fcBear	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBat	| & & \verb|	\fcBatA	| & & \verb|	\fcBear	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcBearA	[scale=0.4]} & &\multirow{5}{*}{	\fcBearB	[scale=0.4]} & &\multirow{5}{*}{	\fcBearC	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBearA	| & & \verb|	\fcBearB	| & & \verb|	\fcBearC	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcBearD	[scale=0.4]} & &\multirow{5}{*}{	\fcBearE	[scale=0.4]} & &\multirow{5}{*}{	\fcBearF	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBearD	| & & \verb|	\fcBearE	| & & \verb|	\fcBearF	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcBearG	[scale=0.4]} & &\multirow{5}{*}{	\fcBears	[scale=0.4]} & &\multirow{5}{*}{	\fcBed	[scale=0.3]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBearG	| & & \verb|	\fcBears	| & & \verb|	\fcBed	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcBedA	[scale=0.4]} & &\multirow{5}{*}{	\fcBedsideLamp	[scale=0.4]} & &\multirow{5}{*}{	\fcBee	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBedA	| & & \verb|	\fcBedsideLamp	| & & \verb|	\fcBee	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcBeeA	[scale=0.8]} & &\multirow{5}{*}{	\fcBell	[scale=0.8]} & &\multirow{5}{*}{	\fcBellA	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBeeA	| & & \verb|	\fcBell	| & & \verb|	\fcBellA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 2	}\label{	Tab2	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcBellPepper	[scale=0.4]} & &\multirow{5}{*}{	\fcBike	[scale=0.8]} & &\multirow{5}{*}{	\fcBinoculars	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBellPepper	| & & \verb|	\fcBike	| & & \verb|	\fcBinoculars	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcBird	[scale=0.8]} & &\multirow{5}{*}{	\fcBirdA	[scale=0.8]} & &\multirow{5}{*}{	\fcBirdB	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBird	| & & \verb|	\fcBirdA	| & & \verb|	\fcBirdB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcBirdC	[scale=0.8]} & &\multirow{5}{*}{	\fcBirdD	[scale=0.4]} & &\multirow{5}{*}{	\fcBirdE	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBirdC	| & & \verb|	\fcBirdD	| & & \verb|	\fcBirdE	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcBirdF	[scale=0.8]} & &\multirow{5}{*}{	\fcBoard	[scale=0.4]} & &\multirow{5}{*}{	\fcBoat	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBirdF	| & & \verb|	\fcBoard	| & & \verb|	\fcBoat	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcBonnet	[scale=0.8]} & &\multirow{5}{*}{	\fcBookA	[scale=0.8]} & &\multirow{5}{*}{	\fcBookB	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBonnet	| & & \verb|	\fcBookA	| & & \verb|	\fcBookB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcBread	[scale=0.4]} & &\multirow{5}{*}{	\fcBroom	[scale=0.5]} & &\multirow{5}{*}{	\fcBrownie	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBread	| & & \verb|	\fcBroom	| & & \verb|	\fcBrownie	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcBud	[scale=0.4]} & &\multirow{5}{*}{	\fcBull	[scale=0.8]} & &\multirow{5}{*}{	\fcBullA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBud	| & & \verb|	\fcBull	| & & \verb|	\fcBullA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcBulldozer	[scale=0.4]} & &\multirow{5}{*}{	\fcBullet	[scale=0.8]} & &\multirow{5}{*}{	\fcBunnyA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBulldozer	| & & \verb|	\fcBullet	| & & \verb|	\fcBunnyA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 3	}\label{	Tab3	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcBunnyB	[scale=0.4]} & &\multirow{5}{*}{	\fcBunnyC	[scale=0.4]} & &\multirow{5}{*}{	\fcBunnyD	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBunnyB	| & & \verb|	\fcBunnyC	| & & \verb|	\fcBunnyD	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcBunnyE	[scale=0.4]} & &\multirow{5}{*}{	\fcBurrito	[scale=0.4]} & &\multirow{5}{*}{	\fcBus	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBunnyE	| & & \verb|	\fcBurrito	| & & \verb|	\fcBus	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcBusA	[scale=0.4]} & &\multirow{5}{*}{	\fcButterfly	[scale=0.8]} & &\multirow{5}{*}{	\fcButterflyA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcBusA	| & & \verb|	\fcButterfly	| & & \verb|	\fcButterflyA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcButterflyB	[scale=0.8]} & &\multirow{5}{*}{	\fcButterflyC	[scale=0.4]} & &\multirow{5}{*}{	\fcCabbage	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcButterflyB	| & & \verb|	\fcButterflyC	| & & \verb|	\fcCabbage	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcCabbageA	[scale=0.4]} & &\multirow{5}{*}{	\fcCabinet	[scale=0.4]} & &\multirow{5}{*}{	\fcCactoopuntia	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcCabbageA	| & & \verb|	\fcCabinet	| & & \verb|	\fcCactoopuntia	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcCactus	[scale=0.4]} & &\multirow{5}{*}{	\fcCactusA	[scale=0.4]} & &\multirow{5}{*}{	\fcCactusB	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcCactus	| & & \verb|	\fcCactusA	| & & \verb|	\fcCactusB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcCactusC	[scale=0.4]} & &\multirow{5}{*}{	\fcCalf	[scale=0.4]} & &\multirow{5}{*}{	\fcCandle	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcCactusC	| & & \verb|	\fcCalf	| & & \verb|	\fcCandle	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcCar	[scale=0.8]} & &\multirow{5}{*}{	\fcCarA	[scale=0.4]} & &\multirow{5}{*}{	\fcCarrot	[scale=0.08]}\\	& & & & & \\	& & & & & \\	\verb|	\fcCar	| & & \verb|	\fcCarA	| & & \verb|	\fcCarrot	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 4	}\label{	Tab4	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcCarrotA	[scale=0.4]} & &\multirow{5}{*}{	\fcCart	[scale=0.4]} & &\multirow{5}{*}{	\fcCartA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcCarrotA	| & & \verb|	\fcCart	| & & \verb|	\fcCartA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcCashier	[scale=0.4]} & &\multirow{5}{*}{	\fcCat	[scale=0.8]} & &\multirow{5}{*}{	\fcCaterpillar	[scale=0.3]}\\	& & & & & \\	& & & & & \\	\verb|	\fcCashier	| & & \verb|	\fcCat	| & & \verb|	\fcCaterpillar	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcCatfish	[scale=0.4]} & &\multirow{5}{*}{	\fcCellPhone	[scale=0.4]} & &\multirow{5}{*}{	\fcCentipede	[scale=0.6]}\\	& & & & & \\	& & & & & \\	\verb|	\fcCatfish	| & & \verb|	\fcCellPhone	| & & \verb|	\fcCentipede	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcChair	[scale=0.4]} & &\multirow{5}{*}{	\fcChairA	[scale=0.4]} & &\multirow{5}{*}{	\fcChairB	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcChair	| & & \verb|	\fcChairA	| & & \verb|	\fcChairB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcChairC	[scale=0.3]} & &\multirow{5}{*}{	\fcChairD	[scale=0.3]} & &\multirow{5}{*}{	\fcCheese	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcChairC	| & & \verb|	\fcChairD	| & & \verb|	\fcCheese	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcCherry	[scale=0.8]} & &\multirow{5}{*}{	\fcChick	[scale=0.4]} & &\multirow{5}{*}{	\fcChicken	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcCherry	| & & \verb|	\fcChick	| & & \verb|	\fcChicken	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcChickenA	[scale=0.4]} & &\multirow{5}{*}{	\fcChickenThigh	[scale=0.3]} & &\multirow{5}{*}{	\fcChicks	[scale=0.3]}\\	& & & & & \\	& & & & & \\	\verb|	\fcChickenA	| & & \verb|	\fcChickenThigh	| & & \verb|	\fcChicks	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcChive	[scale=0.4]} & &\multirow{5}{*}{	\fcChristmasTree	[scale=0.8]} & &\multirow{5}{*}{	\fcChrysanthemum	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcChive	| & & \verb|	\fcChristmasTree	| & & \verb|	\fcChrysanthemum	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 5	}\label{	Tab5	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcClock	[scale=0.4]} & &\multirow{5}{*}{	\fcClockA	[scale=0.4]} & &\multirow{5}{*}{	\fcCloud	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcClock	| & & \verb|	\fcClockA	| & & \verb|	\fcCloud	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcCloudA	[scale=0.4]} & &\multirow{5}{*}{	\fcCloudB	[scale=0.4]} & &\multirow{5}{*}{	\fcCloudC	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcCloudA	| & & \verb|	\fcCloudB	| & & \verb|	\fcCloudC	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcCoach	[scale=0.4]} & &\multirow{5}{*}{	\fcCobrabebe	[scale=0.4]} & &\multirow{5}{*}{	\fcComb	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcCoach	| & & \verb|	\fcCobrabebe	| & & \verb|	\fcComb	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcComputer	[scale=0.4]} & &\multirow{5}{*}{	\fcComputerA	[scale=0.4]} & &\multirow{5}{*}{	\fcCow	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcComputer	| & & \verb|	\fcComputerA	| & & \verb|	\fcCow	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcCrabA	[scale=0.4]} & &\multirow{5}{*}{	\fcCrabB	[scale=0.4]} & &\multirow{5}{*}{	\fcCrane	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcCrabA	| & & \verb|	\fcCrabB	| & & \verb|	\fcCrane	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcCrown	[scale=0.8]} & &\multirow{5}{*}{	\fcCrownA	[scale=0.4]} & &\multirow{5}{*}{	\fcCucumber	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcCrown	| & & \verb|	\fcCrownA	| & & \verb|	\fcCucumber	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcCucumberA	[scale=0.4]} & &\multirow{5}{*}{	\fcCupcake	[scale=0.8]} & &\multirow{5}{*}{	\fcCupcakeA	[scale=0.3]}\\	& & & & & \\	& & & & & \\	\verb|	\fcCucumberA	| & & \verb|	\fcCupcake	| & & \verb|	\fcCupcakeA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcCupcakeB	[scale=0.3]} & &\multirow{5}{*}{	\fcCushion	[scale=0.4]} & &\multirow{5}{*}{	\fcCutlery	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcCupcakeB	| & & \verb|	\fcCushion	| & & \verb|	\fcCutlery	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 6	}\label{	Tab6	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcCuttingBoard	[scale=0.4]} & &\multirow{5}{*}{	\fcDaisy	[scale=0.4]} & &\multirow{5}{*}{	\fcDarts	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcCuttingBoard	| & & \verb|	\fcDaisy	| & & \verb|	\fcDarts	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcData	[scale=0.4]} & &\multirow{5}{*}{	\fcDeskLamp	[scale=0.4]} & &\multirow{5}{*}{	\fcDeskLampA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcData	| & & \verb|	\fcDeskLamp	| & & \verb|	\fcDeskLampA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcDeskLampB	[scale=0.4]} & &\multirow{5}{*}{	\fcDeskLampC	[scale=0.4]} & &\multirow{5}{*}{	\fcDeskLampD	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcDeskLampB	| & & \verb|	\fcDeskLampC	| & & \verb|	\fcDeskLampD	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcDino	[scale=0.8]} & &\multirow{5}{*}{	\fcDinosaurA	[scale=0.3]} & &\multirow{5}{*}{	\fcDinosaurB	[scale=0.3]}\\	& & & & & \\	& & & & & \\	\verb|	\fcDino	| & & \verb|	\fcDinosaurA	| & & \verb|	\fcDinosaurB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcDinosaurC	[scale=0.3]} & &\multirow{5}{*}{	\fcDinosaurD	[scale=0.3]} & &\multirow{5}{*}{	\fcDinosaurE	[scale=0.3]}\\	& & & & & \\	& & & & & \\	\verb|	\fcDinosaurC	| & & \verb|	\fcDinosaurD	| & & \verb|	\fcDinosaurE	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcDinosaurF	[scale=0.3]} & &\multirow{5}{*}{	\fcDinosaurG	[scale=0.3]} & &\multirow{5}{*}{	\fcDinosaurH	[scale=0.3]}\\	& & & & & \\	& & & & & \\	\verb|	\fcDinosaurF	| & & \verb|	\fcDinosaurG	| & & \verb|	\fcDinosaurH	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcDinosaurI	[scale=0.3]} & &\multirow{5}{*}{	\fcDinosaurJ	[scale=0.3]} & &\multirow{5}{*}{	\fcDog	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcDinosaurI	| & & \verb|	\fcDinosaurJ	| & & \verb|	\fcDog	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcDolphin	[scale=0.8]} & &\multirow{5}{*}{	\fcDolphinA	[scale=0.4]} & &\multirow{5}{*}{	\fcDolphinB	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcDolphin	| & & \verb|	\fcDolphinA	| & & \verb|	\fcDolphinB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 7	}\label{	Tab7	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcDragonFly	[scale=0.4]} & &\multirow{5}{*}{	\fcDressingTable	[scale=0.4]} & &\multirow{5}{*}{	\fcDressingTableA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcDragonFly	| & & \verb|	\fcDressingTable	| & & \verb|	\fcDressingTableA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcDryer	[scale=0.4]} & &\multirow{5}{*}{	\fcDuck	[scale=0.8]} & &\multirow{5}{*}{	\fcDuckA	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcDryer	| & & \verb|	\fcDuck	| & & \verb|	\fcDuckA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcDuckB	[scale=0.8]} & &\multirow{5}{*}{	\fcDuckC	[scale=0.2]} & &\multirow{5}{*}{	\fcEar	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcDuckB	| & & \verb|	\fcDuckC	| & & \verb|	\fcEar	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcEgg	[scale=0.6]} & &\multirow{5}{*}{	\fcEggA	[scale=0.8]} & &\multirow{5}{*}{	\fcEggB	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcEgg	| & & \verb|	\fcEggA	| & & \verb|	\fcEggB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcEggplant	[scale=0.4]} & &\multirow{5}{*}{	\fcElephant	[scale=0.8]} & &\multirow{5}{*}{	\fcElephantA	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcEggplant	| & & \verb|	\fcElephant	| & & \verb|	\fcElephantA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcElephantB	[scale=0.4]} & &\multirow{5}{*}{	\fcET	[scale=0.4]} & &\multirow{5}{*}{	\fcExcavator	[scale=0.3]}\\	& & & & & \\	& & & & & \\	\verb|	\fcElephantB	| & & \verb|	\fcET	| & & \verb|	\fcExcavator	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcEyebrows	[scale=0.4]} & &\multirow{5}{*}{	\fcEyes	[scale=0.4]} & &\multirow{5}{*}{	\fcFaceTowel	[scale=0.3]}\\	& & & & & \\	& & & & & \\	\verb|	\fcEyebrows	| & & \verb|	\fcEyes	| & & \verb|	\fcFaceTowel	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcFan	[scale=0.8]} & &\multirow{5}{*}{	\fcFanA	[scale=0.3]} & &\multirow{5}{*}{	\fcFish	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcFan	| & & \verb|	\fcFanA	| & & \verb|	\fcFish	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 8	}\label{	Tab8	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcFishA	[scale=0.8]} & &\multirow{5}{*}{	\fcFishB	[scale=0.6]} & &\multirow{5}{*}{	\fcFishC	[scale=0.6]}\\	& & & & & \\	& & & & & \\	\verb|	\fcFishA	| & & \verb|	\fcFishB	| & & \verb|	\fcFishC	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcFishD	[scale=0.4]} & &\multirow{5}{*}{	\fcFishE	[scale=0.4]} & &\multirow{5}{*}{	\fcFishF	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcFishD	| & & \verb|	\fcFishE	| & & \verb|	\fcFishF	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcFishG	[scale=0.4]} & &\multirow{5}{*}{	\fcFishH	[scale=0.4]} & &\multirow{5}{*}{	\fcFishI	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcFishG	| & & \verb|	\fcFishH	| & & \verb|	\fcFishI	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcFishJ	[scale=0.4]} & &\multirow{5}{*}{	\fcFishK	[scale=0.4]} & &\multirow{5}{*}{	\fcFishL	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcFishJ	| & & \verb|	\fcFishK	| & & \verb|	\fcFishL	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcFishM	[scale=0.4]} & &\multirow{5}{*}{	\fcFlamingo	[scale=0.8]} & &\multirow{5}{*}{	\fcFlamingoA	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcFishM	| & & \verb|	\fcFlamingo	| & & \verb|	\fcFlamingoA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcFlamingoB	[scale=0.8]} & &\multirow{5}{*}{	\fcFlashlight	[scale=0.3]} & &\multirow{5}{*}{	\fcFlower	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcFlamingoB	| & & \verb|	\fcFlashlight	| & & \verb|	\fcFlower	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcFlowerA	[scale=0.8]} & &\multirow{5}{*}{	\fcFlowerB	[scale=0.6]} & &\multirow{5}{*}{	\fcFlowerC	[scale=0.6]}\\	& & & & & \\	& & & & & \\	\verb|	\fcFlowerA	| & & \verb|	\fcFlowerB	| & & \verb|	\fcFlowerC	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcFlowerD	[scale=0.8]} & &\multirow{5}{*}{	\fcFlowerE	[scale=0.3]} & &\multirow{5}{*}{	\fcFlowerF	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcFlowerD	| & & \verb|	\fcFlowerE	| & & \verb|	\fcFlowerF	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 9	}\label{	Tab9	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcFlowerG	[scale=0.4]} & &\multirow{5}{*}{	\fcFlowerH	[scale=0.4]} & &\multirow{5}{*}{	\fcFlowerI	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcFlowerG	| & & \verb|	\fcFlowerH	| & & \verb|	\fcFlowerI	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcFlowerJ	[scale=0.4]} & &\multirow{5}{*}{	\fcFlowerK	[scale=0.4]} & &\multirow{5}{*}{	\fcFlowerL	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcFlowerJ	| & & \verb|	\fcFlowerK	| & & \verb|	\fcFlowerL	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcFlowerM	[scale=0.4]} & &\multirow{5}{*}{	\fcFlowerN	[scale=0.4]} & &\multirow{5}{*}{	\fcFlowerO	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcFlowerM	| & & \verb|	\fcFlowerN	| & & \verb|	\fcFlowerO	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcFlowerP	[scale=0.4]} & &\multirow{5}{*}{	\fcFlyingSaucer	[scale=0.8]} & &\multirow{5}{*}{	\fcFrenchFries	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcFlowerP	| & & \verb|	\fcFlyingSaucer	| & & \verb|	\fcFrenchFries	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcFridge	[scale=0.4]} & &\multirow{5}{*}{	\fcFrog	[scale=0.8]} & &\multirow{5}{*}{	\fcfrog	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcFridge	| & & \verb|	\fcFrog	| & & \verb|	\fcfrog	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcFrogA	[scale=0.4]} & &\multirow{5}{*}{	\fcGhost	[scale=0.8]} & &\multirow{5}{*}{	\fcGiraffe	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcFrogA	| & & \verb|	\fcGhost	| & & \verb|	\fcGiraffe	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcGiraffeA	[scale=0.8]} & &\multirow{5}{*}{	\fcGiraffeB	[scale=0.4]} & &\multirow{5}{*}{	\fcGiraffes	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcGiraffeA	| & & \verb|	\fcGiraffeB	| & & \verb|	\fcGiraffes	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcGlass	[scale=0.8]} & &\multirow{5}{*}{	\fcGloves	[scale=0.2]} & &\multirow{5}{*}{	\fcGnat	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcGlass	| & & \verb|	\fcGloves	| & & \verb|	\fcGnat	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 10	}\label{	Tab10	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcGoose	[scale=0.8]} & &\multirow{5}{*}{	\fchamburger	[scale=0.4]} & &\multirow{5}{*}{	\fcHamster	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcGoose	| & & \verb|	\fchamburger	| & & \verb|	\fcHamster	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcHand	[scale=0.3]} & &\multirow{5}{*}{	\fcHat	[scale=0.8]} & &\multirow{5}{*}{	\fcHatA	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcHand	| & & \verb|	\fcHat	| & & \verb|	\fcHatA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcHelicopter	[scale=0.4]} & &\multirow{5}{*}{	\fcHerring	[scale=0.4]} & &\multirow{5}{*}{	\fcHippo	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcHelicopter	| & & \verb|	\fcHerring	| & & \verb|	\fcHippo	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcHorse	[scale=0.8]} & &\multirow{5}{*}{	\fcHorseA	[scale=0.3]} & &\multirow{5}{*}{	\fcHorseB	[scale=0.3]}\\	& & & & & \\	& & & & & \\	\verb|	\fcHorse	| & & \verb|	\fcHorseA	| & & \verb|	\fcHorseB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcHouse	[scale=0.8]} & &\multirow{5}{*}{	\fcHouseA	[scale=0.8]} & &\multirow{5}{*}{	\fcHouseB	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcHouse	| & & \verb|	\fcHouseA	| & & \verb|	\fcHouseB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcHouseC	[scale=0.4]} & &\multirow{5}{*}{	\fcHummingbird	[scale=0.4]} & &\multirow{5}{*}{	\fcIceCreamA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcHouseC	| & & \verb|	\fcHummingbird	| & & \verb|	\fcIceCreamA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcIceCreamB	[scale=0.4]} & &\multirow{5}{*}{	\fcIceCreamC	[scale=0.3]} & &\multirow{5}{*}{	\fcIceCreamD	[scale=0.3]}\\	& & & & & \\	& & & & & \\	\verb|	\fcIceCreamB	| & & \verb|	\fcIceCreamC	| & & \verb|	\fcIceCreamD	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcIceCreamE	[scale=0.4]} & &\multirow{5}{*}{	\fcIceCreamF	[scale=0.4]} & &\multirow{5}{*}{	\fcIceCreamG	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcIceCreamE	| & & \verb|	\fcIceCreamF	| & & \verb|	\fcIceCreamG	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 11	}\label{	Tab11	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcIceCreamH	[scale=0.4]} & &\multirow{5}{*}{	\fcJuicy	[scale=0.4]} & &\multirow{5}{*}{	\fcKetchup	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcIceCreamH	| & & \verb|	\fcJuicy	| & & \verb|	\fcKetchup	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcKettle	[scale=0.4]} & &\multirow{5}{*}{	\fcKettleA	[scale=0.4]} & &\multirow{5}{*}{	\fcKey	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcKettle	| & & \verb|	\fcKettleA	| & & \verb|	\fcKey	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcKite	[scale=0.8]} & &\multirow{5}{*}{	\fcKiteA	[scale=0.4]} & &\multirow{5}{*}{	\fcKittenA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcKite	| & & \verb|	\fcKiteA	| & & \verb|	\fcKittenA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcKittenB	[scale=0.4]} & &\multirow{5}{*}{	\fcKittensA	[scale=0.4]} & &\multirow{5}{*}{	\fcKittensB	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcKittenB	| & & \verb|	\fcKittensA	| & & \verb|	\fcKittensB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcKnees	[scale=0.4]} & &\multirow{5}{*}{	\fcKnife	[scale=0.4]} & &\multirow{5}{*}{	\fcKnifeA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcKnees	| & & \verb|	\fcKnife	| & & \verb|	\fcKnifeA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcKnifeB	[scale=0.4]} & &\multirow{5}{*}{	\fcLadle	[scale=0.4]} & &\multirow{5}{*}{	\fcLadybird	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcKnifeB	| & & \verb|	\fcLadle	| & & \verb|	\fcLadybird	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcLadybirdA	[scale=0.4]} & &\multirow{5}{*}{	\fcLadybirdB	[scale=0.4]} & &\multirow{5}{*}{	\fcLadyBug	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcLadybirdA	| & & \verb|	\fcLadybirdB	| & & \verb|	\fcLadyBug	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcLamb	[scale=0.4]} & &\multirow{5}{*}{	\fcLamp	[scale=0.4]} & &\multirow{5}{*}{	\fcLanguage	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcLamb	| & & \verb|	\fcLamp	| & & \verb|	\fcLanguage	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 12	}\label{	Tab12	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcLetterK	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterKA	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterL	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcLetterK	| & & \verb|	\fcLetterKA	| & & \verb|	\fcLetterL	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcLetterLA	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterM	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterMA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcLetterLA	| & & \verb|	\fcLetterM	| & & \verb|	\fcLetterMA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcLetterN	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterNA	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterO	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcLetterN	| & & \verb|	\fcLetterNA	| & & \verb|	\fcLetterO	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcLetterOA	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterP	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterPA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcLetterOA	| & & \verb|	\fcLetterP	| & & \verb|	\fcLetterPA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcLetterQ	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterQA	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterR	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcLetterQ	| & & \verb|	\fcLetterQA	| & & \verb|	\fcLetterR	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcLetterRA	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterS	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterSA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcLetterRA	| & & \verb|	\fcLetterS	| & & \verb|	\fcLetterSA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcLetterT	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterTA	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterU	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcLetterT	| & & \verb|	\fcLetterTA	| & & \verb|	\fcLetterU	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcLetterUA	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterV	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterVA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcLetterUA	| & & \verb|	\fcLetterV	| & & \verb|	\fcLetterVA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 13	}\label{	Tab13	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcLetterW	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterWA	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterX	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcLetterW	| & & \verb|	\fcLetterWA	| & & \verb|	\fcLetterX	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcLetterXA	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterY	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterYA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcLetterXA	| & & \verb|	\fcLetterY	| & & \verb|	\fcLetterYA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcLetterZ	[scale=0.4]} & &\multirow{5}{*}{	\fcLetterZA	[scale=0.4]} & &\multirow{5}{*}{	\fcLightBulb	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcLetterZ	| & & \verb|	\fcLetterZA	| & & \verb|	\fcLightBulb	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcLightning	[scale=0.4]} & &\multirow{5}{*}{	\fcLion	[scale=0.8]} & &\multirow{5}{*}{	\fcLionA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcLightning	| & & \verb|	\fcLion	| & & \verb|	\fcLionA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcLittleBirds	[scale=0.4]} & &\multirow{5}{*}{	\fcLittleMouse	[scale=0.4]} & &\multirow{5}{*}{	\fcLocust	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcLittleBirds	| & & \verb|	\fcLittleMouse	| & & \verb|	\fcLocust	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcLouvadeus	[scale=0.4]} & &\multirow{5}{*}{	\fcLoveLetter	[scale=0.4]} & &\multirow{5}{*}{	\fcMacaw	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcLouvadeus	| & & \verb|	\fcLoveLetter	| & & \verb|	\fcMacaw	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcMailbox	[scale=0.8]} & &\multirow{5}{*}{	\fcMailBoxA	[scale=0.4]} & &\multirow{5}{*}{	\fcMat	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcMailbox	| & & \verb|	\fcMailBoxA	| & & \verb|	\fcMat	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcMeton	[scale=0.4]} & &\multirow{5}{*}{	\fcMill	[scale=0.4]} & &\multirow{5}{*}{	\fcMirror	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcMeton	| & & \verb|	\fcMill	| & & \verb|	\fcMirror	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 14	}\label{	Tab14	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcMonkey	[scale=0.8]} & &\multirow{5}{*}{	\fcMonkeyA	[scale=0.4]} & &\multirow{5}{*}{	\fcMonster	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcMonkey	| & & \verb|	\fcMonkeyA	| & & \verb|	\fcMonster	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcMoon	[scale=0.8]} & &\multirow{5}{*}{	\fcMoonA	[scale=0.4]} & &\multirow{5}{*}{	\fcMoonB	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcMoon	| & & \verb|	\fcMoonA	| & & \verb|	\fcMoonB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcMoonfish	[scale=0.4]} & &\multirow{5}{*}{	\fcMoose	[scale=0.4]} & &\multirow{5}{*}{	\fcMoped	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcMoonfish	| & & \verb|	\fcMoose	| & & \verb|	\fcMoped	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcMotorcycle	[scale=0.4]} & &\multirow{5}{*}{	\fcMotorcycleA	[scale=0.4]} & &\multirow{5}{*}{	\fcMotorScooter	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcMotorcycle	| & & \verb|	\fcMotorcycleA	| & & \verb|	\fcMotorScooter	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcMouse	[scale=0.08]} & &\multirow{5}{*}{	\fcMouseA	[scale=0.8]} & &\multirow{5}{*}{	\fcMouseB	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcMouse	| & & \verb|	\fcMouseA	| & & \verb|	\fcMouseB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcMouseC	[scale=0.4]} & &\multirow{5}{*}{	\fcMouseD	[scale=0.4]} & &\multirow{5}{*}{	\fcMug	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcMouseC	| & & \verb|	\fcMouseD	| & & \verb|	\fcMug	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcMushroom	[scale=0.4]} & &\multirow{5}{*}{	\fcMushroomA	[scale=0.4]} & &\multirow{5}{*}{	\fcMushroomB	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcMushroom	| & & \verb|	\fcMushroomA	| & & \verb|	\fcMushroomB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcNose	[scale=0.4]} & &\multirow{5}{*}{	\fcNuggets	[scale=0.4]} & &\multirow{5}{*}{	\fcNumberEight	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcNose	| & & \verb|	\fcNuggets	| & & \verb|	\fcNumberEight	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 15	}\label{	Tab15	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcNumberFive	[scale=0.4]} & &\multirow{5}{*}{	\fcNumberFour	[scale=0.4]} & &\multirow{5}{*}{	\fcNumberNine	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcNumberFive	| & & \verb|	\fcNumberFour	| & & \verb|	\fcNumberNine	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcNumberOne	[scale=0.4]} & &\multirow{5}{*}{	\fcNumberSeven	[scale=0.4]} & &\multirow{5}{*}{	\fcNumberSix	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcNumberOne	| & & \verb|	\fcNumberSeven	| & & \verb|	\fcNumberSix	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcNumberTen	[scale=0.4]} & &\multirow{5}{*}{	\fcNumberThree	[scale=0.4]} & &\multirow{5}{*}{	\fcNumberTwo	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcNumberTen	| & & \verb|	\fcNumberThree	| & & \verb|	\fcNumberTwo	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcOctopus	[scale=0.8]} & &\multirow{5}{*}{	\fcOctopusA	[scale=0.3]} & &\multirow{5}{*}{	\fcOctopusB	[scale=0.3]}\\	& & & & & \\	& & & & & \\	\verb|	\fcOctopus	| & & \verb|	\fcOctopusA	| & & \verb|	\fcOctopusB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcOnion	[scale=0.4]} & &\multirow{5}{*}{	\fcOnionA	[scale=0.4]} & &\multirow{5}{*}{	\fcOrca	[scale=0.3]}\\	& & & & & \\	& & & & & \\	\verb|	\fcOnion	| & & \verb|	\fcOnionA	| & & \verb|	\fcOrca	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcOstrich	[scale=0.4]} & &\multirow{5}{*}{	\fcOwl	[scale=0.4]} & &\multirow{5}{*}{	\fcOwlA	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcOstrich	| & & \verb|	\fcOwl	| & & \verb|	\fcOwlA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcOwlB	[scale=0.4]} & &\multirow{5}{*}{	\fcOx	[scale=0.4]} & &\multirow{5}{*}{	\fcPalmTree	[scale=0.3]}\\	& & & & & \\	& & & & & \\	\verb|	\fcOwlB	| & & \verb|	\fcOx	| & & \verb|	\fcPalmTree	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcPan	[scale=0.4]} & &\multirow{5}{*}{	\fcPanA	[scale=0.4]} & &\multirow{5}{*}{	\fcPanB	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcPan	| & & \verb|	\fcPanA	| & & \verb|	\fcPanB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 16	}\label{	Tab16	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcPandaBear	[scale=0.4]} & &\multirow{5}{*}{	\fcParrot	[scale=0.4]} & &\multirow{5}{*}{	\fcPassA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcPandaBear	| & & \verb|	\fcParrot	| & & \verb|	\fcPassA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcPassB	[scale=0.4]} & &\multirow{5}{*}{	\fcPeacock	[scale=0.4]} & &\multirow{5}{*}{	\fcPencil	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcPassB	| & & \verb|	\fcPeacock	| & & \verb|	\fcPencil	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcPencilA	[scale=0.4]} & &\multirow{5}{*}{	\fcPenguin	[scale=0.4]} & &\multirow{5}{*}{	\fcPenguinA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcPencilA	| & & \verb|	\fcPenguin	| & & \verb|	\fcPenguinA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcPerch	[scale=0.4]} & &\multirow{5}{*}{	\fcPeruA	[scale=0.4]} & &\multirow{5}{*}{	\fcPeruB	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcPerch	| & & \verb|	\fcPeruA	| & & \verb|	\fcPeruB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcPhone	[scale=0.8]} & &\multirow{5}{*}{	\fcPig	[scale=0.8]} & &\multirow{5}{*}{	\fcPigA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcPhone	| & & \verb|	\fcPig	| & & \verb|	\fcPigA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcPigB	[scale=0.4]} & &\multirow{5}{*}{	\fcPigC	[scale=0.4]} & &\multirow{5}{*}{	\fcPigD	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcPigB	| & & \verb|	\fcPigC	| & & \verb|	\fcPigD	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcPigE	[scale=0.4]} & &\multirow{5}{*}{	\fcPigF	[scale=0.4]} & &\multirow{5}{*}{	\fcPigG	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcPigE	| & & \verb|	\fcPigF	| & & \verb|	\fcPigG	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcPigH	[scale=0.4]} & &\multirow{5}{*}{	\fcPigI	[scale=0.4]} & &\multirow{5}{*}{	\fcPillow	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcPigH	| & & \verb|	\fcPigI	| & & \verb|	\fcPillow	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 17	}\label{	Tab17	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcPimento	[scale=0.4]} & &\multirow{5}{*}{	\fcPineapple	[scale=0.8]} & &\multirow{5}{*}{	\fcpink	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcPimento	| & & \verb|	\fcPineapple	| & & \verb|	\fcpink	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcPlane	[scale=0.8]} & &\multirow{5}{*}{	\fcPlaneA	[scale=0.8]} & &\multirow{5}{*}{	\fcPlanetA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcPlane	| & & \verb|	\fcPlaneA	| & & \verb|	\fcPlanetA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcPlanetB	[scale=0.4]} & &\multirow{5}{*}{	\fcPlanetC	[scale=0.4]} & &\multirow{5}{*}{	\fcPlanetD	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcPlanetB	| & & \verb|	\fcPlanetC	| & & \verb|	\fcPlanetD	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcPlanetE	[scale=0.4]} & &\multirow{5}{*}{	\fcPlanetF	[scale=0.4]} & &\multirow{5}{*}{	\fcPlanetG	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcPlanetE	| & & \verb|	\fcPlanetF	| & & \verb|	\fcPlanetG	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcPlanets	[scale=0.4]} & &\multirow{5}{*}{	\fcPopsicle	[scale=0.4]} & &\multirow{5}{*}{	\fcPotato	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcPlanets	| & & \verb|	\fcPopsicle	| & & \verb|	\fcPotato	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcPotatoA	[scale=0.4]} & &\multirow{5}{*}{	\fcPulse	[scale=0.4]} & &\multirow{5}{*}{	\fcPumpkin	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcPotatoA	| & & \verb|	\fcPulse	| & & \verb|	\fcPumpkin	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcPumpkinA	[scale=0.8]} & &\multirow{5}{*}{	\fcPuppy	[scale=0.4]} & &\multirow{5}{*}{	\fcPyramid	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcPumpkinA	| & & \verb|	\fcPuppy	| & & \verb|	\fcPyramid	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcRabbit	[scale=0.8]} & &\multirow{5}{*}{	\fcRabbitA	[scale=0.8]} & &\multirow{5}{*}{	\fcRabbitB	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcRabbit	| & & \verb|	\fcRabbitA	| & & \verb|	\fcRabbitB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 18	}\label{	Tab18	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcRabbits	[scale=0.4]} & &\multirow{5}{*}{	\fcRaccoon	[scale=0.4]} & &\multirow{5}{*}{	\fcRacoon	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcRabbits	| & & \verb|	\fcRaccoon	| & & \verb|	\fcRacoon	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcRake	[scale=0.4]} & &\multirow{5}{*}{	\fcRazor	[scale=0.4]} & &\multirow{5}{*}{	\fcRefrigerator	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcRake	| & & \verb|	\fcRazor	| & & \verb|	\fcRefrigerator	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcRoastChicken	[scale=0.4]} & &\multirow{5}{*}{	\fcRobe	[scale=0.8]} & &\multirow{5}{*}{	\fcRocket	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcRoastChicken	| & & \verb|	\fcRobe	| & & \verb|	\fcRocket	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcRocketA	[scale=0.4]} & &\multirow{5}{*}{	\fcRocketB	[scale=0.4]} & &\multirow{5}{*}{	\fcRocketC	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcRocketA	| & & \verb|	\fcRocketB	| & & \verb|	\fcRocketC	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcRoller	[scale=0.4]} & &\multirow{5}{*}{	\fcRollingPin	[scale=0.4]} & &\multirow{5}{*}{	\fcSandal	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcRoller	| & & \verb|	\fcRollingPin	| & & \verb|	\fcSandal	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcSaturnA	[scale=0.4]} & &\multirow{5}{*}{	\fcSaturnB	[scale=0.4]} & &\multirow{5}{*}{	\fcScallion	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcSaturnA	| & & \verb|	\fcSaturnB	| & & \verb|	\fcScallion	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcScaredEgg	[scale=0.4]} & &\multirow{5}{*}{	\fcSchoolbag	[scale=0.4]} & &\multirow{5}{*}{	\fcScissors	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcScaredEgg	| & & \verb|	\fcSchoolbag	| & & \verb|	\fcScissors	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcScooter	[scale=0.4]} & &\multirow{5}{*}{	\fcScooterA	[scale=0.4]} & &\multirow{5}{*}{	\fcScorpion	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcScooter	| & & \verb|	\fcScooterA	| & & \verb|	\fcScorpion	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 19	}\label{	Tab19	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcSeahorse	[scale=0.4]} & &\multirow{5}{*}{	\fcSeahorseA	[scale=0.4]} & &\multirow{5}{*}{	\fcSeeds	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcSeahorse	| & & \verb|	\fcSeahorseA	| & & \verb|	\fcSeeds	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcShark	[scale=0.4]} & &\multirow{5}{*}{	\fcSharkA	[scale=0.4]} & &\multirow{5}{*}{	\fcSharpKnife	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcShark	| & & \verb|	\fcSharkA	| & & \verb|	\fcSharpKnife	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcSheep	[scale=0.8]} & &\multirow{5}{*}{	\fcSheepA	[scale=0.4]} & &\multirow{5}{*}{	\fcSheepB	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcSheep	| & & \verb|	\fcSheepA	| & & \verb|	\fcSheepB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcSheepC	[scale=0.4]} & &\multirow{5}{*}{	\fcSheet	[scale=0.8]} & &\multirow{5}{*}{	\fcsheetA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcSheepC	| & & \verb|	\fcSheet	| & & \verb|	\fcsheetA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcsheetB	[scale=0.4]} & &\multirow{5}{*}{	\fcShell	[scale=0.4]} & &\multirow{5}{*}{	\fcShip	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcsheetB	| & & \verb|	\fcShell	| & & \verb|	\fcShip	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcShootingStar	[scale=0.6]} & &\multirow{5}{*}{	\fcShower	[scale=0.4]} & &\multirow{5}{*}{	\fcShrimp	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcShootingStar	| & & \verb|	\fcShower	| & & \verb|	\fcShrimp	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcSleepingBag	[scale=0.4]} & &\multirow{5}{*}{	\fcSleepingBagA	[scale=0.4]} & &\multirow{5}{*}{	\fcSnail	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcSleepingBag	| & & \verb|	\fcSleepingBagA	| & & \verb|	\fcSnail	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcSnailA	[scale=0.4]} & &\multirow{5}{*}{	\fcSnailB	[scale=0.4]} & &\multirow{5}{*}{	\fcSnailC	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcSnailA	| & & \verb|	\fcSnailB	| & & \verb|	\fcSnailC	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 20	}\label{	Tab20	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcSnowflake	[scale=0.4]} & &\multirow{5}{*}{	\fcSock	[scale=0.4]} & &\multirow{5}{*}{	\fcSofaA	[scale=0.3]}\\	& & & & & \\	& & & & & \\	\verb|	\fcSnowflake	| & & \verb|	\fcSock	| & & \verb|	\fcSofaA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcSofaB	[scale=0.3]} & &\multirow{5}{*}{	\fcSpacecraftA	[scale=0.4]} & &\multirow{5}{*}{	\fcSpacecraftB	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcSofaB	| & & \verb|	\fcSpacecraftA	| & & \verb|	\fcSpacecraftB	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcSpatulas	[scale=0.4]} & &\multirow{5}{*}{	\fcSpider	[scale=0.8]} & &\multirow{5}{*}{	\fcSpiderA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcSpatulas	| & & \verb|	\fcSpider	| & & \verb|	\fcSpiderA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcSpiderB	[scale=0.4]} & &\multirow{5}{*}{	\fcSpinning	[scale=0.8]} & &\multirow{5}{*}{	\fcSpray	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcSpiderB	| & & \verb|	\fcSpinning	| & & \verb|	\fcSpray	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcSquirrel	[scale=0.8]} & &\multirow{5}{*}{	\fcSquirrelA	[scale=0.8]} & &\multirow{5}{*}{	\fcStar	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcSquirrel	| & & \verb|	\fcSquirrelA	| & & \verb|	\fcStar	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcStarA	[scale=0.4]} & &\multirow{5}{*}{	\fcStarB	[scale=0.4]} & &\multirow{5}{*}{	\fcStars	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcStarA	| & & \verb|	\fcStarB	| & & \verb|	\fcStars	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcSteak	[scale=0.4]} & &\multirow{5}{*}{	\fcSteamroller	[scale=0.4]} & &\multirow{5}{*}{	\fcSteamrollerA	[scale=0.3]}\\	& & & & & \\	& & & & & \\	\verb|	\fcSteak	| & & \verb|	\fcSteamroller	| & & \verb|	\fcSteamrollerA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcStoolA	[scale=0.4]} & &\multirow{5}{*}{	\fcStoolB	[scale=0.4]} & &\multirow{5}{*}{	\fcStoolC	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcStoolA	| & & \verb|	\fcStoolB	| & & \verb|	\fcStoolC	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 21	}\label{	Tab21	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcStrawberry	[scale=0.8]} & &\multirow{5}{*}{	\fcStrawberryA	[scale=0.8]} & &\multirow{5}{*}{	\fcSturgeon	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcStrawberry	| & & \verb|	\fcStrawberryA	| & & \verb|	\fcSturgeon	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcSubmarineA	[scale=0.4]} & &\multirow{5}{*}{	\fcSugar	[scale=0.4]} & &\multirow{5}{*}{	\fcSun	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcSubmarineA	| & & \verb|	\fcSugar	| & & \verb|	\fcSun	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcSunA	[scale=0.8]} & &\multirow{5}{*}{	\fcSunB	[scale=0.8]} & &\multirow{5}{*}{	\fcTableLight	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcSunA	| & & \verb|	\fcSunB	| & & \verb|	\fcTableLight	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcTeapot	[scale=0.4]} & &\multirow{5}{*}{	\fcTelevision	[scale=0.3]} & &\multirow{5}{*}{	\fcTent	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcTeapot	| & & \verb|	\fcTelevision	| & & \verb|	\fcTent	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcThermometerA	[scale=0.4]} & &\multirow{5}{*}{	\fcThermometerB	[scale=0.4]} & &\multirow{5}{*}{	\fcThroat	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcThermometerA	| & & \verb|	\fcThermometerB	| & & \verb|	\fcThroat	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcToiletPaper	[scale=0.4]} & &\multirow{5}{*}{	\fcTomato	[scale=0.4]} & &\multirow{5}{*}{	\fcTomatoA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcToiletPaper	| & & \verb|	\fcTomato	| & & \verb|	\fcTomatoA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcTony	[scale=0.4]} & &\multirow{5}{*}{	\fcTornado	[scale=0.4]} & &\multirow{5}{*}{	\fcToucan	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcTony	| & & \verb|	\fcTornado	| & & \verb|	\fcToucan	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcTractorA	[scale=0.4]} & &\multirow{5}{*}{	\fcTractorB	[scale=0.8]} & &\multirow{5}{*}{	\fcTractorC	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcTractorA	| & & \verb|	\fcTractorB	| & & \verb|	\fcTractorC	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 22	}\label{	Tab22	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcTrain	[scale=0.8]} & &\multirow{5}{*}{	\fcTree	[scale=0.4]} & &\multirow{5}{*}{	\fcTricycle	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcTrain	| & & \verb|	\fcTree	| & & \verb|	\fcTricycle	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcTricycleA	[scale=0.4]} & &\multirow{5}{*}{	\fcTruck	[scale=0.8]} & &\multirow{5}{*}{	\fcTruckA	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcTricycleA	| & & \verb|	\fcTruck	| & & \verb|	\fcTruckA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcTruckB	[scale=0.4]} & &\multirow{5}{*}{	\fcTruckC	[scale=0.4]} & &\multirow{5}{*}{	\fcTruckD	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcTruckB	| & & \verb|	\fcTruckC	| & & \verb|	\fcTruckD	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcTruckE	[scale=0.4]} & &\multirow{5}{*}{	\fcTruckF	[scale=0.4]} & &\multirow{5}{*}{	\fcTruckG	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcTruckE	| & & \verb|	\fcTruckF	| & & \verb|	\fcTruckG	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcTruckH	[scale=0.4]} & &\multirow{5}{*}{	\fcTrunk	[scale=0.8]} & &\multirow{5}{*}{	\fcTulip	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcTruckH	| & & \verb|	\fcTrunk	| & & \verb|	\fcTulip	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcTurnip	[scale=0.4]} & &\multirow{5}{*}{	\fcTurtle	[scale=0.8]} & &\multirow{5}{*}{	\fcTurtleA	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcTurnip	| & & \verb|	\fcTurtle	| & & \verb|	\fcTurtleA	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcTurtleB	[scale=0.4]} & &\multirow{5}{*}{	\fcTurtleC	[scale=0.4]} & &\multirow{5}{*}{	\fcUmbrella	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcTurtleB	| & & \verb|	\fcTurtleC	| & & \verb|	\fcUmbrella	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcUrchin	[scale=0.4]} & &\multirow{5}{*}{	\fcUrchinA	[scale=0.4]} & &\multirow{5}{*}{	\fcVan	[scale=0.8]}\\	& & & & & \\	& & & & & \\	\verb|	\fcUrchin	| & & \verb|	\fcUrchinA	| & & \verb|	\fcVan	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 23	}\label{	Tab23	}\end{table}
+\begin{table}[H]\centering\begin{tabular}{|c|c|c|c|c|c|}\hline{\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure} & {\bf Command} & {\bf Figure}\\	\hline	&\multirow{5}{*}{	\fcVase	[scale=0.4]} & &\multirow{5}{*}{	\fcWagon	[scale=0.4]} & &\multirow{5}{*}{	\fcWardrobe	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcVase	| & & \verb|	\fcWagon	| & & \verb|	\fcWardrobe	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcWateringCan	[scale=0.4]} & &\multirow{5}{*}{	\fcWatermelon	[scale=0.8]} & &\multirow{5}{*}{	\fcWhale	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcWateringCan	| & & \verb|	\fcWatermelon	| & & \verb|	\fcWhale	| & \\	& & & & & \\	& & & & & \\	& & & & & \\	\hline									
+		&\multirow{5}{*}{	\fcWitchHat	[scale=0.8]} & &\multirow{5}{*}{	\fcYoyo	[scale=0.4]} & &\multirow{5}{*}{	\fcZebra	[scale=0.4]}\\	& & & & & \\	& & & & & \\	\verb|	\fcWitchHat	| & & \verb|	\fcYoyo	| & & \verb|	\fcZebra	| & \\	& & & & & \\	& & & & & \\	& & & & & \\		\hline 	\hline 	\end{tabular}	\caption{	Tabela 24	}\label{Tab24}\end{table}
+
+
+
+
+	
+\end{document}
