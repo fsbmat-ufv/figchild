@@ -3,7 +3,7 @@ _figchild: Figures for Creating Children's Activities_
 
 This package was created with the aim of facilitating the work of Elementary School teachers who need to create colorful and attractive activities for their students. It is a product of the Computational Mathematics discipline offered at the Federal University of Viçosa – Campus UFV – Florestal by professor Fernando de Souza Bastos. At the time, professor Fernando was a faculty member at the UFV Florestal campus. Currently, he is a professor in the Department of Statistics at the UFV main campus in Viçosa. The package makes use of the TikZ and xcolor packages and others.
 
-**Current version:** v3.1.2
+**Current version:** v3.1.3
 
 ## Changes in this version
 
