@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Catálogo interativo do pacote LaTeX figchild: ilustrações didáticas e infantis em TikZ com código e pré-visualização lado a lado." />
+  <title>figchild — Catálogo de Figuras TikZ</title>
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Cabeçalho Principal -->
+    <header class="site-header">
+      <div class="header-badges">
+        <span class="badge badge-version">Versão 3.1.3</span>
+        <a href="https://ctan.org/pkg/figchild" target="_blank" rel="noopener noreferrer" class="badge badge-ctan">
+          📦 CTAN Package
+        </a>
+        <a href="https://github.com/fsbmat-ufv/figchild" target="_blank" rel="noopener noreferrer" class="badge badge-github">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          GitHub
+        </a>
+        <span class="badge" style="background:#e0e7ff; color:#3730a3;">Licença LPPL 1.3c</span>
+      </div>
+
+      <h1 class="site-title">Pacote <code>figchild</code></h1>
+      <p class="site-subtitle">
+        Biblioteca de ilustrações vetoriais em <strong>TikZ</strong> desenvolvida especialmente para enriquecer listas de exercícios, materiais pedagógicos, livros para colorir e atividades do Ensino Básico.
+      </p>
+
+      <!-- Caixa de Início Rápido -->
+      <div class="quickstart-card">
+        <span class="quickstart-label">Uso no preâmbulo:</span>
+        <code class="quickstart-code">\usepackage{figchild}</code>
+        <button class="btn-mini-copy" onclick="window.figchildApp.copyText('\\usepackage{figchild}', this)">
+          Copiar preâmbulo
+        </button>
+      </div>
+
+      <p class="authors-info">
+        Coordenação: <strong>Prof. Fernando de Souza Bastos</strong> — Universidade Federal de Viçosa (UFV).
+      </p>
+    </header>
+
+    <!-- Barra de Controles: Busca e Filtros de Categoria -->
+    <section class="controls-section">
+      <!-- Busca em tempo real -->
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input 
+          type="text" 
+          id="searchInput" 
+          class="search-input" 
+          placeholder="Pesquisar por comando (ex: \fcTrain, abajour, elefante, árvore, letra a)..." 
+          autocomplete="off"
+        />
+        <button id="searchClear" class="search-clear" title="Limpar pesquisa">✕</button>
+      </div>
+
+      <!-- Pílulas de Categoria -->
+      <div class="categories-bar" id="categoriesBar">
+        <!-- Gerado dinamicamente pelo JavaScript -->
+      </div>
+    </section>
+
+    <!-- Barra de Contagem de Resultados -->
+    <div class="results-bar">
+      <div class="results-count" id="resultsCount">Carregando catálogo...</div>
+    </div>
+
+    <!-- Grid de Figuras (Cards Lado a Lado: Código à Esquerda, Imagem à Direita) -->
+    <main class="figures-grid" id="figuresGrid">
+      <!-- Cards gerados dinamicamente pelo JavaScript -->
+    </main>
+
+    <!-- Paginação -->
+    <nav class="pagination-container" id="pagination" aria-label="Navegação de páginas">
+      <!-- Botões de página gerados dinamicamente -->
+    </nav>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+      <p>
+        <strong>figchild</strong> &copy; 2021–2026 por Fernando de Souza Bastos e colaboradores.
+      </p>
+      <p>
+        Desenvolvido no âmbito da disciplina de Matemática Computacional da <strong>Universidade Federal de Viçosa (UFV)</strong>.
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- Modal Interativo: Personalizador de Opções TikZ -->
+  <div class="modal-overlay" id="customizerModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalTitle">Personalizar Figura</h2>
+        <button class="modal-close" id="modalClose" aria-label="Fechar modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Visualização Interativa -->
+        <div class="modal-preview-box">
+          <img id="modalImg" src="" alt="Prévia da figura" />
+        </div>
+
+        <!-- Controles Interativos -->
+        <div class="controls-form">
+          <!-- Slider Escala -->
+          <div class="control-item">
+            <div class="control-label-row">
+              <span>Escala (<code>scale</code>)</span>
+              <span id="scaleVal">1.0x</span>
+            </div>
+            <input type="range" id="scaleSlider" min="0.3" max="2.5" step="0.1" value="1.0" />
+          </div>
+
+          <!-- Slider Rotação -->
+          <div class="control-item">
+            <div class="control-label-row">
+              <span>Rotação (<code>rotate</code>)</span>
+              <span id="rotateVal">0°</span>
+            </div>
+            <input type="range" id="rotateSlider" min="0" max="360" step="5" value="0" />
+          </div>
+
+          <!-- Seletor de Espessura -->
+          <div class="control-item">
+            <div class="control-label-row">
+              <span>Espessura do Traço (<code>line width</code>)</span>
+            </div>
+            <select id="lineWidthSelect" style="padding: 0.4rem; border-radius: 6px; border: 1px solid var(--border);">
+              <option value="default">Padrão do pacote</option>
+              <option value="0.5pt">Fino (0.5pt)</option>
+              <option value="1pt">Médio (1pt)</option>
+              <option value="2pt">Grosso (2pt)</option>
+              <option value="3pt">Muito Grosso (3pt)</option>
+            </select>
+          </div>
+
+          <!-- Seletor de Cor -->
+          <div class="control-item">
+            <div class="control-label-row">
+              <span>Cor do Traço (<code>draw</code>)</span>
+            </div>
+            <div class="color-pills">
+              <div class="color-dot active" data-color="black" style="background: #000;" title="Preto (draw=black)"></div>
+              <div class="color-dot" data-color="blue" style="background: #2563eb;" title="Azul (draw=blue)"></div>
+              <div class="color-dot" data-color="red" style="background: #dc2626;" title="Vermelho (draw=red)"></div>
+              <div class="color-dot" data-color="green" style="background: #16a34a;" title="Verde (draw=green)"></div>
+              <div class="color-dot" data-color="orange" style="background: #ea580c;" title="Laranja (draw=orange)"></div>
+              <div class="color-dot" data-color="purple" style="background: #9333ea;" title="Roxo (draw=purple)"></div>
+              <div class="color-dot" data-color="gray" style="background: #64748b;" title="Cinza (draw=gray)"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <div>
+          <span style="font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; font-weight: 600;">Comando Gerado:</span>
+          <div class="modal-code-output" id="modalCodeOutput">\fcAbajourA</div>
+        </div>
+        <button class="btn-copy-code" id="modalCopyBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span>Copiar Comando</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dados das 561 figuras e Lógica da Aplicação -->
+  <script src="figures_data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
