@@ -3,9 +3,29 @@ _figchild: Figures for Creating Children's Activities_
 
 This package was created with the aim of facilitating the work of Elementary School teachers who need to create colorful and attractive activities for their students. It is a product of the Computational Mathematics discipline offered at the Federal University of Viçosa – Campus UFV – Florestal by professor Fernando de Souza Bastos. At the time, professor Fernando was a faculty member at the UFV Florestal campus. Currently, he is a professor in the Department of Statistics at the UFV main campus in Viçosa. The package makes use of the TikZ and xcolor packages and others.
 
-**Current version:** v3.1.2
+**Current version:** v3.1.3
 
 ## Upcoming changes:
+
+### Fixed in v3.1.3
+
+* **The default stroke is no longer set globally:**
+  Earlier versions set `every path` for the whole document, so the style
+  leaked into every `tikzpicture`, including those from other packages.
+  Because `\clip` then received `draw`, unrelated figures failed with
+  *Extra options not allowed for clipping path command*. The default stroke
+  (`line width=0.5pt, draw=black`) is now applied inside each figure, through
+  `execute at begin picture`, and nothing is set outside the figures.
+
+* **`\fcMouse` and `\fcCarrot` are drawn again:**
+  Both opened a second option group, `[...][scale=0.01]`, which TikZ never
+  reads. The scale was silently dropped and the figures were drawn far
+  outside the page, so they simply did not appear — with no error in the log.
+  Forty other figures carried a stray closing bracket, harmless but now
+  removed as well.
+
+* **Accented characters in the source:**
+  Comments had been double-encoded in v3.1.2; they are proper UTF-8 again.
 
 ### What's New in This Version
 

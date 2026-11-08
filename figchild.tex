@@ -26,6 +26,7 @@
 %Version 1.1.1 (2021/04/21)
 %Version 2.1.1 (2022/03/22)
 %Version 3.1.1 (2025/06/04)
+%Version 3.1.3 (2026/11/08)
 %\newcommand{\version}[3]{
 %	version #1.#2.#3
 %}
@@ -46,10 +47,10 @@
 		
 		\vspace{0.5cm}
 		
-		version 3.1.1
-		
+		version 3.1.3
+
 		\vspace{0.5cm}
-		
+
 		\today
 		
 	\end{center}
@@ -133,6 +134,16 @@
 	\end{verbatim}
 	
 	
+	\section*{News: Version 3.1.3}
+
+	\begin{itemize}
+		\item \textbf{The default stroke is no longer set globally:} earlier versions set \verb|every path| for the whole document, so the style leaked into every \verb|tikzpicture|, including those coming from other packages. Because \verb|\clip| then received \verb|draw|, unrelated figures failed with \emph{Extra options not allowed for clipping path command}. The default stroke (\verb|line width=0.5pt, draw=black|) is now applied inside each figure, through \verb|execute at begin picture|, and nothing is set outside the figures.
+
+		\item \textbf{\texttt{\textbackslash fcMouse} and \texttt{\textbackslash fcCarrot} are drawn again:} both opened a second option group, \verb|[...][scale=0.01]|, which TikZ never reads. The scale was silently dropped and the figures were drawn far outside the page, so they simply did not appear --- with no error in the log. Forty other figures carried a stray closing bracket, harmless but now removed as well.
+
+		\item \textbf{Accented characters in the source:} comments had been double-encoded; they are proper UTF-8 again.
+	\end{itemize}
+
 	\section*{News: Version 3.1.1}
 	
 	\begin{itemize}
